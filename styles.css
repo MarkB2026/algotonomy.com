@@ -1740,28 +1740,36 @@ body {
 }
 
 
-.site-brand {
-  display: inline-flex;
-  align-items: baseline;
-  white-space: nowrap;
-  text-decoration: none;
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 25px;
-  line-height: 1;
-  letter-spacing: -0.8px;
+
+/* BOTISTICS — header logo */
+.site-nav a.site-brand {
+    display: inline-flex;
+    align-items: baseline;
+    white-space: nowrap;
+    text-decoration: none;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: -0.8px;
+    color: #ffffff;
 }
 
-.site-brand .logo-bot {
-  color: #ffffff;
-  font-weight: 800;
-  font-style: normal;
+.site-nav .site-brand .logo-bot {
+    color: #ffffff;
+    font-weight: 800;
+    font-style: normal;
 }
 
-.site-brand .logo-istics {
-  color: #b3c5d5;
-  font-weight: 300;
-  font-style: italic;
-  margin-left: 3px;
+.site-nav .site-brand .logo-istics {
+    color: #b3c5d5;
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 3px;
+}
+
+.site-nav .site-brand:hover {
+    text-decoration: none;
+    opacity: 0.9;
 }
 
 
