@@ -1740,3 +1740,28 @@ body {
 }
 
 
+.site-brand {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+  text-decoration: none;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 25px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+}
+
+.site-brand .logo-bot {
+  color: #ffffff;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.site-brand .logo-istics {
+  color: #b3c5d5;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 3px;
+}
+
+
