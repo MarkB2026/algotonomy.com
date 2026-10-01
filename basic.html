@@ -19,7 +19,7 @@ gtag('config','G-FT272GQ5T5');
 button,input{font:inherit}.release{background:linear-gradient(90deg,#123f57,#159bce,#123f57);padding:11px;text-align:center;font-weight:900;letter-spacing:.35px;border-bottom:1px solid #62d8f5}
 .shell{max-width:1120px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.back{color:#8dd4e4;text-decoration:none;font-weight:800}.badge{border:1px solid #245064;background:#102633;color:#87e7fa;border-radius:999px;padding:7px 11px;font-weight:800;font-size:12px}
 .hero{padding:58px 0 35px;max-width:880px}.eyebrow{color:#67c7ee;font-size:11px;letter-spacing:1.9px;font-weight:900}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:-1.5px;margin:10px 0 15px}.hero p{font-size:17px;color:#b8cbd8;max-width:780px;margin:0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
-.btn{border:0;border-radius:8px;padding:13px 18px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d}.btn.secondary{background:#193747;color:#d7f3ff;border:1px solid #3c7896}.btn.gold{background:linear-gradient(180deg,#ffdc89,#d8a638);color:#261a08}.btn:disabled{opacity:.55;cursor:not-allowed}
+.btn{border:0;border-radius:8px;padding:13px 18px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d}.btn.secondary{background:#193747;color:#d7f3ff;border:1px solid #3c7896}.btn.gold{background:linear-gradient(180deg,#ffdc89,#d8a638);color:#261a08}.btn:disabled{opacity:.55;cursor:not-allowed}.btn.disabled{opacity:.55;cursor:not-allowed;pointer-events:none;background:#29404f;color:#a9bdc9}
 .section{background:linear-gradient(180deg,var(--panel),#0f171f);border:1px solid var(--line);border-radius:11px;margin:14px 0;overflow:hidden}.head{padding:14px 17px;border-bottom:1px solid var(--line);font-weight:900;letter-spacing:.3px}.body{padding:18px}
 .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card{border:1px solid #304757;background:#101a23;border-radius:9px;padding:16px}.card h3{margin:0 0 6px;font-size:15px}.card p{margin:0;color:#9eb1bd;font-size:13px}
 .editions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;align-items:stretch}.edition{display:flex;flex-direction:column;height:100%;border:1px solid #3b5668;border-radius:12px;padding:23px;background:linear-gradient(155deg,#182734,#101922)}.edition.premium{border:2px solid #487a98;background:linear-gradient(155deg,#192c3c,#111b25)}.edition h2{font-size:23px;margin:8px 0}.price{font-size:30px;font-weight:900}.edition p{color:#b8c9d5}.edition ul{padding-left:20px;line-height:1.9;color:#d7e6ef}.edition .btn{margin-top:auto;text-align:center;width:100%}
@@ -39,7 +39,13 @@ button,input{font:inherit}.release{background:linear-gradient(90deg,#123f57,#159
 <div class="eyebrow">SCRIPTZIPS · RSI REVERSAL BOT</div>
 <h1>RSI reversal trading without babysitting every chart.</h1>
 <p>A focused Windows trading bot built around RSI divergence and reversal logic. Download the bot, connect it to IBKR, and configure the actual strategy inside its native ScriptZips dashboard.</p>
-<div class="hero-actions"><button class="btn" id="heroFree">DOWNLOAD FREE</button><button class="btn secondary" id="heroPremium">SEE PREMIUM · $1</button></div>
+<div class="hero-actions">
+<!-- FREE REVERSAL HERO DOWNLOAD — TEMPORARILY DISABLED DURING BETA
+<button class="btn" id="heroFree">DOWNLOAD FREE</button>
+-->
+<span class="btn disabled" aria-disabled="true">FREE VERSION · TEMPORARILY DISABLED</span>
+<button class="btn secondary" id="heroPremium">PREMIUM BETA TEST VERSION · $1</button>
+</div>
 </section>
 
 <section class="section">
@@ -62,14 +68,18 @@ button,input{font:inherit}.release{background:linear-gradient(90deg,#123f57,#159
 <span class="badge">FREE</span><h2>RSI Reversal Bot</h2><div class="price">FREE</div>
 <p>The standard RSI bot with the core reversal strategy, dashboard and essential risk controls.</p>
 <ul><li>RSI divergence/reversal strategy</li><li>Local Windows dashboard</li><li>IBKR connection</li><li>Observe and Paper modes</li><li>Initial/trailing stop controls</li><li>No payment or license required</li></ul>
-<button class="btn" id="freeDownload">DOWNLOAD FREE BOT</button><div id="freeStatus" class="status"></div>
+<!-- FREE REVERSAL DOWNLOAD — TEMPORARILY DISABLED DURING PREMIUM BETA
+<button class="btn" id="freeDownload">DOWNLOAD FREE BOT</button>
+-->
+<span class="btn disabled" aria-disabled="true">FREE VERSION · TEMPORARILY DISABLED</span>
+<div id="freeStatus" class="status"></div>
 </article>
 <article class="edition premium">
-<span class="badge">PREMIUM BETA</span><h2>Premium RSI Bot</h2><div class="price">$1</div>
+<span class="badge">PREMIUM BETA</span><h2>Premium RSI Bot · Beta Test Version</h2><div class="price">$1</div>
 <p>Everything in Free plus deeper trade-management controls for protecting and managing developing positions.</p>
-<p class="fine">Beta testers get the complete Premium build while we validate the release and payment flow.</p>
+<p class="fine">Beta testers get the complete Premium build. The temporary $1 charge is part of testing the real Bitcoin payment, license and download system before public release.</p>
 <ul><li>Everything in Free</li><li>Progressive Ratcheting</li><li>Protected Profit Stages</li><li>Cooldown & Smart Re-entry</li><li>Scale In / Out</li><li>Structure / ATR Run Room</li><li>One-time purchase · No subscription</li></ul>
-<button class="btn gold" id="premiumOpen">GET PREMIUM · $1</button>
+<button class="btn gold" id="premiumOpen">GET PREMIUM BETA TEST VERSION · $1</button>
 </article>
 </div>
 <div class="note" style="margin-top:17px"><strong>No website-built bots.</strong> Both editions download a standard installer. Strategy, scanner, risk and connection settings are configured locally inside the actual ScriptZips bot dashboard.</div>
@@ -90,7 +100,7 @@ button,input{font:inherit}.release{background:linear-gradient(90deg,#123f57,#159
 <section class="section checkout" id="premiumCheckout">
 <div class="head">PREMIUM · BITCOIN CHECKOUT</div>
 <div class="body">
-<p>Premium is temporarily $1 USD during beta testing. Already paid? Do not pay again — restore your original license below.</p>
+<p>Premium is temporarily $1 USD during beta testing. The $1 charge is intentional and is part of validating the Bitcoin payment, license issuance and Premium download flow. Already paid? Do not pay again — restore your original license below.</p>
 <button class="btn gold" id="quoteBtn">GENERATE BITCOIN QUOTE</button>
 <div class="payment-panel" id="paymentPanel">
 <div id="quoteDetails">Requesting quote…</div>
@@ -142,7 +152,10 @@ async function freeDownload(){
   catch(e){setStatus('freeStatus',e.message,true)}
   finally{b.disabled=false;b.textContent='DOWNLOAD FREE BOT'}
 }
-$('freeDownload').onclick=freeDownload;$('heroFree').onclick=()=>{$('editions').scrollIntoView({behavior:'smooth'});setTimeout(freeDownload,350)};
+/* FREE REVERSAL DOWNLOAD BINDINGS — TEMPORARILY DISABLED DURING BETA
+$('freeDownload').onclick=freeDownload;
+$('heroFree').onclick=()=>{$('editions').scrollIntoView({behavior:'smooth'});setTimeout(freeDownload,350)};
+*/
 function openPremium(){$('premiumCheckout').classList.add('show');$('premiumCheckout').scrollIntoView({behavior:'smooth',block:'start'})}
 $('premiumOpen').onclick=openPremium;$('heroPremium').onclick=openPremium;
 function copyRow(label,value){
