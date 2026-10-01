@@ -103,6 +103,14 @@
 .premium-showcase .btn{min-width:210px}
 @media(max-width:900px){.premium-grid9{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.premium-grid9{grid-template-columns:1fr}.premium-showcase-head,.premium-showcase-foot{display:block}.premium-price{text-align:left;margin-top:18px}.premium-showcase .btn{margin-top:15px;width:100%}}
+
+/* Premium multi-bot ownership protection */
+.ownership-banner{margin:13px 0 0;padding:18px 20px;border:1px solid #315b70;border-radius:12px;background:linear-gradient(110deg,#102532,#0c1a25 72%);display:flex;align-items:center;gap:17px}
+.ownership-icon{width:52px;height:52px;flex:0 0 52px;border-radius:11px;display:grid;place-items:center;background:#153c50;border:1px solid #28647d;color:#68def4;font-size:24px;font-weight:850}
+.ownership-copy{min-width:0}.ownership-copy h3{font-size:16px;margin:0 0 4px}.ownership-copy p{font-size:12px;line-height:1.5;color:#9fb7c6;margin:0;max-width:900px}
+.ownership-badge{margin-left:auto;white-space:nowrap;border:1px solid #3e819d;border-radius:999px;padding:5px 10px;color:#83e8fb;font-size:10px;font-weight:850;letter-spacing:1px}
+@media(max-width:650px){.ownership-banner{align-items:flex-start;flex-wrap:wrap}.ownership-badge{margin-left:69px}}
+
 </style></head><body><header class="wrap nav"><a href="index.html">← Homepage</a><small>Specialized trading bots · Run locally</small></header><main class="wrap"><section class="hero"><div class="hero-heading"><div class="eyebrow">Purpose-built trading software</div><h1>Free Trading Bots.<br/><em>Premium when you want more.</em></h1></div><p>Explore locally run trading bots, from focused strategies to full-featured Platinum platforms. Free editions are planned across the lineup, with optional Premium upgrades as individual releases complete testing.</p></section><div class="catalogue-heading"><h2>Available now</h2></div><section class="mini-rsi-banner" id="mini-rsi">
   <div class="mini-rsi-copy">
     <div class="mini-rsi-top"><span class="mini-rsi-tag">Available now · Free</span><span class="mini-rsi-tag beginner">Starter Bot</span></div>
@@ -138,6 +146,14 @@
     <div class="premium-tile"><div class="premium-icon">≡</div><div><h3>Scale In / Out</h3><p>Build and reduce positions through managed tranches.</p></div></div>
     <div class="premium-tile"><div class="premium-icon">⌁</div><div><h3>Structure / ATR Run Room</h3><p>Evaluate remaining price movement against risk.</p></div></div>
     <div class="premium-tile"><div class="premium-icon">⚙</div><div><h3>Advanced Trade Management</h3><p>Additional controls for managing developing positions and execution.</p></div></div>
+  </div>
+  <div class="ownership-banner">
+    <div class="ownership-icon">⇄</div>
+    <div class="ownership-copy">
+      <h3>Multi-Bot Ownership Protection</h3>
+      <p>Run multiple ScriptZips bots together without conflicting trade management. Premium bots share a local ownership footprint so each bot can recognize positions already claimed by another bot, protect existing ownership and avoid competing to manage the same trade.</p>
+    </div>
+    <div class="ownership-badge">PREMIUM · SHARED OWNERSHIP</div>
   </div>
   <div class="premium-showcase-foot">
     <p><strong>Everything in Basic.</strong> Nine Premium capabilities shown above · one-time purchase · no subscription.</p>
