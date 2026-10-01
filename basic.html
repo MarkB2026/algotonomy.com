@@ -4,1177 +4,189 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT272GQ5T5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FT272GQ5T5');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-FT272GQ5T5');
 </script>
-
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-
-<script
-  id="turnstileApi" src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
-  defer>
-</script>
-<meta name="description" content="Download a free RSI trading bot for IBKR. Configure RSI divergence, entry filters, risk controls, and local paper trading on your Windows PC.">
-<title>Free RSI Trading Bot for IBKR | ScriptZips</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Download the ScriptZips RSI Reversal trading bot for Windows and IBKR. Start free or unlock Premium trade management for a one-time $10 purchase.">
+<title>RSI Reversal Trading Bot for IBKR | ScriptZips</title>
 <style>
-:root{--bg:#0a0f14;--panel:#111923;--panel2:#16212d;--line:#263746;--text:#eef6fb;--muted:#8da0ae;--cyan:#25c7e8;--cyan2:#0b7e99;--good:#55d694;--gold:#e8b95a;--locked:#78838d}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0,#112837 0,#0a0f14 34%);color:var(--text);font:14px/1.45 Segoe UI,Arial,sans-serif}button,input,select{font:inherit}input,select{width:100%;height:40px;border:1px solid var(--line);border-radius:7px;background:#0b1219;color:var(--text);padding:8px 10px}input[type=checkbox]{width:auto;height:auto;accent-color:var(--cyan)}.shell{max-width:1260px;margin:auto;padding:24px}.hero{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:18px}.brand{font-size:27px;font-weight:900;letter-spacing:.2px}.brand span{color:var(--cyan)}.tag{color:var(--muted);font-size:13px;margin-top:3px}.badge{border:1px solid #245064;background:#102633;color:#87e7fa;border-radius:999px;padding:7px 11px;font-weight:800;font-size:12px}.tabs{position:sticky;top:0;z-index:5;display:flex;gap:7px;overflow:auto;background:rgba(10,15,20,.94);backdrop-filter:blur(8px);padding:10px 0 12px;margin-bottom:12px}.tab{white-space:nowrap;border:1px solid var(--line);background:#101923;color:#b9c8d2;border-radius:7px;padding:9px 13px;cursor:pointer}.tab.active{background:#123044;border-color:#2386a2;color:#fff}.page{display:none}.page.active{display:block}.section{background:linear-gradient(180deg,var(--panel),#0f171f);border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden}.head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:13px 15px;border-bottom:1px solid var(--line);font-weight:850;letter-spacing:.35px}.head small{font-weight:500;color:var(--muted);letter-spacing:0}.body{padding:15px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.field{display:grid;gap:6px;color:#aebdca;font-size:12px}.checks{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:13px}.check{display:flex;align-items:center;gap:7px;color:#c7d4dd}.note{margin-top:12px;padding:10px 12px;border-left:3px solid var(--cyan2);background:#0c151d;color:#9fb2bf;border-radius:3px}.rule{display:grid;grid-template-columns:1.2fr .9fr .7fr .7fr 42px;gap:8px;margin-top:8px}.add{margin-top:10px;border:1px dashed #347086;background:#0c1c26;color:#9cecff;border-radius:7px;padding:9px 12px;cursor:pointer}.premium-wrap{border:1px solid #5b4b2a;background:linear-gradient(180deg,#181711,#11151a);box-shadow:inset 0 1px 0 rgba(255,214,128,.06)}.premium-title{color:#ffd782}.premium-badge{background:#302712;border:1px solid #715b29;color:#ffd782;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:900;letter-spacing:.8px}.premium-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.premium-card{position:relative;border:1px solid #39382f;background:#11161b;border-radius:9px;padding:13px;min-height:132px;overflow:hidden}.premium-card h3{margin:0 0 6px;font-size:14px;color:#dce3e8}.premium-card p{margin:0 0 12px;color:#7f8b94;font-size:12px}.premium-card .fake{display:flex;gap:7px;opacity:.42;filter:saturate(.4)}.premium-card select,.premium-card input{height:34px;pointer-events:none}.lock{position:absolute;right:10px;top:10px;color:var(--gold);font-weight:900;font-size:11px}.premium-footer{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:13px;padding:11px 12px;background:#17150e;border:1px solid #443a22;border-radius:8px;color:#a99b77}.premium-footer b{color:#f4ce76}.buildbar{position:sticky;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:16px;padding:14px 15px;background:rgba(13,20,27,.96);border:1px solid #294151;border-radius:10px;backdrop-filter:blur(8px)}.buildbtn{border:0;border-radius:8px;background:linear-gradient(180deg,#34d2ee,#1295b4);color:#031017;font-weight:950;padding:12px 22px;cursor:pointer}.summary{color:#91a4b1;font-size:12px}.json{white-space:pre-wrap;background:#081016;border:1px solid var(--line);padding:14px;border-radius:8px;color:#b9dce7;max-height:420px;overflow:auto}.locked-input{opacity:.45;pointer-events:none}.pill{display:inline-block;border:1px solid #315262;border-radius:999px;padding:3px 7px;color:#9edff0;font-size:10px;font-weight:800}.subhead{font-weight:800;margin:3px 0 10px;color:#dce7ed}@media(max-width:900px){.grid,.grid.three,.premium-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rule{grid-template-columns:1fr 1fr}.hero{align-items:flex-start;flex-direction:column}}@media(max-width:560px){.shell{padding:14px}.grid,.grid.three,.premium-grid{grid-template-columns:1fr}.rule{grid-template-columns:1fr}.buildbar{align-items:stretch;flex-direction:column}.buildbtn{width:100%}}
-
-@keyframes botSpin{to{transform:rotate(360deg)}}
-.build-status{display:none;margin-top:22px;text-align:center}
-.build-status.show{display:block}
-.build-spinner{
-  box-sizing:border-box;width:70px;height:70px;margin:0 auto 14px;
-  border:7px solid #173342;border-top-color:#55d8ff;border-radius:50%;
-  animation:botSpin .85s linear infinite;position:relative
-}
-.build-spinner.ready,.build-spinner.failed{animation:none}
-.build-spinner.ready{border:1px solid #23d48a;border-radius:13px;background:linear-gradient(145deg,#35e5a4,#0ea873);box-shadow:0 8px 22px rgba(0,0,0,.22)}
-.build-spinner.failed{border:3px solid #ff4d57}
-.build-spinner.ready::after{
-  content:"";position:absolute;inset:0;display:block;
-  background:#fff;clip-path:polygon(16% 48%,27% 37%,43% 54%,75% 20%,87% 31%,43% 78%);
-}
-.build-spinner.failed::after{
-  content:"×";position:absolute;inset:0;display:flex;align-items:center;
-  justify-content:center;color:#ff626b;font-size:46px;font-weight:900
-}
-.build-status-title{font-weight:900;font-size:16px;color:#bdefff}
-.build-status-text{margin-top:8px;color:#91a4b1;font-size:13px}
-
-/* Bitcoin Premium checkout */
-.premium-cta{border:1px solid #876b2f;background:linear-gradient(135deg,#241d10,#131a20);border-radius:10px;padding:17px;margin-top:14px}
-.premium-cta h3{margin:0 0 5px;color:#ffd782;font-size:18px}.premium-cta p{margin:0 0 12px;color:#c6b99a}
-.premium-button{background:linear-gradient(180deg,#ffd782,#dba638);border:0;color:#221807;font-weight:900;border-radius:8px;padding:12px 20px;cursor:pointer}
-.premium-button:disabled{opacity:.5;cursor:not-allowed}.payment-panel{display:none;margin-top:15px;padding:15px;border:1px solid #6e582a;border-radius:9px;background:#14170f}
-.payment-panel.show{display:block}.payment-panel code{word-break:break-all;color:#ffdb8a}.payment-panel input{margin:8px 0}.payment-message{margin-top:10px;color:#ffda89;white-space:pre-wrap}
-
-/* Premium launch roadmap */
-.premium-section-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:6px 0 14px;padding-bottom:10px;border-bottom:1px solid #735a2d;color:#ffda86;font-size:15px;font-weight:900;letter-spacing:.5px}
-.premium-section-label small{font-size:11px;color:#c5b48c;font-weight:600;letter-spacing:0}
-.premium-section-label.future{color:#9ba9b6;border-bottom-color:#34404c;margin-top:25px}
-.premium-card.launch{border-color:#84672e;background:linear-gradient(145deg,#282215,#161a1e);box-shadow:inset 0 1px 0 #b68c3230}
-.premium-card.launch h3{color:#ffe0a0}
-.premium-card.future{background:#0d1217;border-color:#252c34;opacity:.56;filter:grayscale(.65)}
-.premium-card.future h3{color:#a7b1bb}
-.premium-card.future .lock{color:#8994a1}
-.premium-card.future .fake{opacity:.24}
-.premium-intro{font-size:13px;color:#c5bba6;margin:0 0 16px}
-
-/* Restrained Premium palette: gold belongs to launch cards only. */
-.premium-wrap{border-color:#304455;background:linear-gradient(180deg,#121d28,#101820);box-shadow:none}
-.premium-wrap>.head{border-bottom-color:#304455}
-.premium-title{color:#eff5ff}
-.premium-badge{background:#172430;border-color:#455b6d;color:#b7d0e4}
-.premium-intro{color:#b6c5d1}
-.premium-section-label{color:#eef4fa;border-bottom-color:#354b5b}
-.premium-section-label small{color:#b7c5d1}
-.premium-section-label.future{color:#a6c7dc;border-bottom-color:#354b5b}
-.premium-card.launch{border-color:#c39737;background:linear-gradient(145deg,#211d14,#151a1e);box-shadow:inset 0 1px 0 #b68c3230}
-.premium-card.launch h3,.premium-card.launch .lock{color:#ffda86}
-.premium-footer{background:#111c26;border-color:#304455;color:#b3c5d2}
-.premium-footer b{color:#e7f0f7}
-
-/* Unsupported indicator options are visible but unavailable until Brain + runtime wiring is tested. */
-select option:disabled{color:#81909e;background:#17212d}
-.indicator-availability{border:1px solid #365266;background:#132331;border-radius:8px;padding:10px 12px;color:#bcd2e0;font-size:12px;margin:10px 0}
-.indicator-availability strong{color:#8ad5ff}
-
-/* Approved symbol whitelist */
-.whitelist-entry{display:flex;gap:9px;align-items:center}.whitelist-entry input{max-width:370px}.whitelist-entry .add{margin:0;white-space:nowrap;height:40px}.symbol-chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}.symbol-chip{display:inline-flex;align-items:center;gap:9px;border:1px solid #3286a6;background:#112c3b;color:#d8f3ff;padding:7px 10px;border-radius:8px;font-weight:800}.symbol-chip button{width:23px;height:23px;border:1px solid #56778a;border-radius:5px;background:#193344;color:#e5f7ff;cursor:pointer}.symbol-count{color:#75dafa;font-weight:800}.symbol-error{color:#ff9b9b;min-height:16px;font-size:12px;margin-top:5px}@media(max-width:560px){.whitelist-entry{flex-wrap:wrap}.whitelist-entry input{max-width:none}}
-
-/* Step 5: Basic / Premium choice */
-.build-choice-intro{text-align:center;margin:2px 0 20px}.build-choice-intro h2{font-size:25px;margin:0 0 6px}.build-choice-intro p{color:var(--muted);margin:0}
-.build-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:18px 0}
-.build-choice{display:flex;flex-direction:column;gap:12px;border:1px solid #3b5668;border-radius:12px;padding:23px;background:linear-gradient(155deg,#182734,#101922)}
-.build-choice.paid{border:2px solid #c39840;background:linear-gradient(155deg,#292418,#131b22)}
-.choice-label{display:inline-block;align-self:flex-start;border:1px solid #507084;border-radius:999px;padding:4px 10px;color:#a8deee;font-size:11px;font-weight:900;letter-spacing:.8px}
-.paid .choice-label{border-color:#947234;color:#ffdf91}.choice-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
-.choice-heading h3{font-size:21px;margin:0}.choice-price{font-size:29px;font-weight:900;color:#f4f9fc}.paid .choice-price{color:#ffdc8b}
-.build-choice p{color:#b8c9d5;margin:0}.choice-features{margin:0;padding:0;list-style:none;color:#d7e6ef;line-height:2}.choice-features li::before{content:'✓';color:#63d8a2;margin-right:9px;font-weight:900}
-.choice-action{margin-top:auto;min-height:45px;border:0;border-radius:8px;font-weight:900;cursor:pointer;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d;padding:11px 15px}
-.paid .choice-action{background:linear-gradient(180deg,#ffdc89,#d8a638);color:#261a08}
-.restore-box{border:1px solid #385263;background:#101d28;border-radius:10px;padding:16px;margin:18px 0}.restore-box h3{margin:0 0 6px}.restore-box p{margin:0 0 12px;color:var(--muted)}.restore-row{display:flex;gap:9px}.restore-row input{flex:1}.restore-row button{white-space:nowrap;border:1px solid #4d879d;background:#1b3543;color:#c4eefa;border-radius:7px;padding:8px 16px;cursor:pointer}.restore-note{font-size:12px;color:#cbbd91;margin-top:9px}
-#premiumCheckout{display:none}#premiumCheckout.show{display:block}
-@media(max-width:680px){.build-choices{grid-template-columns:1fr}.restore-row{flex-direction:column}}
-
-/* Build progress lives beside the edition cards, not in a duplicate sticky footer. */
-.build-status{margin:20px 0;padding:22px;border:1px solid #34738a;border-radius:12px;background:linear-gradient(150deg,#122c3a,#101a24);text-align:center}
-.build-status.show{display:block}
-.build-status-title{font-size:21px}
-.build-status-text{font-size:14px;min-height:22px}
-.build-status.ready{border-color:#3eac77}.build-status.failed{border-color:#d16b70}
-.build-download{display:none;margin:16px auto 0;max-width:360px}
-.build-download.show{display:block}
-.turnstile-help{margin:10px auto 0;max-width:640px;color:#ffcf8b;text-align:center;font-size:12px}
-
-/* Premium download status — actual status only, no fabricated percentage */
-.premium-progress{display:none;margin-top:16px;padding:20px;border:1px solid #c59a3d;border-radius:11px;background:linear-gradient(145deg,#192632,#111b24);color:#e7edf3}
-.premium-progress.show{display:block}.premium-progress h3{margin:8px 0 2px;font-size:21px;color:#ffdc88}.premium-progress .pp-badge{display:inline-block;border:1px solid #9e762d;border-radius:20px;padding:4px 10px;color:#ffe09c;font-size:11px;font-weight:800;letter-spacing:.7px}.pp-sub{color:#aabccb;margin:0 0 14px}.pp-track{height:9px;background:#293b49;border-radius:20px;overflow:hidden;margin:15px 0 7px}.pp-fill{width:0;height:100%;background:linear-gradient(90deg,#c58c2c,#ffe19a);border-radius:20px;transition:width .4s}.pp-fill.indeterminate{width:35%;animation:pp-slide 1.7s ease-in-out infinite}@keyframes pp-slide{0%{transform:translateX(-105%)}100%{transform:translateX(390%)}}.pp-meta{display:flex;justify-content:space-between;gap:12px;color:#b7c9d7;font-size:12px}.pp-steps{display:grid;gap:11px;margin:20px 0}.pp-step{display:flex;align-items:center;gap:12px;color:#9fb0bd}.pp-mark{display:grid;place-items:center;flex:0 0 25px;height:25px;border:2px solid #627789;border-radius:50%;font-size:14px;font-weight:900}.pp-step.done{color:#dcebe4}.pp-step.done .pp-mark{background:#20a86a;border-color:#20a86a;color:white}.pp-step.current{color:#ffdc88;font-weight:700}.pp-step.current .pp-mark{border-color:#efbc54;color:#efbc54}.pp-info{padding:13px;border:1px solid #315a77;border-radius:8px;background:#132c3e;color:#c3deee;font-size:13px;line-height:1.6}.pp-error{color:#ffac9b}.pp-link{display:none;margin-top:13px;text-decoration:none}.pp-link.show{display:inline-block}@media(max-width:600px){.premium-progress{padding:14px}.pp-meta{flex-direction:column}}
-
-.payment-wait-note{display:none;margin:12px 0;padding:12px;border:1px solid #ae8335;border-radius:8px;background:#332918;color:#ffdf9a;font-size:13px;line-height:1.55}.payment-wait-note.show{display:block}
-.payment-success-actions{display:none;margin-top:15px;padding:17px;border:1px solid #44ad80;border-radius:9px;background:#142e29;color:#e1f5e9}.payment-success-actions.show{display:block}.payment-success-actions strong{font-size:17px;color:#91efbd}.payment-success-actions p{font-size:13px;line-height:1.5}.payment-success-actions .premium-button{margin-top:8px;max-width:100%}.payment-key-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}.payment-key-row code{overflow-wrap:anywhere;font-size:12px}.payment-hint{color:#c6d6cb}
-/* Small optional restore demo; leaves payment and build flows unchanged. */
-.restore-title-row{display:flex;align-items:baseline;gap:15px;flex-wrap:wrap;margin-bottom:6px}
-.restore-title-row h3{margin:0}
-.restore-demo-link{border:0;background:transparent;color:#f3c866;text-decoration:underline;text-underline-offset:3px;font-size:12px;font-weight:700;cursor:pointer;padding:0}
-.restore-demo-link:hover,.restore-demo-link:focus-visible{color:#ffe7a7}
-.restore-demo-dialog{border:1px solid #b78b39;border-radius:12px;background:#111e29;color:#f3f6f9;box-shadow:0 24px 75px #000b;padding:22px;width:min(94vw,820px);max-height:90vh}
-.restore-demo-dialog::backdrop{background:#020810d9}
-.restore-demo-dialog header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:8px}
-.restore-demo-dialog h3{margin:0;font-size:20px;color:#ffdc88}
-.restore-demo-dialog p{color:#bbcedc;font-size:13px;line-height:1.5;margin:6px 0 15px}
-.restore-demo-dialog img{display:block;width:100%;height:auto;max-height:65vh;background:#0c1720;border:1px solid #385263;border-radius:7px}
-.restore-demo-close{background:#213848;color:#d9f3ff;border:1px solid #527f94;border-radius:6px;padding:7px 12px;cursor:pointer;font-size:18px}
-
-/* v1.6.14: compact wallet-style address-first quote; reserve gold for primary actions. */
-.btc-copy-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:10px 0;flex-wrap:wrap}
-.btc-copy-info{min-width:0;overflow-wrap:anywhere;color:#d8e6ef}
-.btc-copy-info strong{color:#d8e6ef}
-.btc-copy-info code{color:#e3edf4}
-.btc-copy-link{border:0;background:transparent;color:#86cfe9;text-decoration:underline;text-underline-offset:3px;padding:2px 4px;cursor:pointer;font:inherit;font-size:12px;white-space:nowrap}
-.btc-copy-link:hover,.btc-copy-link:focus-visible{color:#c5f0ff}
-.btc-exact-note{color:#d7bd81;font-size:12px;margin:3px 0 13px}
-#paymentQuote>p{color:#d0dbe3}
-#paymentQuote>p b{color:#c6d5de}
-.payment-wait-note{border-color:#79643a;background:#28271e;color:#d9cba9}
+:root{--bg:#0a0f14;--panel:#111923;--panel2:#16212d;--line:#263746;--text:#eef6fb;--muted:#91a4b1;--cyan:#25c7e8;--cyan2:#1295b4;--good:#55d694;--gold:#e8b95a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0,#112837 0,#0a0f14 34%);color:var(--text);font:14px/1.55 Segoe UI,Arial,sans-serif}
+button,input{font:inherit}.release{background:linear-gradient(90deg,#123f57,#159bce,#123f57);padding:11px;text-align:center;font-weight:900;letter-spacing:.35px;border-bottom:1px solid #62d8f5}
+.shell{max-width:1120px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.back{color:#8dd4e4;text-decoration:none;font-weight:800}.badge{border:1px solid #245064;background:#102633;color:#87e7fa;border-radius:999px;padding:7px 11px;font-weight:800;font-size:12px}
+.hero{padding:58px 0 35px;max-width:880px}.eyebrow{color:#67c7ee;font-size:11px;letter-spacing:1.9px;font-weight:900}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:-1.5px;margin:10px 0 15px}.hero p{font-size:17px;color:#b8cbd8;max-width:780px;margin:0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{border:0;border-radius:8px;padding:13px 18px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d}.btn.secondary{background:#193747;color:#d7f3ff;border:1px solid #3c7896}.btn.gold{background:linear-gradient(180deg,#ffdc89,#d8a638);color:#261a08}.btn:disabled{opacity:.55;cursor:not-allowed}
+.section{background:linear-gradient(180deg,var(--panel),#0f171f);border:1px solid var(--line);border-radius:11px;margin:14px 0;overflow:hidden}.head{padding:14px 17px;border-bottom:1px solid var(--line);font-weight:900;letter-spacing:.3px}.body{padding:18px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card{border:1px solid #304757;background:#101a23;border-radius:9px;padding:16px}.card h3{margin:0 0 6px;font-size:15px}.card p{margin:0;color:#9eb1bd;font-size:13px}
+.editions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.edition{display:flex;flex-direction:column;border:1px solid #3b5668;border-radius:12px;padding:23px;background:linear-gradient(155deg,#182734,#101922)}.edition.premium{border:2px solid #487a98;background:linear-gradient(155deg,#192c3c,#111b25)}.edition h2{font-size:23px;margin:8px 0}.price{font-size:30px;font-weight:900}.edition p{color:#b8c9d5}.edition ul{padding-left:20px;line-height:1.9;color:#d7e6ef}.edition .btn{margin-top:auto;text-align:center;width:100%}
+.note{padding:12px 14px;border-left:3px solid #0b7e99;background:#0c151d;color:#a8bdc9;border-radius:4px}.status{margin-top:12px;color:#9fd8e9;min-height:21px;white-space:pre-wrap}.error{color:#ffadad}.success{color:#91efbd}
+.checkout{display:none}.checkout.show{display:block}.payment-panel{display:none;margin-top:14px;padding:16px;border:1px solid #45677b;border-radius:9px;background:#101f2b}.payment-panel.show{display:block}.payment-panel code{word-break:break-all;color:#b6e9ff}
+.copyrow{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid #263b48;padding:8px 0}.copyrow button{border:0;background:transparent;color:#86cfe9;text-decoration:underline;cursor:pointer}.field{display:grid;gap:6px;margin:13px 0;color:#b8c9d5}.field input{height:42px;border:1px solid #355061;border-radius:7px;background:#0b1219;color:#fff;padding:8px 10px;width:100%}
+.restore{margin-top:17px;padding:16px;border:1px solid #385263;border-radius:9px;background:#101d28}.restore-row{display:flex;gap:9px}.restore-row input{flex:1}.license{padding:12px;margin:12px 0;border:1px solid #3f8068;background:#122b25;border-radius:8px}.license code{overflow-wrap:anywhere}.fine{font-size:12px;color:#8fa4b1}.configure{display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px}.configure strong{font-size:18px}.footer{text-align:center;color:#738794;font-size:12px;padding:28px 0}
+@media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr}.editions{grid-template-columns:1fr}.configure{grid-template-columns:1fr}.hero{padding-top:38px}}@media(max-width:560px){.shell{padding:14px}.feature-grid{grid-template-columns:1fr}.restore-row,.hero-actions{flex-direction:column}.btn{width:100%;text-align:center}}
 </style>
-<style>
-/* v1.6.15: one centered customer-facing Premium action, no duplicate build controls */
-#premiumBuildBtn,#paymentBuildDownload,#ppDownload{display:none!important}
-.premium-action-wrap{max-width:760px;margin:22px auto 12px;text-align:center;padding:12px 18px}
-.premium-single-action{display:block;width:100%;min-height:55px;font-size:17px;letter-spacing:.3px;box-shadow:0 5px 18px #0005}
-.premium-single-action:disabled{opacity:.72;cursor:wait}
-.premium-action-note{margin-top:10px;color:#b9c9d4;font-size:13px;line-height:1.5}
-.payment-success-actions{background:#142c28;border-color:#386b57}
-.payment-success-actions .payment-hint{display:none}
-#turnstileWrap{margin-top:8px!important}
-</style>
-<style>
-/* v1.6.18 — One Premium workspace, collapsible steps, restrained accent color. */
-.premium-workspace{margin:18px 0;border:1px solid #3b596a;border-radius:12px;background:#101d27;padding:17px 18px 20px}
-.premium-workspace-heading h3{margin:0 0 4px;font-size:20px;color:#eaf4fa}.premium-workspace-heading p{margin:0 0 15px;color:#aebfc9;font-size:13px}
-.premium-fold{border:1px solid #334c5c;border-radius:9px;background:#13212b;margin:10px 0;overflow:hidden}
-.premium-fold[open]{border-color:#52758a}.premium-fold>summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:800;color:#dce9ef;display:flex;align-items:center;gap:12px}
-.premium-fold>summary::-webkit-details-marker{display:none}.fold-state{font-size:12px;color:#9cc5d5;font-weight:500;margin-left:auto}.fold-chevron{font-size:19px;color:#a9c4d0;transition:transform .2s}.premium-fold[open] .fold-chevron{transform:rotate(180deg)}
-.fold-body{padding:0 15px 16px}.premium-fold .restore-box.embedded,.premium-fold .premium-cta.embedded{margin:0;padding:8px 0 0;border:0;background:transparent;box-shadow:none}
-.premium-fold .restore-title-row h3{display:none}.premium-fold .restore-title-row{justify-content:flex-end}.premium-fold .restore-box>p{font-size:13px}
-.premium-fold .premium-cta h3{display:none}.premium-fold .premium-cta>p{font-size:12px;color:#b5c4cf}
-.premium-fold .payment-panel{background:#121d24;border:1px solid #344c58}.premium-fold .payment-success-actions{border-color:#387e65;background:#142a26}
-.premium-fold .premium-progress{margin:4px 0 0;border:0;background:transparent;padding:12px 0}.premium-fold .premium-progress h3{color:#e2f2f6}
-.premium-fold .pp-badge{border-color:#43745e;color:#a3e9c3}.premium-fold .pp-step.current{color:#a4d8e8}.premium-fold .pp-step.current .pp-mark{border-color:#68afc7;color:#8fd2e8}
-.premium-fold .pp-fill{background:linear-gradient(90deg,#2d93ae,#6ed7bf)}
-.premium-workspace-action{margin:19px auto 0;text-align:center;max-width:660px}
-.premium-workspace-action .premium-single-action{width:100%;min-height:53px;font-size:16px}
-.premium-workspace-action .premium-single-action.download-ready{background:linear-gradient(#46d28c,#159e63)!important;border-color:#58d6a0!important;color:#06251a!important;box-shadow:0 3px 18px #0d9d5230}
-.premium-activity{font-size:13px;color:#8dd4e4;margin:7px 0 13px;min-height:20px}.premium-activity:not([hidden])::before{content:'◌';display:inline-block;margin-right:9px;animation:premium-spin 1.1s linear infinite}@keyframes premium-spin{to{transform:rotate(360deg)}}
-#paymentSuccessActions .payment-hint{display:none}#paymentSuccessActions{padding:12px}#paymentSuccessActions strong{font-size:14px}
-#paymentWaitNote{border-color:#465b65;background:#1b292e;color:#bed1d9}
-#premiumCheckout .premium-button{background:linear-gradient(#e7c47a,#cda14b)}
-#turnstileWrap{margin-top:15px!important}
-@media(max-width:600px){.premium-workspace{padding:12px}.fold-body{padding:0 10px 12px}.premium-fold>summary{padding:12px}}
-</style>
-<style>
-/* Free Trading Bots brand and three-path landing. All existing payment/build handlers remain intact. */
-.brand{font-size:31px;letter-spacing:-.7px}.brand-dot{font-size:17px;color:#93a9b7!important;letter-spacing:0}
-.launch-intro{max-width:860px;padding:27px 0 19px}.launch-intro .eyebrow{font-size:11px;letter-spacing:1.9px;font-weight:900;color:#67c7ee}.launch-intro h1{font-size:clamp(28px,4.2vw,48px);line-height:1.09;letter-spacing:-1.2px;margin:10px 0 12px}.launch-intro p{font-size:16px;line-height:1.7;color:#b8cbd8;max-width:760px;margin:0}
-.path-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:8px 0 17px}.path-card{display:flex;flex-direction:column;gap:12px;padding:22px 19px;border:1px solid #2e4a5b;background:linear-gradient(145deg,#172734,#101b24);border-radius:12px}.path-card.featured{border-color:#4285a6;background:linear-gradient(145deg,#1a3041,#111c26)}.path-tag{color:#8ed9f7;font-size:10px;letter-spacing:1.2px;font-weight:900}.path-card h2{font-size:21px;line-height:1.2;margin:0}.path-card p{color:#b5c8d4;line-height:1.55;margin:0}.path-card ul{padding-left:18px;color:#b8cbd7;font-size:12px;line-height:1.8;margin:0 0 5px}.path-button{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;border:0;border-radius:7px;padding:12px 13px;text-decoration:none;font-weight:900;font-size:12px;letter-spacing:.4px;background:#24bde5;color:#051923;cursor:pointer}.path-button.outline{background:#1b3749;color:#d0effc;border:1px solid #3c7896}.path-button:hover{filter:brightness(1.13)}.truth-strip{padding:13px 15px;border:1px solid #304a5b;background:#0e1d28;border-radius:8px;color:#a9c4d2;font-size:12px;line-height:1.65;margin-bottom:16px}.truth-strip strong{color:#d9edf8}
-/* Less gold: blue primary UI, gold reserved for Bitcoin pricing. */.build-choice.paid{border-color:#487a98;background:linear-gradient(155deg,#192c3c,#111b25)}.paid .choice-label{border-color:#487a98;color:#b0e2f5}.paid .choice-price{color:#d9f5ff}.paid .choice-action,.premium-button{background:linear-gradient(180deg,#44c5ec,#1688b4);color:#051922}.premium-workspace .premium-button{background:linear-gradient(180deg,#44c5ec,#1688b4)!important;color:#051922}.premium-card.launch{border-color:#4d7087;background:linear-gradient(145deg,#1b2c3b,#111b23)}.premium-card.launch h3,.premium-card.launch .lock{color:#c6eaff}.premium-section-label{border-bottom-color:#38586b}.premium-cta{border-color:#41667d;background:#13212d}.premium-cta h3{color:#d5f1ff}.payment-panel{border-color:#45677b;background:#101f2b}.payment-panel code{color:#b6e9ff}.payment-message{color:#aee1f5}.premium-progress{border-color:#456c83}.premium-progress h3{color:#d7effa}.premium-progress .pp-badge{border-color:#4b819b;color:#c5e8f6}.pp-fill{background:linear-gradient(90deg,#1a91bc,#79d7f1)}
-@media(max-width:930px){.path-grid{grid-template-columns:1fr}.path-card{min-height:0}.launch-intro{padding-top:16px}}@media(max-width:560px){.launch-intro h1{font-size:30px}.path-card{padding:18px}}
-</style>
-<style>
-/* Builder v1.6.24: compact header and brighter navigation. */
-.shell{padding-top:13px}
-.builder-top-badge{display:flex;justify-content:flex-end;margin:0 0 9px}
-.tabs{background:rgba(10,19,27,.96)}
-.tab{background:#17445a;border:1px solid #347e9a;color:#e0f6ff;font-weight:700}
-.tab:hover{background:#1d607b;border-color:#51c5e7}
-.tab.active{background:linear-gradient(180deg,#42d2f2,#159bce);border-color:#62d8f5;color:#061d2a;box-shadow:0 0 0 1px #4ec9e955}
-.tab:focus-visible{outline:2px solid #7ee7ff;outline-offset:2px}
-.add:disabled{opacity:.52;cursor:not-allowed}
-.free-indicator-count{margin-top:8px;color:#a7d7e8;font-size:12px}
-</style>
-</head><body><div style="background:linear-gradient(90deg,#123f57,#159bce,#123f57);color:#fff;text-align:center;
-padding:12px;font-size:16px;font-weight:900;letter-spacing:.35px;
-position:sticky;top:0;z-index:99999;border-bottom:1px solid #62d8f5;">
-  ✨ NEW RELEASE — UPDATED TRADING BOT DOWNLOAD NOW AVAILABLE
+</head>
+<body>
+<div class="release">✨ UPDATED SCRIPTZIPS TRADING BOT DOWNLOADS</div>
+<main class="shell">
+<div class="top"><a class="back" href="index.html">← BACK TO SCRIPTZIPS</a><span class="badge">LOCAL WINDOWS BOT · FREE + PREMIUM</span></div>
+
+<section class="hero">
+<div class="eyebrow">SCRIPTZIPS · RSI REVERSAL BOT</div>
+<h1>RSI reversal trading without babysitting every chart.</h1>
+<p>A focused Windows trading bot built around RSI divergence and reversal logic. Download the bot, connect it to IBKR, and configure the actual strategy inside its native ScriptZips dashboard.</p>
+<div class="hero-actions"><button class="btn" id="heroFree">DOWNLOAD FREE</button><button class="btn secondary" id="heroPremium">SEE PREMIUM · $10</button></div>
+</section>
+
+<section class="section">
+<div class="head">WHAT THE BOT DOES</div>
+<div class="body feature-grid">
+<div class="card"><h3>RSI Divergence</h3><p>Looks for reversal conditions using RSI divergence and confirmed price structure.</p></div>
+<div class="card"><h3>Focused Entry Logic</h3><p>Strategy settings live in the bot itself, where they stay synchronized with the engine that actually trades.</p></div>
+<div class="card"><h3>Risk & Exit Controls</h3><p>Configure position limits, stops and trade-management rules locally in the dashboard.</p></div>
+<div class="card"><h3>IBKR Connection</h3><p>Runs locally on Windows and connects to your running Interactive Brokers TWS or Gateway session.</p></div>
+<div class="card"><h3>Observe & Paper First</h3><p>Use non-live modes to see decisions and validate behavior before considering live execution.</p></div>
+<div class="card"><h3>Decision Visibility</h3><p>Follow the bot's decisions, activity and operational status from the native dashboard.</p></div>
 </div>
-  
-  <div class="shell">
-<div class="builder-top-badge"><span class="badge">LOCAL WINDOWS BOTS · FREE + PREMIUM</span></div>
-<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 16px;flex-wrap:wrap"><a href="index.html" style="color:#8dd4e4;text-decoration:none;font-weight:800">← BACK TO FREE TRADING BOTS</a><span style="color:#9eb9c8;font-size:13px">DEDICATED BOT BUILDER</span></div>
-<button id="startFreePath" type="button" hidden></button><button id="explorePremiumPath" type="button" hidden></button>
-<div class="tabs"><button class="tab active" data-page="strategy">1 · Strategy</button><button class="tab" data-page="risk">2 · Risk & Exits</button><button class="tab" data-page="execution">3 · Execution</button><button class="tab" data-page="premium">4 · Premium Features</button><button class="tab" data-page="review">5 · Review & Download</button></div>
-<section id="strategy" class="page active">
-<div class="section"><div class="head"><span>BOT BASICS</span><small>Name it and choose what it trades</small></div><div class="body"><div class="grid"><label class="field">Bot Name<input name="bot_name" value="My Trading Bot"></label><div class="field"><span>Trading Symbols</span><span class="symbol-count" id="symbolCount">1 approved</span></div><label class="field">Direction<select name="direction"><option>LONG</option><option>SHORT</option></select></label><label class="field">Strategy Timeframe<select name="timeframe"><option>1 min</option><option selected>5 min</option><option>15 min</option><option>30 min</option><option>1 hour</option><option>Daily</option></select></label></div></div></div>
-<div class="section"><div class="head"><span>APPROVED SYMBOL WHITELIST</span><small>Only symbols entered here may be scanned or traded</small></div><div class="body">
-<div class="whitelist-entry"><input id="symbolEntry" type="text" placeholder="Add a symbol: SPY, WULF, RIOT..." maxlength="12" autocomplete="off" aria-label="Add approved symbol"><button type="button" id="addSymbol" class="add">+ ADD SYMBOL</button></div>
-<div id="symbolError" class="symbol-error" role="alert" aria-live="polite"></div><div id="symbolChips" class="symbol-chips"></div>
-<div class="note">The bot's universe is limited to this list. A whitelisted symbol does <strong>not</strong> authorize adoption of an existing broker position. Basic supports up to 10 approved symbols. Existing broker positions are never adopted; open positions require manual reconciliation after a restart.</div></div></div>
-<div class="indicator-availability"><strong>Available in Brain v0.2:</strong> RSI, EMA, ATR and RVOL. Other indicators are greyed out and marked Coming Soon. Basic uses its own engine calculations. Validate your settings in Observe and IBKR Paper before trading.</div>
-<div class="section"><div class="head"><span>ENTRY RULES</span><small>Add one or more conditions</small></div><div class="body"><div id="rules"><div class="rule"><select name="indicator"><option selected>RSI</option><option disabled>MACD — Coming Soon</option><option>EMA</option><option disabled>SMA — Coming Soon</option><option disabled>VWAP — Coming Soon</option><option disabled>Price — Coming Soon</option><option>ATR</option><option disabled>Volume — Coming Soon</option><option>RVOL</option><option disabled>Bollinger Bands — Coming Soon</option></select><select name="operator"><option>Below</option><option>Above</option><option>Crosses Above</option><option>Crosses Below</option></select><input name="period" type="number" value="14" title="Period"><input name="value" type="number" value="30" title="Value"><button type="button" class="add" style="margin:0;padding:0" onclick="this.parentElement.remove()">×</button></div></div><button class="add" type="button" id="addRule">+ ADD INDICATOR / CONDITION</button><div id="freeIndicatorCount" class="free-indicator-count" role="status" aria-live="polite">Free: 1 of 3 entry conditions selected. You can change them after downloading.</div><div class="checks"><label class="check"><input type="checkbox" name="all_rules" checked> Require all entry rules</label><label class="check"><input type="checkbox" name="confirmed_bar" checked> Confirm on closed bar</label><label class="check"><input type="checkbox" name="trend_filter"> Trend filter</label><label class="check"><input type="checkbox" name="rvol_filter"> Minimum RVOL filter</label></div></div></div>
-<div class="section"><div class="head"><span>RSI DIVERGENCE</span><small>Confirmed-pivot entry gate</small></div><div class="body"><div class="checks"><label class="check"><input type="checkbox" name="div_enabled" checked> Require RSI divergence</label><label class="check"><input type="checkbox" name="div_confirm" checked> Require price confirmation (close beyond previous bar)</label></div><div class="grid three"><label class="field">RSI Period<input name="div_rsi" type="number" min="2" value="14"></label><label class="field">Pivot Width (bars)<input name="div_pivot" type="number" min="1" max="10" value="2"></label><label class="field">Lookback (bars)<input name="div_lookback" type="number" min="10" max="250" value="60"></label><label class="field">Minimum RSI Difference<input name="div_delta" type="number" min="0" step="0.5" value="2"></label></div><div class="note">Confirmed pivots use completed bars. Divergence gates the indicator rules above. Test in Observe before Paper.</div></div></div>
-<div class="section"><div class="head"><span>TRADE QUALITY FILTERS</span><span class="pill">OPTIONAL</span></div><div class="body"><div class="grid three"><label class="field">Minimum Price<input name="min_price" type="number" value="1"></label><label class="field">Minimum Volume<input name="min_volume" type="number" value="100000"></label><label class="field">Minimum RVOL<input name="min_rvol" type="number" step=".1" value="1.0"></label></div></div></div>
 </section>
 
-<section id="risk" class="page">
-<div class="section"><div class="head"><span>POSITION SIZE</span><small>Hard limits travel with the generated bot</small></div><div class="body"><div class="grid"><label class="field">Quantity<input name="qty" type="number" min="1" value="1"></label><label class="field">Max Shares per Symbol<input name="max_position" type="number" min="1" value="1"></label><label class="field">Max Open Positions (account-wide)<input name="max_open_positions" type="number" min="1" max="10" value="10"></label><label class="field">Max Trade Risk $<input name="max_trade_risk" type="number" value="100"></label><label class="field">1-Share Override<select name="one_share"><option selected>ON</option><option>OFF</option></select></label></div></div></div>
-<div class="section"><div class="head"><span>INITIAL STOP</span></div><div class="body"><div class="grid three"><label class="field">Stop Type<select name="stop_type"><option selected>Percent</option><option>ATR</option><option>Dollar</option><option>Fixed Price</option></select></label><label class="field">Stop Value<input name="stop_value" type="number" step=".1" value="3"></label><label class="field">ATR Period<input name="atr_period" type="number" value="14"></label></div></div></div>
-<div class="section"><div class="head"><span>TRAILING STOP</span></div><div class="body"><div class="grid"><label class="field">Trailing Stop<select name="trail_enabled"><option selected>Enabled</option><option>Disabled</option></select></label><label class="field">Type<select name="trail_type"><option selected>Percent</option><option>ATR</option><option>Dollar</option></select></label><label class="field">Distance<input name="trail_distance" type="number" step=".1" value="2"></label><label class="field">Activate<select name="trail_activate"><option selected>Immediately</option><option>After Profit $</option><option>After Profit %</option></select></label><label class="field">Activation Value<input name="trail_activate_value" type="number" step=".1" value="0" title="Used for After Profit $ or After Profit %"></label></div></div></div>
-<div class="section"><div class="head"><span>EXIT RULE</span></div><div class="body"><div class="grid"><label class="field">Exit Indicator<select name="exit_indicator"><option selected>RSI</option><option disabled>MACD — Coming Soon</option><option disabled>Price — Coming Soon</option><option>EMA</option><option disabled>VWAP — Coming Soon</option></select></label><label class="field">Condition<select name="exit_operator"><option selected>Above</option><option>Below</option><option>Crosses Above</option><option>Crosses Below</option></select></label><label class="field">Period<input name="exit_period" type="number" value="14"></label><label class="field">Value<input name="exit_value" type="number" value="70"></label></div></div></div>
-</section>
-
-<section id="execution" class="page">
-<div class="section"><div class="head"><span>BROKER & MODE</span></div><div class="body"><div class="grid"><label class="field">Broker<select name="broker"><option selected>IBKR</option><option value="MT5">MT5 — BETA (Demo / Observe)</option></select></label><label class="field">Mode<select name="mode"><option>OBSERVE</option><option selected>PAPER</option><option>LIVE</option></select></label><label class="field">Host<input name="host" value="127.0.0.1"></label><label class="field">Port<input name="port" type="text" value="7497" inputmode="numeric" disabled></label><label class="field">Client ID<input name="client_id" type="number" value="91"></label></div><div class="note" id="brokerHelp">Port is set automatically from Mode. PAPER uses 7497; LIVE uses 7496. OBSERVE uses 7497 for connection testing. The generated bot connects locally to your running IBKR TWS / Gateway. Brokerage login credentials are not entered into this builder.</div></div></div>
-<div class="section" id="mt5Connection" hidden><div class="head"><span>MT5 BETA · LOCAL TERMINAL</span><small>Demo account only · installer pending adapter verification</small></div><div class="body"><div class="grid three"><label class="field">MT5 Terminal Path<input name="mt5_path" value="C:\Program Files\MetaTrader 5\terminal64.exe" placeholder="C:\Program Files\MetaTrader 5\terminal64.exe"></label><label class="field">Demo Account Number (optional)<input name="mt5_login" type="text" inputmode="numeric" autocomplete="off" placeholder="Use account signed in locally"></label><label class="field">Broker Server (optional)<input name="mt5_server" autocomplete="off" placeholder="e.g. Broker-Demo"></label></div><div class="note">MT5 works differently from IBKR: install and open the MetaTrader 5 desktop terminal, then sign in to your broker's <strong>demo</strong> server inside MT5. The eventual local bot will connect through that terminal. The path above is a common Windows default; change it if yours differs. Leave account and server blank to use the terminal's active session. <strong>Never enter your MT5 password on this website.</strong> These settings are configuration only; the MT5 installer is still gated until the adapter is tested.</div></div></div>
-<div class="section"><div class="head"><span>SESSION & SAFETY</span></div><div class="body"><div class="grid"><label class="field">Max Daily Trades<input name="max_daily_trades" type="number" value="5"></label><label class="field">Max Daily Loss $<input name="max_daily_loss" type="number" value="200"></label><label class="field">Daily Profit Stop $<input name="daily_profit_stop" type="number" value="300"></label><label class="field">Hard Exit Time<input name="hard_exit" type="time" value="15:55"></label></div><div class="checks"><label class="check"><input name="intraday_only" type="checkbox" checked> Intraday only</label><label class="check"><input name="cancel_orders" type="checkbox" checked> Cancel outstanding orders at shutdown</label><label class="check"><input name="decisions_csv" type="checkbox" checked> Decisions Report CSV</label><label class="check"><input name="hive_optin" type="checkbox" disabled> Hive sharing — coming later</label></div></div></div>
-</section>
-
-<section id="premium" class="page">
-<div class="section premium-wrap"><div class="head"><span class="premium-title">PREMIUM TRADE MANAGEMENT</span><span class="premium-badge">PREMIUM · $10 ONE-TIME</span></div>
+<section class="section" id="editions">
+<div class="head">CHOOSE YOUR EDITION</div>
 <div class="body">
-<p class="premium-intro">Premium includes everything in Basic plus deeper trade-management controls for protecting profit, managing developing trades and controlling re-entry.</p>
-<div class="premium-section-label">✦ PREMIUM FEATURES <small>Included in the Premium edition</small></div>
-<div class="premium-grid">
-<div class="premium-card launch"><span class="lock">🔒 PREMIUM</span><h3>Progressive Ratcheting</h3><p>Advance protection from the initial stop through breakeven and progressively stronger profit protection as the trade develops.</p><div class="fake"><input disabled value="Progressive protection stages"></div></div>
-<div class="premium-card launch"><span class="lock">🔒 PREMIUM</span><h3>Protected Profit Stages</h3><p>Protect an increasing portion of open profit as the position moves in your favor.</p><div class="fake"><input disabled value="Profit protection stages"></div></div>
-<div class="premium-card launch"><span class="lock">🔒 PREMIUM</span><h3>Cooldown &amp; Smart Re-entry</h3><p>Pause after an exit and require a fresh qualifying setup before another entry.</p><div class="fake"><input disabled value="Cooldown + fresh setup"></div></div>
-<div class="premium-card launch"><span class="lock">🔒 PREMIUM</span><h3>Scale In / Out</h3><p>Manage position size through staged entries and exits as the trade develops.</p><div class="fake"><input disabled value="Managed position scaling"></div></div>
-<div class="premium-card launch"><span class="lock">🔒 PREMIUM</span><h3>Structure / ATR Run Room</h3><p>Evaluate remaining price movement and market structure against current trade risk.</p><div class="fake"><input disabled value="Structure + ATR evaluation"></div></div>
+<div class="editions">
+<article class="edition">
+<span class="badge">FREE</span><h2>RSI Reversal Bot</h2><div class="price">$0</div>
+<p>The standard RSI bot with the core reversal strategy, dashboard and essential risk controls.</p>
+<ul><li>RSI divergence/reversal strategy</li><li>Local Windows dashboard</li><li>IBKR connection</li><li>Observe and Paper modes</li><li>Initial/trailing stop controls</li><li>No payment or license required</li></ul>
+<button class="btn" id="freeDownload">DOWNLOAD FREE BOT</button><div id="freeStatus" class="status"></div>
+</article>
+<article class="edition premium">
+<span class="badge">PREMIUM</span><h2>Premium RSI Bot</h2><div class="price">$10</div>
+<p>Everything in Free plus deeper trade-management controls for protecting and managing developing positions.</p>
+<ul><li>Everything in Free</li><li>Progressive Ratcheting</li><li>Protected Profit Stages</li><li>Cooldown & Smart Re-entry</li><li>Scale In / Out</li><li>Structure / ATR Run Room</li><li>One-time purchase · No subscription</li></ul>
+<button class="btn gold" id="premiumOpen">GET PREMIUM · $10</button>
+</article>
 </div>
-<div class="premium-footer"><span><b>Everything in Basic, plus advanced trade management.</b> One-time $10 purchase with no subscription.</span><span class="premium-badge">PREMIUM</span></div>
-</div></div>
+<div class="note" style="margin-top:17px"><strong>No website-built bots.</strong> Both editions download a standard installer. Strategy, scanner, risk and connection settings are configured locally inside the actual ScriptZips bot dashboard.</div>
+</div>
 </section>
 
-<section id="review" class="page">
-  <div class="section">
-    <div class="head"><span>REVIEW YOUR BOT</span><small>These settings are configured locally after installation</small></div>
-    <div class="body"><div id="reviewText" class="json"></div></div>
-  </div>
-
-  <div class="section">
-    <div class="head"><span>WHAT YOU RECEIVE</span></div>
-    <div class="body">
-      <div class="checks">
-        <span class="check">✓ Standalone Windows bot</span>
-        <span class="check">✓ Local dashboard</span>
-        <span class="check">✓ Decisions CSV</span>
-        <span class="check">✓ RSI divergence and indicator filters</span>
-        <span class="check">✓ Safety controls</span>
-      </div>
-
-      <div class="note">The installer contains the trading application and required runtime components. You do not need the Python source code to run your bot.</div>
-
-      <div class="build-choice-intro"><h2>Choose Your Edition</h2><p>Start free with the RSI Reversal Bot, or choose Premium for additional trade-management controls.</p></div>
-      <div class="build-choices">
-        <div class="build-choice">
-          <span class="choice-label">FREE</span>
-          <div class="choice-heading"><h3>Free RSI Bot</h3><span class="choice-price">$0</span></div>
-          <p>Download the standard RSI Divergence installer. Configure your strategy and risk settings locally after installation. Start in Observe or Paper.</p>
-          <ul class="choice-features"><li>RSI divergence strategy</li><li>Up to 10 trading symbols</li><li>Initial and trailing stops</li><li>Essential risk and safety controls</li><li>Local dashboard and Windows installer (IBKR)</li><li>MT5 beta configuration preview; MT5 installer pending verification</li><li>No payment or license required</li></ul>
-          <button type="button" class="choice-action" id="freeBuildChoice">DOWNLOAD FREE BASIC BOT</button>
-        </div>
-        <div class="build-choice paid">
-          <span class="choice-label">PREMIUM UPGRADE</span>
-          <div class="choice-heading"><h3>Premium RSI Bot</h3><span class="choice-price">$10</span></div>
-          <p>Everything in Basic plus advanced trade-management controls for developing, protecting and managing positions.</p>
-          <ul class="choice-features"><li>Everything in Basic</li><li>Progressive Ratcheting</li><li>Protected Profit Stages</li><li>Cooldown &amp; Smart Re-entry</li><li>Scale In / Out</li><li>Structure / ATR Run Room</li><li>One-time purchase · No subscription</li></ul>
-          <button type="button" class="choice-action" id="showPremiumChoice">EXPLORE PREMIUM · $10 ↓</button>
-        </div>
-      </div>
-      <div class="restore-box"><div class="restore-title-row"><h3>Reinstalling Premium?</h3><button type="button" class="restore-demo-link" id="restoreDemoOpen" aria-haspopup="dialog" aria-controls="restoreDemoDialog">▶ Click here for demo</button></div><p>Enter your original Premium license key to unlock a new installation. Keys cannot be recovered if lost.</p><div class="restore-row"><input id="restoreLicenseKey" type="text" autocomplete="off" placeholder="Your Premium license key" aria-label="Premium license key"><button id="restoreLicenseBtn" type="button">RESTORE ACCESS</button></div><div class="restore-note" id="restoreLicenseMessage" aria-live="polite">Enter your original license key; no additional payment is required.</div><button type="button" class="premium-button" id="premiumBuildBtn" hidden aria-hidden="true" tabindex="-1">BUILD PREMIUM (PAPER ONLY)</button>
-<div class="premium-progress" id="premiumProgress" role="status" aria-live="polite">
-  <span class="pp-badge">PREMIUM UNLOCKED</span><h3 id="ppHeading">Premium download status</h3>
-  <p class="pp-sub">Paper edition · Windows installer</p><div id="premiumActivity" class="premium-activity" hidden aria-live="off"></div>
-  <div class="pp-track" aria-label="Build activity"><div class="pp-fill indeterminate" id="ppFill"></div></div>
-  <div class="pp-meta"><span id="ppDetail">Preparing your build…</span><span id="ppElapsed">Elapsed: 0s</span></div>
-  <div class="pp-steps">
-    <div class="pp-step" id="ppStep0"><span class="pp-mark">1</span><span>Premium license verified</span></div>
-    <div class="pp-step" id="ppStep1"><span class="pp-mark">2</span><span>Configuration submitted</span></div>
-    <div class="pp-step" id="ppStep2"><span class="pp-mark">3</span><span>Building Windows installer</span></div>
-    <div class="pp-step" id="ppStep3"><span class="pp-mark">4</span><span>Download Premium Bot</span></div>
-  </div>
-  <div class="pp-info" id="ppInfo">Your payment and active license are recorded in Cloudflare. Keep your original key: you can restore Premium without paying again. After a refresh in the same tab, restore your key to resume checking a saved build. Keep your build ID as a backup.</div>
-  <a class="premium-button pp-link" id="ppDownload" hidden aria-hidden="true" tabindex="-1">DOWNLOAD PREMIUM INSTALLER</a>
-</div></div>
-
-      <div class="premium-cta" id="premiumCheckout">
-        <h3>₿ Premium Bitcoin Checkout — $10 USD</h3>
-        <p>Already paid? Use Restore Access above with your original license key. Do not pay twice. Keep your key and TXID.</p>
-        <button class="premium-button" type="button" id="premiumUnlockBtn">GENERATE BITCOIN QUOTE</button>
-        <div class="payment-panel" id="paymentPanel" aria-live="polite">
-          <div id="paymentQuote">Requesting Bitcoin quote…</div>
-          <label class="field" style="margin-top:12px">Bitcoin transaction ID (TXID)
-            <input id="paymentTxid" maxlength="64" placeholder="Paste your 64-character transaction ID" autocomplete="off">
-          </label>
-          <button class="premium-button" type="button" id="paymentVerifyBtn">VERIFY PAYMENT</button>
-          <button type="button" class="add" id="paymentRefreshBtn">CHECK PAYMENT STATUS</button>
-          <div class="payment-wait-note" id="paymentWaitNote" role="status">⏳ Waiting for Bitcoin confirmation? Keep this page open and avoid refreshing while checking. If you accidentally close it, do not pay again: retain your quote ID and TXID and contact support if you cannot resume.</div>
-          <div class="payment-message" id="paymentMessage"></div>
-          <div class="payment-success-actions" id="paymentSuccessActions" aria-live="polite">
-            <strong>✓ Premium payment verified — ready to download</strong>
-            <p id="paymentSuccessKeyNote">Keep your original license key. You will need it for future reinstalls.</p>
-            <div class="payment-key-row" id="paymentKeyRow" style="display:none"><code id="paymentIssuedKey"></code><button type="button" class="add" id="paymentCopyKey">COPY LICENSE KEY</button></div>
-            <button type="button" class="premium-button" id="paymentBuildDownload" hidden aria-hidden="true" tabindex="-1">BUILD &amp; DOWNLOAD PREMIUM BOT</button>
-            <p class="payment-hint" id="paymentBuildHint">Your standard Windows installer downloads after your active licence is verified.</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="turnstileWrap" style="display:flex;justify-content:center;margin-top:22px;">
-        <div id="turnstileWidget" aria-label="Cloudflare security verification"></div>
-      </div>
-      <div id="turnstileHelp" class="turnstile-help" role="status" aria-live="polite"></div>
-      <div class="premium-action-wrap" id="premiumActionWrap">
-        <button type="button" class="premium-button premium-single-action" id="premiumSingleAction">GET PREMIUM — $10 USD</button>
-        <div class="premium-action-note" id="premiumActionNote" role="status" aria-live="polite">One payment. Download the standard Premium installer after verification. Configure it locally.</div>
-      </div>
-
-      <div id="buildStatus" class="build-status">
-        <div id="buildSpinner" class="build-spinner"></div>
-        <div id="buildStatusTitle" class="build-status-title">BUILDING YOUR BOT</div>
-        <div id="buildStatusText" class="build-status-text">
-  Preparing your download…
+<section class="section">
+<div class="head">PREMIUM TRADE MANAGEMENT</div>
+<div class="body feature-grid">
+<div class="card"><h3>Progressive Ratcheting</h3><p>Advance protection from the initial stop through breakeven and stronger profit protection as a trade develops.</p></div>
+<div class="card"><h3>Protected Profit Stages</h3><p>Protect an increasing portion of open profit as the position moves in your favor.</p></div>
+<div class="card"><h3>Cooldown & Smart Re-entry</h3><p>Pause after an exit and require a fresh qualifying setup before another entry.</p></div>
+<div class="card"><h3>Scale In / Out</h3><p>Manage position size through staged entries and exits.</p></div>
+<div class="card"><h3>Structure / ATR Run Room</h3><p>Evaluate remaining movement and market structure against current trade risk.</p></div>
 </div>
-        <a id="buildDownload" class="choice-action build-download" href="#" download>DOWNLOAD BASIC BOT</a>
-        <button id="buildRetry" type="button" class="choice-action build-download">TRY BUILD AGAIN</button>
-      </div>
-    </div>
-  </div>
 </section>
-</div>
 
+<section class="section checkout" id="premiumCheckout">
+<div class="head">PREMIUM · BITCOIN CHECKOUT</div>
+<div class="body">
+<p>Premium is a one-time $10 USD purchase. Already paid? Do not pay again — restore your original license below.</p>
+<button class="btn gold" id="quoteBtn">GENERATE BITCOIN QUOTE</button>
+<div class="payment-panel" id="paymentPanel">
+<div id="quoteDetails">Requesting quote…</div>
+<label class="field">Bitcoin transaction ID (TXID)<input id="txid" maxlength="64" autocomplete="off" placeholder="Paste your 64-character transaction ID"></label>
+<div style="display:flex;gap:9px;flex-wrap:wrap"><button class="btn" id="verifyBtn">VERIFY PAYMENT</button><button class="btn secondary" id="statusBtn">CHECK PAYMENT STATUS</button></div>
+<div id="paymentStatus" class="status"></div>
+<div id="issuedLicense" class="license" hidden><strong>✓ PAYMENT VERIFIED — SAVE THIS LICENSE KEY</strong><div style="margin:8px 0"><code id="licenseText"></code></div><button class="btn secondary" id="copyLicense">COPY LICENSE KEY</button></div>
+<button class="btn" id="premiumDownload" hidden>DOWNLOAD PREMIUM INSTALLER</button>
+</div>
+<div class="restore">
+<h3 style="margin-top:0">Reinstalling Premium?</h3>
+<p>Enter your original Premium license key. No additional payment is required.</p>
+<div class="restore-row"><input id="restoreKey" autocomplete="off" placeholder="Your Premium license key"><button class="btn secondary" id="restoreBtn">RESTORE ACCESS</button></div>
+<div id="restoreStatus" class="status"></div>
+<button class="btn" id="restoredDownload" hidden>DOWNLOAD PREMIUM INSTALLER</button>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="body configure"><div><strong>Configure the bot where it actually runs.</strong><div class="fine">Scanner, strategy, risk, broker connection and intelligence settings are handled by the native ScriptZips dashboard — not duplicated on the website.</div></div><span class="badge">DOWNLOAD • UNZIP • RUN</span></div>
+</section>
+
+<div class="footer">Trading software can execute orders when configured for live trading. Start in Observe or Paper and review your settings before enabling live execution.</div>
+</main>
 <script>
-const tabs=[...document.querySelectorAll('.tab')];
-
-function showPage(id, scrollToTop=true){
-  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));
-  tabs.forEach(t=>t.classList.toggle('active',t.dataset.page===id));
-  if(id==='review'){renderReview();requestAnimationFrame(ensureTurnstileRendered);}
-  // Navigation stays at the current viewport; no forced scroll on tab changes.
-}
-
-tabs.forEach(t=>t.onclick=()=>showPage(t.dataset.page, false));
-if(location.hash==='#premium') showPage('premium', false);
-document.getElementById('startFreePath').onclick=()=>{showPage('strategy');document.getElementById('strategy').scrollIntoView({behavior:'smooth',block:'start'});};
-document.getElementById('explorePremiumPath').onclick=()=>{showPage('premium');document.getElementById('premium').scrollIntoView({behavior:'smooth',block:'start'});};
-
-// Explicit whitelist. The UI does not grant permission to adopt broker positions.
-const approvedSymbols=['MARA'];
-const symbolPattern=/^[A-Z][A-Z0-9.\-]{0,11}$/;
-function renderSymbols(){
-  const area=document.getElementById('symbolChips'); area.replaceChildren();
-  for(const symbol of approvedSymbols){
-    const chip=document.createElement('span');chip.className='symbol-chip';
-    const label=document.createElement('span');label.textContent=symbol;
-    const remove=document.createElement('button');remove.type='button';remove.textContent='×';remove.setAttribute('aria-label','Remove '+symbol);
-    remove.onclick=()=>{if(approvedSymbols.length===1){document.getElementById('symbolError').textContent='At least one approved symbol is required.';return;}approvedSymbols.splice(approvedSymbols.indexOf(symbol),1);renderSymbols();};
-    chip.append(label,remove);area.appendChild(chip);
-  }
-  document.getElementById('symbolCount').textContent=approvedSymbols.length+' approved';
-}
-function addApprovedSymbol(){
-  const input=document.getElementById('symbolEntry');const symbol=input.value.trim().toUpperCase();const error=document.getElementById('symbolError');error.textContent='';
-  if(!symbolPattern.test(symbol)){error.textContent='Enter a valid ticker (letters, digits, dot or hyphen; max 12 characters).';return;}
-  if(approvedSymbols.includes(symbol)){error.textContent=symbol+' is already approved.';return;}
-  if(approvedSymbols.length>=10){error.textContent='Basic supports up to 10 symbols.';return;}
-  approvedSymbols.push(symbol);input.value='';renderSymbols();input.focus();
-}
-document.getElementById('addSymbol').addEventListener('click',addApprovedSymbol);
-document.getElementById('symbolEntry').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addApprovedSymbol();}});
-renderSymbols();
-
-const brokerSelect=document.querySelector('[name="broker"]');
-const modeSelect=document.querySelector('[name="mode"]');
-const portInput=document.querySelector('[name="port"]');
-function syncPortControl(){
-  const mt5=brokerSelect.value==='MT5';
-  const liveOption=[...modeSelect.options].find(o=>o.value==='LIVE');
-  liveOption.disabled=mt5;
-  if(mt5 && modeSelect.value==='LIVE')modeSelect.value='PAPER';
-  portInput.value=mt5?'N/A':(modeSelect.value==='LIVE'?'7496':'7497');
-  portInput.disabled=true;
-  document.querySelector('[name="host"]').disabled=mt5;
-  document.querySelector('[name="client_id"]').disabled=mt5;
-  document.getElementById('mt5Connection').hidden=!mt5;
-  document.getElementById('brokerHelp').textContent=mt5
-    ?'MT5 BETA: Select OBSERVE or PAPER and enter your local MT5 terminal details below. Sign in to your demo account in the MT5 desktop terminal, not here. MT5 installer execution has not yet passed an end-to-end demo trade test; build support depends on the deployed engine. LIVE is unavailable. IBKR Host, Port and Client ID do not apply to MT5.'
-    :'Port is set automatically from Mode. PAPER uses 7497; LIVE uses 7496. OBSERVE uses 7497 for connection testing. The generated bot connects locally to your running IBKR TWS / Gateway. Brokerage login credentials are not entered into this builder.';
-}
-modeSelect.addEventListener('change',syncPortControl);
-brokerSelect.addEventListener('change',syncPortControl);
-syncPortControl();
-
-const FREE_MAX_ENTRY_RULES=3;
-function updateFreeIndicatorCount(){
-  const count=document.querySelectorAll('#rules .rule').length;
-  const label=document.getElementById('freeIndicatorCount');
-  const button=document.getElementById('addRule');
-  if(label)label.textContent=`Free: ${count} of ${FREE_MAX_ENTRY_RULES} entry conditions selected. ${count>=FREE_MAX_ENTRY_RULES?'Limit reached.':'You can change them after downloading.'}`;
-  if(button){button.disabled=count>=FREE_MAX_ENTRY_RULES;button.title=count>=FREE_MAX_ENTRY_RULES?'Free edition limit: 3 entry conditions':'';}
-}
-document.getElementById('rules').addEventListener('click',e=>{
-  if(e.target.closest('button') && e.target.closest('.rule')){
-    requestAnimationFrame(updateFreeIndicatorCount);
-  }
-});
-updateFreeIndicatorCount();
-document.getElementById('addRule').onclick=()=>{
-  if(document.querySelectorAll('#rules .rule').length>=FREE_MAX_ENTRY_RULES){updateFreeIndicatorCount();return;}
-  const d=document.createElement('div');
-  d.className='rule';
-  d.innerHTML=`<select name="indicator"><option>RSI</option><option disabled>MACD — Coming Soon</option><option>EMA</option><option disabled>SMA — Coming Soon</option><option disabled>VWAP — Coming Soon</option><option disabled>Price — Coming Soon</option><option>ATR</option><option disabled>Volume — Coming Soon</option><option>RVOL</option><option disabled>Bollinger Bands — Coming Soon</option></select><select name="operator"><option>Below</option><option>Above</option><option>Crosses Above</option><option>Crosses Below</option></select><input name="period" type="number" value="14" title="Period"><input name="value" type="number" value="50" title="Value"><button type="button" class="add" style="margin:0;padding:0" onclick="this.parentElement.remove()">×</button>`;
-  document.getElementById('rules').appendChild(d);
-  syncIndicatorRule(d);
-  updateFreeIndicatorCount();
-};
-
-// v1.6.25 — indicator-aware Entry Rules.
-const indicatorRuleProfiles={
-  RSI:{operators:['Below','Above','Crosses Above','Crosses Below'],period:{enabled:true,value:14,min:2,max:250,step:1,title:'RSI Period'},value:{enabled:true,value:30,min:0,max:100,step:0.5,title:'RSI Level'}},
-  EMA:{operators:['Price Above EMA','Price Below EMA','Price Crosses Above EMA','Price Crosses Below EMA'],period:{enabled:true,value:20,min:2,max:250,step:1,title:'EMA Period'},value:{enabled:false,value:'',title:'Not used — comparison is price vs EMA'}},
-  ATR:{operators:['Above','Below'],period:{enabled:true,value:14,min:2,max:250,step:1,title:'ATR Period'},value:{enabled:true,value:1,min:0,step:0.1,title:'ATR Value'}},
-  RVOL:{operators:['Above','Below'],period:{enabled:true,value:20,min:2,max:250,step:1,title:'RVOL Lookback'},value:{enabled:true,value:1.5,min:0,step:0.1,title:'RVOL Multiple'}}
-};
-function applyNumberProfile(input,p){
-  if(!input)return; input.disabled=!p.enabled; input.title=p.title||''; input.placeholder=p.enabled?(p.title||''):'N/A';
-  ['min','max','step'].forEach(a=>input.removeAttribute(a));
-  if(p.enabled){['min','max','step'].forEach(a=>{if(p[a]!==undefined)input.setAttribute(a,p[a]);});input.value=p.value;} else input.value='';
-}
-function syncIndicatorRule(rule,preserveOperator=false){
-  const indicator=rule.querySelector('[name="indicator"]'),operator=rule.querySelector('[name="operator"]'),period=rule.querySelector('[name="period"]'),value=rule.querySelector('[name="value"]');
-  if(!indicator||!operator)return; const prof=indicatorRuleProfiles[indicator.value]||indicatorRuleProfiles.RSI,old=operator.value;
-  operator.replaceChildren(...prof.operators.map(label=>{const o=document.createElement('option');o.value=label;o.textContent=label;return o;}));
-  if(preserveOperator&&prof.operators.includes(old))operator.value=old; applyNumberProfile(period,prof.period);applyNumberProfile(value,prof.value);
-}
-document.getElementById('rules').addEventListener('change',e=>{if(e.target.matches('[name="indicator"]'))syncIndicatorRule(e.target.closest('.rule'));});
-document.querySelectorAll('#rules .rule').forEach(r=>syncIndicatorRule(r,true));
-
-function plan(){
-  const one=n=>document.querySelector(`[name="${n}"]`);
-  const val=n=>one(n)?.value;
-  const checked=n=>!!one(n)?.checked;
-
-  const rules=[...document.querySelectorAll('#rules .rule')].map(r=>({
-    indicator:r.querySelector('[name=indicator]').value,
-    condition:r.querySelector('[name=operator]').value,
-    period:Number(r.querySelector('[name=period]').value),
-    value:Number(r.querySelector('[name=value]').value)
-  }));
-
-  return {
-    schema:'algobotbuilder.plan.v1.simple',
-    bot_name:val('bot_name'),
-    symbol:approvedSymbols[0], // Backward-compatible primary symbol; engine scans symbols[]
-    symbols:[...approvedSymbols],
-    trading_universe:{mode:'WHITELIST',symbols:[...approvedSymbols]},
-    ownership:{adopt_existing_positions:false,manage_only_bot_opened:true},
-    direction:val('direction'),
-    timeframe:val('timeframe'),
-
-    entry:{
-      divergence:{enabled:checked('div_enabled'),price_confirmation:checked('div_confirm'),rsi_period:Number(val('div_rsi')),pivot_width:Number(val('div_pivot')),lookback:Number(val('div_lookback')),min_rsi_delta:Number(val('div_delta'))},
-      rules,
-      require_all:checked('all_rules'),
-      confirmed_bar:checked('confirmed_bar'),
-      trend_filter:checked('trend_filter'),
-      rvol_filter:checked('rvol_filter'),
-      min_price:Number(val('min_price')),
-      min_volume:Number(val('min_volume')),
-      min_rvol:Number(val('min_rvol'))
-    },
-
-    risk:{
-      quantity:Number(val('qty')),
-      max_position:Number(val('max_position')),
-      max_open_positions:Number(val('max_open_positions')),
-      max_trade_risk:Number(val('max_trade_risk')),
-      one_share_override:val('one_share'),
-
-      initial_stop:{
-        type:val('stop_type'),
-        value:Number(val('stop_value')),
-        atr_period:Number(val('atr_period'))
-      },
-
-      trailing:{
-        enabled:val('trail_enabled'),
-        type:val('trail_type'),
-        distance:Number(val('trail_distance')),
-        activate:val('trail_activate'),
-        activation_value:Number(val('trail_activate_value'))
-      }
-    },
-
-    exit:{
-      indicator:val('exit_indicator'),
-      condition:val('exit_operator'),
-      period:Number(val('exit_period')),
-      value:Number(val('exit_value'))
-    },
-
-    broker:{
-      name:val('broker'),
-      mode:val('mode'),
-      host:val('host'),
-      port:val('broker')==='MT5' ? null : (val('mode')==='LIVE' ? 7496 : 7497),
-      client_id:val('broker')==='MT5' ? null : Number(val('client_id')),
-      ...(val('broker')==='MT5' ? {mt5:{terminal_path:val('mt5_path').trim(),login:val('mt5_login').trim() || null,server:val('mt5_server').trim() || null,credentials:'LOCAL_TERMINAL_ONLY'}} : {})
-    },
-
-    safety:{
-      max_daily_trades:Number(val('max_daily_trades')),
-      max_daily_loss:Number(val('max_daily_loss')),
-      daily_profit_stop:Number(val('daily_profit_stop')),
-      hard_exit:val('hard_exit'),
-      intraday_only:checked('intraday_only'),
-      cancel_orders:checked('cancel_orders'),
-      decisions_csv:checked('decisions_csv')
-    },
-
-    hive:{
-      share_anonymized_data:false
-    },
-
-    premium:{
-      enabled:false
-    }
-  };
-}
-
-function renderReview(){
-  document.getElementById('reviewText').textContent=JSON.stringify(plan(),null,2);
-}
-
 const WORKER='https://falling-sky-7997.algobotbuilder.workers.dev';
-
-function setBuildState(kind,title,message){
-  const panel=document.getElementById('buildStatus');
-  const spinner=document.getElementById('buildSpinner');
-  const titleEl=document.getElementById('buildStatusTitle');
-  const textEl=document.getElementById('buildStatusText');
-
-  panel.classList.add('show');
-  spinner.className='build-spinner';
-  panel.classList.remove('ready','failed');
-
-  if(kind==='ready') spinner.classList.add('ready');
-  if(kind==='failed') spinner.classList.add('failed');
-
-  titleEl.style.color=
-    kind==='ready' ? '#65f59a' :
-    kind==='failed' ? '#ff626b' :
-    '#bdefff';
-
-  titleEl.textContent=title;
-  textEl.textContent=message;
+let quote=null, premiumKey='';
+const licensePattern=/^MBB-[A-F0-9]{8}(?:-[A-F0-9]{8}){7}$/i;
+const $=id=>document.getElementById(id);
+function setStatus(id,text,error=false){const el=$(id);el.textContent=text;el.className='status '+(error?'error':'');}
+async function installer(product,key=''){
+  const premium=product==='premium';
+  const r=await fetch(WORKER+'/'+(premium?'premium/download':'basic-reversal/download'),{
+    method:premium?'POST':'GET',
+    headers:premium?{'Content-Type':'application/json'}:{},
+    body:premium?JSON.stringify({license_key:key}):undefined,
+    cache:'no-store'
+  });
+  if(!r.ok){let msg='Download unavailable ('+r.status+').';try{const j=await r.json();msg=j.error||msg}catch(e){}throw Error(msg)}
+  const type=r.headers.get('content-type')||'';
+  if(type.includes('json')||type.includes('text/html'))throw Error('The server returned a page instead of the installer.');
+  const blob=await r.blob();if(!blob.size)throw Error('Installer download was empty.');
+  const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=premium?'Premium_Setup.exe':'Basic_Setup.exe';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),60000);
 }
-
-  let buildProgressTimer = null;
-
-function startBuildProgressMessages(){
-  const textEl = document.getElementById('buildStatusText');
-
-  const messages = [
-    'Preparing your Bot configuration...',
-    'Building your trading engine...',
-    'Adding your strategy rules and risk controls...',
-    'Building your local Bot dashboard...',
-    'Packaging the Bot application...',
-    'Creating your Windows installer...',
-    'Finishing up — your download should be ready shortly...'
-  ];
-
-  let index = 0;
-
-  textEl.textContent =
-    'Preparing your download…';
-
-  if(buildProgressTimer){
-    clearInterval(buildProgressTimer);
-  }
-
-  buildProgressTimer = setInterval(() => {
-    if(index < messages.length){
-      textEl.textContent = messages[index];
-      index++;
-    } else {
-      textEl.textContent =
-        'Still working — larger builds can take a little longer. Please keep this page open.';
-    }
-  }, 30000);
+async function freeDownload(){
+  const b=$('freeDownload');b.disabled=true;b.textContent='PREPARING DOWNLOAD…';setStatus('freeStatus','');
+  try{await installer('basic-reversal');setStatus('freeStatus','Download requested. Configure the bot locally after installation.')}
+  catch(e){setStatus('freeStatus',e.message,true)}
+  finally{b.disabled=false;b.textContent='DOWNLOAD FREE BOT'}
 }
-
-function stopBuildProgressMessages(){
-  if(buildProgressTimer){
-    clearInterval(buildProgressTimer);
-    buildProgressTimer = null;
-  }
+$('freeDownload').onclick=freeDownload;$('heroFree').onclick=()=>{$('editions').scrollIntoView({behavior:'smooth'});setTimeout(freeDownload,350)};
+function openPremium(){$('premiumCheckout').classList.add('show');$('premiumCheckout').scrollIntoView({behavior:'smooth',block:'start'})}
+$('premiumOpen').onclick=openPremium;$('heroPremium').onclick=openPremium;
+function copyRow(label,value){
+  const row=document.createElement('div');row.className='copyrow';
+  const info=document.createElement('span');const strong=document.createElement('strong');strong.textContent=label+': ';const code=document.createElement('code');code.textContent=String(value);info.append(strong,code);
+  const b=document.createElement('button');b.type='button';b.textContent='Copy';b.onclick=()=>navigator.clipboard.writeText(String(value)).then(()=>{b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy',1500)});
+  row.append(info,b);return row;
 }
-
-// Render explicitly only after Review & Build is visible. Cloudflare cannot
-// reliably auto-render a widget inside a tab hidden on initial page load.
-let turnstileWidgetId=null;
-function ensureTurnstileRendered(){
-  const wrap=document.getElementById('turnstileWrap');
-  const help=document.getElementById('turnstileHelp');
-  if(!wrap || !document.getElementById('review').classList.contains('active'))return;
-  wrap.style.display='flex';
-  if(turnstileWidgetId!==null)return;
-  if(!window.turnstile || typeof window.turnstile.render!=='function'){
-    if(help)help.textContent='Loading Cloudflare verification…';
-    return;
-  }
-  try{
-    turnstileWidgetId=window.turnstile.render('#turnstileWidget',{
-      sitekey:'0x4AAAAAAE7jN23hTQ6hBYIx',
-      callback:onTurnstileSuccess,
-      'error-callback':onTurnstileError,
-      'expired-callback':onTurnstileExpired,
-      'refresh-expired':'auto',
-      appearance:'always'
-    });
-    if(help)help.textContent='';
-  }catch(e){
-    if(help)help.textContent='Cloudflare verification could not load: '+e.message;
-  }
+function renderQuote(q){
+  const el=$('quoteDetails');el.replaceChildren();
+  el.append(copyRow('Receiving address',q.bitcoin_address),copyRow('Amount (BTC)',q.required_btc));
+  const p=document.createElement('p');p.className='fine';p.textContent='Send the exact amount shown. Quote expires '+new Date(q.expires_at).toLocaleString()+'. Quote ID: '+q.quote_id;el.append(p);
 }
-function hideTurnstile(){showTurnstile();}
-function showTurnstile(){
-  const wrap=document.getElementById('turnstileWrap');
-  if(wrap)wrap.style.display='flex';
-  ensureTurnstileRendered();
-}
-function requestTurnstile(){
-  showTurnstile();
-  const help=document.getElementById('turnstileHelp');
-  if(help)help.textContent='Complete Cloudflare verification to start your build.';
-  if(window.turnstile && turnstileWidgetId!==null){
-    try{window.turnstile.reset(turnstileWidgetId);}catch(e){}
-  }
-  document.getElementById('turnstileWrap')?.scrollIntoView({behavior:'smooth',block:'center'});
-}
-  
-async function buildPlan(){
-  const buildButtons=[document.getElementById('freeBuildChoice')];
-  const setButtons=(disabled,label)=>buildButtons.forEach(b=>{b.disabled=disabled;b.textContent=label;});
-
-  // The visitor is already on Review & Build: do not jump back to the top.
-  showPage('review', false);
-  renderReview();
-
-  if(document.querySelectorAll('#rules .rule').length>FREE_MAX_ENTRY_RULES){
-    alert('Free supports a maximum of 3 entry conditions. Remove extra conditions before building.');
-    showPage('strategy', false);
-    return;
-  }
-
-  const turnstileToken=
-    document.querySelector('[name="cf-turnstile-response"]')?.value;
-
-  if(!turnstileToken){
-    setBuildState('failed','SECURITY CHECK REQUIRED','Complete the Cloudflare verification just above this panel, then click Build again.');
-    document.getElementById('turnstileHelp').textContent='Security verification is unavailable or incomplete. If Cloudflare says it cannot connect, try disabling VPN/ad blocking for this site or retry later. The build cannot proceed without verification.';
-    requestTurnstile();
-    return;
-  }
-
-  const botPlan=plan();
-  // UI safety: never send an unsupported indicator if an old saved page or devtools changes the selection.
-  if(botPlan.entry.rules.length>FREE_MAX_ENTRY_RULES){alert('Free supports up to 3 entry conditions.');return;}
-  const supportedIndicators=new Set(['RSI','EMA','ATR','RVOL']);
-  if(botPlan.entry.rules.some(r=>!supportedIndicators.has(r.indicator)) || !new Set(['RSI','EMA']).has(botPlan.exit.indicator)){
-    alert('Unsupported indicator: entry supports RSI, EMA, ATR and RVOL; exit supports RSI and EMA.');
-    return;
-  }
-  // The Stage 2 Basic engine scans 1–10 symbols; verify that the deployed Worker
-  // dispatches the current repository revision before enabling public multi-symbol builds.
-  if(botPlan.symbols.length<1 || botPlan.symbols.length>10){alert('Basic requires 1–10 symbols.');return;}
-  if(!Number.isInteger(botPlan.risk.max_open_positions) || botPlan.risk.max_open_positions<1 || botPlan.risk.max_open_positions>10){alert('Max Open Positions must be 1–10.');return;}
-  if(!Number.isInteger(botPlan.risk.quantity) || botPlan.risk.quantity<1 || !Number.isInteger(botPlan.risk.max_position) || botPlan.risk.max_position<1){alert('Quantity and Max Shares per Symbol must be positive integers.');return;}
-  if(botPlan.entry.divergence.enabled){
-    const d=botPlan.entry.divergence;
-    if(!Number.isInteger(d.rsi_period)||d.rsi_period<2||!Number.isInteger(d.pivot_width)||d.pivot_width<1||d.pivot_width>10||!Number.isInteger(d.lookback)||d.lookback<10||d.lookback>250||!Number.isFinite(d.min_rsi_delta)||d.min_rsi_delta<0){alert('Please check your RSI divergence settings.');return;}
-  }
-  if(botPlan.broker.mode==='LIVE'){
-    alert('LIVE builds are disabled until the new multi-symbol engine and recovery procedures pass IBKR Paper validation. Please select OBSERVE or PAPER.');
-    return;
-  }
-  if(botPlan.broker.name==='MT5'){
-    setBuildState('failed','MT5 BETA — ENGINE VERIFICATION PENDING','MT5 is now selectable for configuration and review, but downloadable MT5 installers remain gated until the Worker and Windows engine are verified to package an MT5 adapter. IBKR builds are unaffected.');
-    return;
-  }
-  botPlan.turnstile_token=turnstileToken;
-
-
-  setButtons(true,'BUILDING...');
-  document.getElementById('buildDownload').classList.remove('show');
-  document.getElementById('buildRetry').classList.remove('show');
-  setBuildState('building','BUILDING YOUR BOT','Submitting configuration...');
-  document.getElementById('buildStatus').scrollIntoView({behavior:'smooth',block:'center'});
-
-  try{
-    const response=await fetch(WORKER+'/',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(botPlan)
-    });
-
-    const result=await response.json();
-
-    if(!response.ok || !result.ok){
-      throw new Error(result.error || 'The builder returned an error.');
-    }
-
-    const buildId=result.build_id;
-   hideTurnstile();
-    setBuildState('building','BUILDING YOUR BOT','Preparing your download…');
-    startBuildProgressMessages();
-
-    while(true){
-      await new Promise(resolve=>setTimeout(resolve,5000));
-
-      const statusResponse=await fetch(
-        WORKER+'/build/status?id='+encodeURIComponent(buildId)+'&sha='+encodeURIComponent(result.commit_sha)
-      );
-
-      const status=await statusResponse.json();
-
-      if(!statusResponse.ok || !status.ok){
-        throw new Error(status.error || 'Could not check build status.');
-      }
-
-      if(status.ready){
-        stopBuildProgressMessages();
-        setBuildState('ready','YOUR BOT IS READY','Installer ready to download.');
-        document.title='YOUR BOT IS READY — Bot Builder';
-
-        setButtons(false,'DOWNLOAD FREE BASIC BOT');
-        const download=document.getElementById('buildDownload');
-        download.href=WORKER+'/download?id='+encodeURIComponent(buildId);
-        download.classList.add('show');
-        document.getElementById('buildStatus').classList.add('ready');
-        document.getElementById('buildStatus').scrollIntoView({behavior:'smooth',block:'center'});
-        return;
-      }
-    }
-  }catch(error){
-    console.error(error);
-    stopBuildProgressMessages();
-    showTurnstile();
-    setBuildState('failed','BOT BUILD FAILED',error.message);
-
-    setButtons(false,'DOWNLOAD FREE BASIC BOT');
-    document.getElementById('buildRetry').classList.add('show');
-    document.getElementById('buildStatus').classList.add('failed');
-
-    if(window.turnstile){
-      try{ if(turnstileWidgetId!==null)turnstile.reset(turnstileWidgetId); }catch(e){}
-    }
-  }
-}
-
-
-// One collapsible Premium workspace; move existing nodes without replacing their event handlers.
-(function assemblePremiumWorkspace(){
-  const restore=document.querySelector('.restore-box');
-  const checkout=document.getElementById('premiumCheckout');
-  const progress=document.getElementById('premiumProgress');
-  const security=document.getElementById('turnstileWrap');
-  const securityHelp=document.getElementById('turnstileHelp');
-  const action=document.getElementById('premiumActionWrap');
-  const workspace=document.createElement('section');workspace.id='premiumWorkspace';workspace.className='premium-workspace';
-  workspace.innerHTML='<div class="premium-workspace-heading"><h3>Premium · Purchase & installer</h3><p>Current Premium RSI/Paper installer. Your original license works for future reinstalls. Configure the installer locally. In-place Free-to-Premium unlocking is planned.</p></div><details id="restoreFold" class="premium-fold"><summary>Already paid? Restore Premium <span class="fold-chevron">⌄</span></summary><div id="restoreSlot" class="fold-body"></div></details><details id="quoteFold" class="premium-fold"><summary>1 · Bitcoin payment <span class="fold-state" id="quoteFoldState">Not started</span><span class="fold-chevron">⌄</span></summary><div id="quoteSlot" class="fold-body"></div></details><details id="installFold" class="premium-fold"><summary>2 · Windows installer <span class="fold-state" id="installFoldState">Awaiting payment</span><span class="fold-chevron">⌄</span></summary><div id="installSlot" class="fold-body"></div></details><div id="actionSlot" class="premium-workspace-action"></div>';
-  restore.before(workspace);
-  workspace.querySelector('#restoreSlot').append(restore);
-  workspace.querySelector('#quoteSlot').append(checkout);
-  workspace.querySelector('#installSlot').append(progress);
-  workspace.querySelector('#actionSlot').append(security,securityHelp,action);
-  restore.classList.add('embedded');checkout.classList.add('embedded');
-  // The payment form opens when Buy Premium is clicked, not on initial load.
-  document.getElementById('quoteFold').open=false;
-  document.getElementById('installFold').open=false;
-  document.getElementById('restoreFold').open=false;
-  hideTurnstile();
-})();
-function showPremiumStage(stage){
-  const quote=document.getElementById('quoteFold'),install=document.getElementById('installFold'),restore=document.getElementById('restoreFold');
-  if(stage==='quote'){quote.open=true;install.open=false;restore.open=false;quote.scrollIntoView({behavior:'smooth',block:'nearest'});}
-  if(stage==='install'){quote.open=false;install.open=true;restore.open=false;install.scrollIntoView({behavior:'smooth',block:'nearest'});}
-  if(stage==='restore'){restore.open=true;restore.scrollIntoView({behavior:'smooth',block:'nearest'});}
-  const qs=document.getElementById('quoteFoldState'),is=document.getElementById('installFoldState');
-  if(stage==='quote')qs.textContent='Enter payment details';
-  if(stage==='install'){qs.textContent='Verified ✓';is.textContent='Ready to build';}
-}
-let premiumActivityTimer=null,premiumActivityIndex=0;
-const premiumActivityMessages=['Preparing your Windows installer','Packaging your Premium dashboard','Checking GitHub Actions build status','Finishing the installer package'];
-function startPremiumActivity(){
-  stopPremiumActivity();const el=document.getElementById('premiumActivity');if(!el)return;
-  el.hidden=false;el.textContent=premiumActivityMessages[0]+'…';
-  premiumActivityTimer=setInterval(()=>{premiumActivityIndex=(premiumActivityIndex+1)%premiumActivityMessages.length;el.textContent=premiumActivityMessages[premiumActivityIndex]+'…';},4200);
-}
-function stopPremiumActivity(){if(premiumActivityTimer){clearInterval(premiumActivityTimer);premiumActivityTimer=null;}const el=document.getElementById('premiumActivity');if(el)el.hidden=true;}
-
-// Single customer-facing Premium action. Legacy buttons remain internal event entry points.
-let pendingPremiumSecurity=false;
-let singleActionState='buy';
-let singleActionBusy=false;
-function syncSingleAction(){
-  const b=document.getElementById('premiumSingleAction');if(!b)return;
-  const note=document.getElementById('premiumActionNote');
-  const saved=typeof ppLoad==='function'?ppLoad():null;
-  const ready=document.getElementById('ppDownload');
-  if(ready?.href&&ready.classList.contains('show'))singleActionState='download';
-  else if(saved?.build_id&&singleActionState!=='building'&&singleActionState!=='build_issue')singleActionState='building';
-  const labels={buy:'GET PREMIUM — $10 USD',quote:'WAITING FOR PAYMENT',confirming:'CHECK PAYMENT STATUS',ready_build:'START PREMIUM INSTALLER BUILD',building:'BUILDING YOUR INSTALLER…',build_issue:'CHECK EXISTING BUILD',download:'DOWNLOAD PREMIUM INSTALLER'};
-  const hints={buy:'Generate a Bitcoin quote for the current Premium RSI/Paper installer.',quote:'Send the exact amount and enter your TXID above, then verify payment.',confirming:'Your payment is pending Bitcoin confirmation. Do not send it again.',ready_build:'Your payment is verified. Start one Windows installer build.',building:'Your build is already running. Please wait; do not start another.',build_issue:'Check the existing build before considering another.',download:'Your installer is ready. Click to download.'};
-  b.textContent=labels[singleActionState]||labels.buy;
-  b.disabled=singleActionBusy||singleActionState==='building'||singleActionState==='quote';
-  b.classList.toggle('download-ready',singleActionState==='download');
-  document.getElementById('installFoldState').textContent=singleActionState==='download'?'Ready ✓':singleActionState==='building'?'Building…':singleActionState==='ready_build'?'Ready to build':document.getElementById('installFoldState').textContent;
-  note.textContent=hints[singleActionState]||hints.buy;
-  document.getElementById('paymentBuildDownload').style.display='none';
-  document.getElementById('premiumBuildBtn').style.display='none';
-  if(ready)ready.style.display='none';
-  if(singleActionState==='download')hideTurnstile();
-}
-document.getElementById('premiumSingleAction').onclick=async()=>{
-  if(singleActionBusy)return;
-  if(singleActionState==='download'){
-    const link=document.getElementById('ppDownload');if(link.href&&link.classList.contains('show'))window.location.assign(link.href);return;
-  }
-  if(singleActionState==='building'||singleActionState==='build_issue'){
-    const saved=ppLoad();if(saved?.build_id&&saved?.commit_sha&&!ppPolling){singleActionState='building';syncSingleAction();await ppPoll(saved);}return;
-  }
-  if(singleActionState==='buy'){
-    document.getElementById('premiumCheckout').classList.add('show');
-    showPremiumStage('quote');document.getElementById('premiumUnlockBtn').click();return;
-  }
-  if(singleActionState==='confirming'){
-    document.getElementById('paymentRefreshBtn').click();return;
-  }
-  if(singleActionState!=='ready_build')return;
-  const saved=ppLoad();if(saved?.build_id){singleActionState='building';syncSingleAction();if(!ppPolling)await ppPoll(saved);return;}
-  const key=paymentIssuedLicenseKey||document.getElementById('restoreLicenseKey').value.trim().toUpperCase();
-  if(!key){document.getElementById('premiumActionNote').textContent='Enter your original license key above and select Restore Access. Do not pay again.';return;}
-  singleActionBusy=true;syncSingleAction();
-  try{
-    document.getElementById('restoreLicenseKey').value=key;
-    if(!premiumUnlocked)await restorePremiumAccess();
-    if(!premiumUnlocked){document.getElementById('premiumActionNote').textContent='License verification failed. Check the Restore Access message.';return;}
-    const token=document.querySelector('[name="cf-turnstile-response"]')?.value;
-    if(!token){pendingPremiumSecurity=true;document.getElementById('installFold').open=true;requestTurnstile();return;}
-    singleActionState='building';syncSingleAction();
-    document.getElementById('premiumBuildBtn').click();
-  }finally{singleActionBusy=false;syncSingleAction();}
+$('quoteBtn').onclick=async()=>{
+  $('paymentPanel').classList.add('show');setStatus('paymentStatus','Fetching signed quote…');
+  try{const r=await fetch(WORKER+'/premium/quote',{cache:'no-store'}),q=await r.json();if(!r.ok||!q.ok)throw Error(q.error||'Could not create quote');quote=q;renderQuote(q);setStatus('paymentStatus','Send the exact BTC amount, then enter your TXID and verify.')}
+  catch(e){setStatus('paymentStatus','Quote error: '+e.message,true)}
 };
-
-// Premium payment and license unlock; license is never persisted in localStorage.
-let premiumQuote=null;
-let paymentIssuedLicenseKey=null;
-const payMessage=document.getElementById('paymentMessage');
-function paymentMessage(text){payMessage.textContent=text;}
-function paymentWaiting(waiting){document.getElementById('paymentWaitNote').classList.toggle('show',!!waiting);}
-function paymentVerified(v){
-  paymentWaiting(false);
-  const key=typeof v.license_key==='string'&&/^MBB-[A-F0-9]{8}(?:-[A-F0-9]{8}){7}$/i.test(v.license_key.trim())?v.license_key.trim().toUpperCase():null;
-  if(key){paymentIssuedLicenseKey=key;document.getElementById('paymentIssuedKey').textContent=key;document.getElementById('paymentKeyRow').style.display='flex';document.getElementById('paymentSuccessKeyNote').textContent='SAVE THIS LICENSE KEY NOW. It cannot be recovered if lost. Use it for future reinstalls.';}
-  document.getElementById('installSlot').insertBefore(document.getElementById('paymentSuccessActions'),document.getElementById('premiumProgress'));
-  document.getElementById('paymentSuccessActions').classList.add('show');
-  document.getElementById('paymentMessage').textContent='Payment verified. Save your original license key before building.';
-  singleActionState='ready_build';showPremiumStage('install');syncSingleAction();
+function verified(v){
+  const key=typeof v.license_key==='string'?v.license_key.trim().toUpperCase():'';
+  if(licensePattern.test(key)){premiumKey=key;$('licenseText').textContent=key;$('issuedLicense').hidden=false;$('premiumDownload').hidden=false}
+  setStatus('paymentStatus','✓ Bitcoin payment verified. Save your original license key before downloading.');
 }
-document.getElementById('paymentCopyKey').onclick=()=>{
-  if(paymentIssuedLicenseKey)navigator.clipboard.writeText(paymentIssuedLicenseKey).then(()=>paymentMessage('License key copied. Store it securely.')).catch(()=>paymentMessage('Select and copy your license key above.'));
+$('verifyBtn').onclick=async()=>{
+  if(!quote){setStatus('paymentStatus','Generate a quote first.',true);return}
+  const txid=$('txid').value.trim();if(!/^[a-fA-F0-9]{64}$/.test(txid)){setStatus('paymentStatus','Enter a valid 64-character TXID.',true);return}
+  setStatus('paymentStatus','Checking blockchain confirmation…');
+  try{const r=await fetch(WORKER+'/premium/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({txid,quote_id:quote.quote_id,quote_signature:quote.quote_signature,required_sats:quote.required_sats,expires_at:quote.expires_at})});const v=await r.json();if(!r.ok||!v.ok)throw Error(v.error||'Verification failed');if(v.verified)verified(v);else setStatus('paymentStatus','Payment status: '+v.status+'. '+(v.error||'Try again after confirmation.'))}
+  catch(e){setStatus('paymentStatus','Verification error: '+e.message,true)}
 };
-document.getElementById('paymentBuildDownload').onclick=async()=>{
-  const key=paymentIssuedLicenseKey||document.getElementById('restoreLicenseKey').value.trim().toUpperCase();
-  const restoreBox=document.querySelector('.restore-box');
-  if(!key){document.getElementById('paymentBuildHint').textContent='Restore your original license key to continue without paying again.';restoreBox.scrollIntoView({behavior:'smooth',block:'center'});document.getElementById('restoreLicenseKey').focus();return;}
-  document.getElementById('restoreLicenseKey').value=key;
-  const btn=document.getElementById('paymentBuildDownload');btn.disabled=true;btn.textContent='VERIFYING LICENSE…';
-  try{
-    if(!premiumUnlocked)await restorePremiumAccess();
-    if(!premiumUnlocked){document.getElementById('paymentBuildHint').textContent='License verification failed. Check the Restore Access message above.';restoreBox.scrollIntoView({behavior:'smooth',block:'center'});return;}
-    document.getElementById('premiumBuildBtn').click();
-    document.getElementById('premiumProgress').scrollIntoView({behavior:'smooth',block:'center'});
-  }finally{btn.disabled=false;btn.textContent='BUILD & DOWNLOAD PREMIUM BOT';}
+$('statusBtn').onclick=async()=>{
+  if(!quote){setStatus('paymentStatus','Generate a quote first.',true);return}
+  try{const r=await fetch(WORKER+'/premium/status?quote_id='+encodeURIComponent(quote.quote_id),{cache:'no-store'}),v=await r.json();if(!r.ok||!v.ok)throw Error(v.error||'Status unavailable');if(v.verified||v.status==='verified')verified(v);else setStatus('paymentStatus','Payment status: '+v.status+'. Confirmed: '+v.confirmed+'; received: '+v.received_sats+' sats.')}
+  catch(e){setStatus('paymentStatus','Status error: '+e.message,true)}
 };
-function showPaymentQuote(q){
-  const el=document.getElementById('paymentQuote');
-  el.replaceChildren();
-  const line=(label,value)=>{const p=document.createElement('p');const b=document.createElement('b');b.textContent=label+': ';const code=document.createElement('code');code.textContent=String(value);p.append(b,code);el.append(p);};
-  const copyRow=(label,value,successText,failureText)=>{
-    const row=document.createElement('div');row.className='btc-copy-row';
-    const info=document.createElement('span');info.className='btc-copy-info';
-    const heading=document.createElement('strong');heading.textContent=label+': ';
-    const code=document.createElement('code');code.textContent=String(value);
-    info.append(heading,code);
-    const btn=document.createElement('button');btn.type='button';btn.className='btc-copy-link';btn.textContent='Copy';btn.setAttribute('aria-label','Copy '+label.toLowerCase());
-    btn.onclick=()=>navigator.clipboard.writeText(String(value)).then(()=>{btn.textContent='Copied ✓';setTimeout(()=>{btn.textContent='Copy';},1600);}).catch(()=>paymentMessage(failureText));
-    row.append(info,btn);el.append(row);
-  };
-  copyRow('Receiving address',q.bitcoin_address,'Address copied.','Select and copy the address above.');
-  copyRow('Amount (BTC)',q.required_btc,'Exact BTC amount copied.','Select and copy the amount above.');
-  const exactNote=document.createElement('p');exactNote.className='btc-exact-note';
-  exactNote.textContent='Send the exact amount shown above. Do not round it.';el.append(exactNote);
-  line('Expires',new Date(q.expires_at).toLocaleString());
-  line('Quote ID',q.quote_id);
-}
-document.getElementById('premiumUnlockBtn').onclick=async()=>{
-  document.getElementById('paymentPanel').classList.add('show');
-  paymentMessage('Fetching signed quote…');
-  try{
-    const r=await fetch(WORKER+'/premium/quote');const q=await r.json();
-    if(!r.ok||!q.ok)throw Error(q.error||'Could not create quote');
-    premiumQuote=q;document.getElementById('paymentPanel').appendChild(document.getElementById('paymentSuccessActions'));document.getElementById('premiumUnlockBtn').style.display='none';singleActionState='quote';document.getElementById('quoteFoldState').textContent='Awaiting payment';paymentIssuedLicenseKey=null;document.getElementById('paymentSuccessActions').classList.remove('show');document.getElementById('paymentKeyRow').style.display='none';paymentWaiting(false);showPaymentQuote(q);syncSingleAction();
-    paymentMessage('Send the exact BTC amount before the quote expires, then enter your TXID. This is a real Bitcoin payment.');
-  }catch(e){paymentMessage('Quote error: '+e.message);}
+$('copyLicense').onclick=()=>{if(premiumKey)navigator.clipboard.writeText(premiumKey).then(()=>setStatus('paymentStatus','License key copied. Store it securely.'))};
+$('premiumDownload').onclick=async()=>{try{await installer('premium',premiumKey);setStatus('paymentStatus','Premium installer download requested.')}catch(e){setStatus('paymentStatus',e.message,true)}};
+$('restoreBtn').onclick=async()=>{
+  const key=$('restoreKey').value.trim().toUpperCase();if(!licensePattern.test(key)){setStatus('restoreStatus','Enter your complete original Premium license key.',true);return}
+  const b=$('restoreBtn');b.disabled=true;setStatus('restoreStatus','Checking your license…');
+  try{const r=await fetch(WORKER+'/premium/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key})}),v=await r.json();if(!r.ok||!v.ok||!v.active)throw Error(v.error||'License not active');premiumKey=key;$('restoredDownload').hidden=false;setStatus('restoreStatus','✓ Premium unlocked. No additional payment required.')}
+  catch(e){setStatus('restoreStatus','Restore failed: '+e.message,true)}
+  finally{b.disabled=false}
 };
-document.getElementById('paymentVerifyBtn').onclick=async()=>{
-  if(!premiumQuote){paymentMessage('Request a quote first.');return;}
-  const txid=document.getElementById('paymentTxid').value.trim();
-  if(!/^[a-fA-F0-9]{64}$/.test(txid)){paymentMessage('Enter a valid 64-character TXID.');return;}
-  paymentMessage('Checking blockchain confirmation…');
-  try{
-    const r=await fetch(WORKER+'/premium/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
-      txid,quote_id:premiumQuote.quote_id,quote_signature:premiumQuote.quote_signature,
-      required_sats:premiumQuote.required_sats,expires_at:premiumQuote.expires_at
-    })});
-    const v=await r.json();
-    if(!r.ok||!v.ok)throw Error(v.error||'Verification failed');
-    if(v.verified){paymentVerified(v);paymentMessage('✓ Bitcoin payment verified! Quote ID: '+premiumQuote.quote_id+'\nSave your original Premium license key. Continue with the installer panel.');}
-    else{paymentWaiting(v.status==='waiting_confirmation');if(v.status==='waiting_confirmation'){singleActionState='confirming';document.getElementById('quoteFoldState').textContent='Awaiting confirmation';syncSingleAction();}paymentMessage('Payment status: '+v.status+'. '+(v.error||'Try again after confirmation.'));}
-  }catch(e){paymentMessage('Verification error: '+e.message);}
-};
-document.getElementById('paymentRefreshBtn').onclick=async()=>{
-  if(!premiumQuote){paymentMessage('Request a quote first.');return;}
-  try{
-    const r=await fetch(WORKER+'/premium/status?quote_id='+encodeURIComponent(premiumQuote.quote_id));
-    const v=await r.json();if(!r.ok||!v.ok)throw Error(v.error||'Status unavailable');
-    paymentWaiting(v.status==='waiting_confirmation');if(v.status==='waiting_confirmation'){singleActionState='confirming';document.getElementById('quoteFoldState').textContent='Awaiting confirmation';syncSingleAction();}if(v.verified||v.status==='verified'){paymentVerified(v);}else paymentMessage('Server payment status: '+v.status+'; confirmed: '+v.confirmed+'; received: '+v.received_sats+' sats.');
-  }catch(e){paymentMessage('Status error: '+e.message);}
-};
-
-document.getElementById('freeBuildChoice').onclick=buildPlan;
-document.getElementById('showPremiumChoice').onclick=()=>{
-  const checkout=document.getElementById('premiumCheckout');
-  checkout.classList.add('show');showPremiumStage('quote');
-};
-let premiumUnlocked=false;
-const PP_STORAGE='mybotbuilder_premium_pending_build_v1';
-let ppStarted=0,ppTimer=null,ppPolling=false;
-function ppShow(stage,detail){
-  const box=document.getElementById('premiumProgress');box.classList.add('show');document.getElementById('installFold').open=true;
-  document.getElementById('installFoldState').textContent=stage===3?'Ready ✓':stage===-1?'Needs attention':'Building…';
-  if(stage===3||stage===-1)stopPremiumActivity();
-  const names=['License verified','Submitting configuration','Building Windows installer','Installer ready'];
-  document.getElementById('ppHeading').textContent=stage===3?'Your Premium Bot is ready':stage===-1?'Premium download needs attention':'Building your Premium Bot';
-  document.getElementById('ppDetail').textContent=detail||names[stage]||'Checking status…';
-  for(let i=0;i<4;i++){
-    const el=document.getElementById('ppStep'+i);el.className='pp-step'+(stage===3||i<stage?' done':i===stage?' current':'');
-    el.querySelector('.pp-mark').textContent=(stage===3||i<stage)?'✓':String(i+1);
-  }
-  const fill=document.getElementById('ppFill');fill.className='pp-fill'+(stage===3?'':stage===-1?'':' indeterminate');
-  fill.style.width=stage===3?'100%':stage===-1?'0%':'';
-  document.getElementById('ppInfo').classList.toggle('pp-error',stage===-1);
-  if(stage===-1)document.getElementById('ppInfo').textContent='Your payment and license are still saved. Keep your key and build ID; check GitHub Actions or retry status before starting another build.';
-  if(stage===3)document.getElementById('ppInfo').textContent='Installer ready. Keep your original license key for future reinstalls. No additional payment required.';
-}
-
-function ppClock(){if(ppTimer)clearInterval(ppTimer);ppTimer=setInterval(()=>{if(!ppStarted)return;const sec=Math.floor((Date.now()-ppStarted)/1000);document.getElementById('ppElapsed').textContent='Elapsed: '+Math.floor(sec/60)+'m '+String(sec%60).padStart(2,'0')+'s';},1000)}
-function ppSave(build){try{sessionStorage.setItem(PP_STORAGE,JSON.stringify(build))}catch(e){}}
-function ppLoad(){try{return JSON.parse(sessionStorage.getItem(PP_STORAGE)||'null')}catch(e){return null}}
-async function ppPoll(build){
-  if(ppPolling)return;ppPolling=true;ppStarted=build.started||Date.now();ppClock();
-  const btn=document.getElementById('premiumBuildBtn');btn.disabled=true;btn.textContent='BUILD IN PROGRESS…';singleActionState='building';syncSingleAction();hideTurnstile();
-  ppShow(2,'Checking GitHub Actions for your Windows installer…');startPremiumActivity();
-  try{
-    for(let n=0;n<120;n++){
-      const sr=await fetch(WORKER+'/build/status?id='+encodeURIComponent(build.build_id)+'&sha='+encodeURIComponent(build.commit_sha));
-      const status=await sr.json();if(!sr.ok||!status.ok)throw Error(status.error||'Build status unavailable');
-      if(status.status==='failed'||status.conclusion==='failure'||status.conclusion==='cancelled')throw Error('GitHub build '+(status.conclusion||'failed'));
-      if(status.ready){
-        const url=WORKER+'/download?id='+encodeURIComponent(build.build_id);
-        const a=document.getElementById('ppDownload');a.href=url;a.classList.add('show');
-        ppShow(3,'Windows installer ready to download.');singleActionState='download';syncSingleAction();
-        document.getElementById('restoreLicenseMessage').textContent='Premium installer ready. Keep your original key.';
-        try{sessionStorage.removeItem(PP_STORAGE)}catch(e){}
-        return;
-      }
-      ppShow(2,status.status==='queued'?'Build queued in GitHub Actions…':'Windows installer build running; checking every 5 seconds…');
-      await new Promise(resolve=>setTimeout(resolve,5000));
-    }
-    ppShow(-1,'Still building or status unavailable. Save your build ID: '+build.build_id);singleActionState='build_issue';syncSingleAction();
-    document.getElementById('ppInfo').textContent='Status checking timed out; this does not cancel your GitHub build. Restore your key to resume checking. Build ID: '+build.build_id;
-  }catch(e){singleActionState='build_issue';syncSingleAction();ppShow(-1,'Status check: '+e.message);document.getElementById('ppInfo').textContent='Your payment and license remain valid. Restore your key to retry this build status check. Build ID: '+build.build_id;}
-  finally{stopPremiumActivity();ppPolling=false;btn.disabled=false;btn.textContent='BUILD PREMIUM (PAPER ONLY)';if(ppTimer)clearInterval(ppTimer)}
-}
-async function restorePremiumAccess(){
-  const input=document.getElementById('restoreLicenseKey');const key=input.value.trim().toUpperCase();
-  const msg=document.getElementById('restoreLicenseMessage');const btn=document.getElementById('restoreLicenseBtn');
-  premiumUnlocked=false;
-  if(!/^MBB-[A-F0-9]{8}(?:-[A-F0-9]{8}){7}$/.test(key)){msg.textContent='Enter your complete original Premium license key.';return;}
-  btn.disabled=true;msg.textContent='Checking your license against Cloudflare D1…';
-  try{
-    const r=await fetch(WORKER+'/premium/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key})});
-    const v=await r.json();if(!r.ok||!v.ok||!v.active)throw Error(v.error||'License not active');
-    premiumUnlocked=true;singleActionState='ready_build';showPremiumStage('install');syncSingleAction();
-    msg.textContent='Premium unlocked. Build another installer without paying again. Keep your original key.';
-    const saved=ppLoad();if(saved&&saved.build_id&&saved.commit_sha){msg.textContent='Premium restored. Resuming your previous installer build…';ppPoll(saved)}
-    else{document.getElementById('premiumProgress').classList.remove('show');document.getElementById('ppDownload').classList.remove('show');msg.textContent='Premium unlocked. Use the centered Start Installer Build button below. Keep your original key.';}
-  }catch(e){msg.textContent='Restore failed: '+e.message;}
-  finally{btn.disabled=false;}
-}
-document.getElementById('restoreLicenseBtn').onclick=restorePremiumAccess;
-// The build repository has a separate Premium spec, installer and plan schema.
-// Keep the initial web-generated Premium plan restricted to its verified RSI/Paper defaults.
-const PREMIUM_BASE_PLAN={"schema_version":"allbot.engine.plan.v1.4.9","plan_name":"AllBot Packaged Default \u2014 RSI Observe/Paper Safe","mode":"PAPER","expected_move":"TREND_CHANGE_REVERSAL","pattern":{"id":"RSI_DIVERGENCE_REVERSAL","direction":"Long + Short","core":{"rsi_divergence":{"period":14,"timeframe":"5 Minute","pivot_sensitivity":"Normal","pivot_left":3,"pivot_right":3,"confirmed_price_pivots":true,"established_trend_required":true,"require_price_ll_hh":true,"require_rsi_hl_lh":true,"entry_sequence":"FULL_SEQUENCE","invalidation_buffer_pct":0.25,"atr_period":14,"minimum_remaining_atr":0.75,"preferred_remaining_atr":1.0}}},"scanner":{"symbols":["SPY","IWM","TSLA","MSTR"],"interval_seconds":30,"rvol_lookback":20,"minimum_rvol":1.0,"history_bars":220},"execution":{"max_spread_dollars":0.1,"max_spread_pct":0.15},"behaviour":{"position_dollars":10000,"max_trade_risk":60,"sink_or_swim_minutes":3,"one_share_override":false},"broker":{"type":"IBKR","connection_type":"TWS","host":"127.0.0.1","port":7497,"client_id":71,"timeout":10},"filters":{"strategy":{"bollinger":false,"rsi_level":false,"rsi_divergence":false,"rvol":false,"volume":false,"vwap":false,"time_of_day":false},"trade_quality":{"remaining_atr":true,"spread_liquidity":true,"valid_market_data":true,"reject_halted":true,"ownership_safety":true}},"sentience":{"level":0,"hard_boundaries_cannot_be_overridden":true},"safety":{"external_ownership_protection":true,"validate_before_start":true,"live_requires_explicit_authorization":true}};
-document.getElementById('premiumBuildBtn').onclick=async()=>{
-  const msg=document.getElementById('restoreLicenseMessage');
-  if(!premiumUnlocked){msg.textContent='Restore your license first.';return;}
-  const pending=ppLoad();if(pending&&pending.build_id){msg.textContent='Resuming your existing build. Do not start a duplicate.';ppPoll(pending);return;}
-  const token=document.querySelector('[name="cf-turnstile-response"]')?.value;
-  if(!token){msg.textContent='Complete the Cloudflare security check before building.';requestTurnstile();return;}
-  const key=document.getElementById('restoreLicenseKey').value.trim().toUpperCase();
-  const basic=plan();const symbols=basic.symbols;
-  if(!Array.isArray(symbols)||symbols.length<1||symbols.length>10){msg.textContent='Select 1–10 symbols first.';return;}
-  const premium=JSON.parse(JSON.stringify(PREMIUM_BASE_PLAN));
-  premium.plan_name='Free Trading Bots Premium — RSI Paper';premium.mode='PAPER';premium.scanner.symbols=symbols;
-  premium.behaviour.one_share_override=true;premium.sentience.level=0;
-  premium.premium_license_key=key;premium.turnstile_token=token;
-  const btn=document.getElementById('premiumBuildBtn');btn.disabled=true;btn.textContent='SUBMITTING PREMIUM…';
-  ppStarted=Date.now();ppClock();ppShow(1,'Submitting your configuration to GitHub Actions…');startPremiumActivity();singleActionState='building';syncSingleAction();
-  try{
-    const r=await fetch(WORKER+'/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(premium)});
-    const v=await r.json();if(!r.ok||!v.ok)throw Error(v.error||'Build submission failed');
-    if(!v.build_id||!v.commit_sha)throw Error('Build accepted but missing tracking identifiers. Check GitHub Actions before retrying.');
-    const build={build_id:v.build_id,commit_sha:v.commit_sha,started:ppStarted};ppSave(build);
-    msg.textContent='Premium build submitted. Waiting for Windows installer…';
-    ppPolling=false;await ppPoll(build);
-  }catch(e){stopPremiumActivity();singleActionState=ppLoad()?.build_id?'build_issue':'ready_build';syncSingleAction();ppShow(-1,'Build submission: '+e.message);msg.textContent='Premium build: '+e.message;}
-  finally{if(!ppPolling){btn.disabled=false;btn.textContent='BUILD PREMIUM (PAPER ONLY)';}}
-};
-document.getElementById('turnstileApi').addEventListener('load',ensureTurnstileRendered);
-document.getElementById('turnstileApi').addEventListener('error',()=>{
-  document.getElementById('turnstileHelp').textContent='Cloudflare verification failed to load. Check your network, ad blocker or sitekey hostname.';
-});
-document.getElementById('buildRetry').onclick=buildPlan;
-syncSingleAction();
-function onTurnstileSuccess(){document.getElementById('turnstileHelp').textContent='Security verified ✓';if(pendingPremiumSecurity){pendingPremiumSecurity=false;setTimeout(()=>{if(singleActionState==='ready_build')document.getElementById('premiumSingleAction').click();},0);}}
-function onTurnstileError(code){showTurnstile();document.getElementById('turnstileHelp').textContent='Cloudflare security check cannot connect (error '+String(code||'unknown')+'). Try reloading, disabling VPN/ad blocking for this site, or using another network. If it persists, the site owner must check Turnstile hostname and CSP settings.';}
-function onTurnstileExpired(){
-  pendingPremiumSecurity=false;
-  showTurnstile();
-  document.getElementById('turnstileHelp').textContent='Security verification expired. Complete a new check before building.';
-  if(window.turnstile){try{if(turnstileWidgetId!==null)window.turnstile.reset(turnstileWidgetId);}catch(e){}}
-}
-</script>
-  
-
-
-<dialog id="restoreDemoDialog" class="restore-demo-dialog" aria-labelledby="restoreDemoTitle">
-  <header><h3 id="restoreDemoTitle">Restore Premium — quick demo</h3><button type="button" class="restore-demo-close" id="restoreDemoClose" aria-label="Close demo">×</button></header>
-  <p>Keep your original license key. After refreshing or reinstalling, use Restore Access to unlock Premium without paying again. The license key in this example is masked.</p>
-  <img id="restoreDemoImage" src="assets/premium-restore-demo.png" alt="Premium restored using a masked license key; Build Premium is available without another payment" style="display:block;width:100%;height:auto;border:1px solid #385263;border-radius:7px">
-</dialog>
-<script>
-(function(){
-  const open=document.getElementById('restoreDemoOpen');
-  const dialog=document.getElementById('restoreDemoDialog');
-  const close=document.getElementById('restoreDemoClose');
-
-  if(!open||!dialog||!close)return;
-  open.addEventListener('click',()=>{dialog.showModal();});
-  close.addEventListener('click',()=>dialog.close());
-  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
-
-})();
-</script>
-<script>
-/* Standard Release delivery: no new GitHub Actions builds on this page.
-   Existing custom beta build infrastructure and Bitcoin payment endpoints remain untouched. */
-(function(){
-  const route='/release-preview/';
-  const main=document.getElementById('premiumSingleAction');
-  const note=document.getElementById('premiumActionNote');
-  const restore=document.getElementById('restoreLicenseBtn');
-  let downloading=false;
-  const license=()=>paymentIssuedLicenseKey||document.getElementById('restoreLicenseKey').value.trim().toUpperCase();
-  const licensePattern=/^MBB-[A-F0-9]{8}(?:-[A-F0-9]{8}){7}$/;
-  function showAction(){
-    const state=singleActionState;
-    const labels={buy:'GET PREMIUM — $10 USD',quote:'WAITING FOR PAYMENT',confirming:'CHECK PAYMENT STATUS',ready_build:'DOWNLOAD PREMIUM INSTALLER',download:'DOWNLOAD PREMIUM INSTALLER',building:'DOWNLOAD PREMIUM INSTALLER',build_issue:'DOWNLOAD PREMIUM INSTALLER'};
-    main.textContent=downloading?'PREPARING DOWNLOAD…':labels[state]||labels.buy;
-    main.disabled=downloading||state==='quote';
-    main.classList.toggle('download-ready',state==='ready_build'||state==='download');
-    note.textContent=state==='ready_build'||state==='download'?'Your active licence unlocks the standard installer. Configure it locally after download.':state==='buy'?'One-time Bitcoin purchase. Already paid? Restore your licence above.':state==='quote'?'Send the exact BTC amount, then verify your TXID.':state==='confirming'?'Check your payment status; do not pay twice.':'Download the standard installer without starting a build.';
-    document.getElementById('installFoldState').textContent=state==='ready_build'||state==='download'?'Ready to download':state==='buy'?'Awaiting payment':'Download';
-    hideTurnstile();
-  }
-  // Existing payment callbacks call syncSingleAction; replace presentation only.
-  syncSingleAction=showAction;
-  async function releaseDownload(product,key){
-    const premium=product==='premium';
-    const headers=premium?{'Content-Type':'application/json'}:{};
-    const response=await fetch(WORKER+route+product,{method:premium?'POST':'GET',headers,body:premium?JSON.stringify({license_key:key}):undefined,cache:'no-store'});
-    if(!response.ok){let message='Release download unavailable ('+response.status+').';try{const e=await response.json();message=e.error||message;}catch(e){}throw Error(message+' Your licence remains valid; no new build was started.');}
-    const type=response.headers.get('content-type')||'';
-    if(type.includes('json')||type.includes('text/html'))throw Error('The server returned a page instead of an installer. Release delivery is not configured yet.');
-    const blob=await response.blob();
-    if(!blob.size)throw Error('Installer download was empty.');
-    const filename=premium?'Premium_Setup.exe':'Basic_Setup.exe';
-    const url=URL.createObjectURL(blob);
-    const anchor=document.createElement('a');anchor.href=url;anchor.download=filename;document.body.appendChild(anchor);anchor.click();anchor.remove();
-    setTimeout(()=>URL.revokeObjectURL(url),60000);
-  }
-  main.onclick=async()=>{
-    if(downloading)return;
-    if(singleActionState==='buy'){
-      document.getElementById('premiumCheckout').classList.add('show');showPremiumStage('quote');document.getElementById('premiumUnlockBtn').click();return;
-    }
-    if(singleActionState==='confirming'){document.getElementById('paymentRefreshBtn').click();return;}
-    if(singleActionState==='quote')return;
-    const key=license();
-    if(!licensePattern.test(key)){note.textContent='Enter your original Premium licence key and select Restore Access above.';showPremiumStage('restore');return;}
-    downloading=true;showAction();
-    try{
-      await releaseDownload('premium',key);
-      premiumUnlocked=true;singleActionState='download';
-      document.getElementById('restoreLicenseMessage').textContent='Installer download requested. Keep your original licence key for future reinstalls.';
-    }catch(e){document.getElementById('restoreLicenseMessage').textContent=e.message;note.dataset.lastError=e.message;}
-    finally{downloading=false;showAction();if(note.dataset.lastError){note.textContent=note.dataset.lastError;delete note.dataset.lastError;}}
-  };
-  // Keep the existing D1 verification, but do not resume or create legacy builds.
-  restore.onclick=async()=>{
-    const input=document.getElementById('restoreLicenseKey');const key=input.value.trim().toUpperCase();
-    const msg=document.getElementById('restoreLicenseMessage');
-    if(!licensePattern.test(key)){msg.textContent='Enter your complete original Premium licence key.';return;}
-    restore.disabled=true;msg.textContent='Checking your licence against Cloudflare D1…';
-    try{
-      const r=await fetch(WORKER+'/premium/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key})});
-      const v=await r.json();if(!r.ok||!v.ok||!v.active)throw Error(v.error||'Licence not active');
-      premiumUnlocked=true;singleActionState='ready_build';showPremiumStage('install');showAction();
-      msg.textContent='Premium unlocked. Download your standard installer below; no new build or payment needed.';
-    }catch(e){premiumUnlocked=false;msg.textContent='Restore failed: '+e.message;}
-    finally{restore.disabled=false;}
-  };
-  document.getElementById('freeBuildChoice').onclick=async()=>{
-    const btn=document.getElementById('freeBuildChoice');btn.disabled=true;btn.textContent='PREPARING DOWNLOAD…';
-    try{await releaseDownload('basic-reversal');}
-    catch(e){const box=document.getElementById('buildStatus');box.classList.add('show','failed');document.getElementById('buildStatusTitle').textContent='DOWNLOAD UNAVAILABLE';document.getElementById('buildStatusText').textContent=e.message;}
-    finally{btn.disabled=false;btn.textContent='DOWNLOAD FREE BASIC BOT';}
-  };
-  // Hidden legacy entry points must not initiate builds.
-  document.getElementById('premiumBuildBtn').onclick=()=>main.click();
-  document.getElementById('paymentBuildDownload').onclick=()=>main.click();
-  document.getElementById('buildRetry').onclick=()=>document.getElementById('freeBuildChoice').click();
-  // Legacy pending build IDs are intentionally left in sessionStorage for recovery.
-  // Do not interpret them as a reason to start or poll a new build.
-  singleActionState='buy';showAction();
-})();
+$('restoredDownload').onclick=async()=>{try{await installer('premium',premiumKey);setStatus('restoreStatus','Premium installer download requested.')}catch(e){setStatus('restoreStatus',e.message,true)}};
 </script>
 </body>
 </html>
