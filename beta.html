@@ -8,7 +8,27 @@
 :root{--bg:#0a0f14;--panel:#111923;--line:#304e61;--text:#eef6fb;--muted:#93a8b6;--cyan:#25c7e8;--green:#54e0aa}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0,#143044 0,#0a0f14 38%);color:var(--text);font:15px/1.55 Segoe UI,Arial,sans-serif}
 .wrap{max-width:980px;margin:auto;padding:0 24px}.nav{height:66px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff16}
-.nav a{color:#bfeefa;text-decoration:none}.hero{padding:54px 0 28px}.kicker{color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:1.8px}
+.nav{
+    min-height:130px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #ffffff16;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.nav a{
+    color:#bfeefa;
+    text-decoration:none;
+}
+
+.site-logo{
+    width:120px;
+    height:100px;
+    object-fit:contain;
+    display:block;
+}
 h1{font-size:44px;line-height:1.05;margin:10px 0 14px}.hero p{color:var(--muted);max-width:700px;font-size:17px}
 .notice{border:1px solid #6d5a2d;background:#241f14;border-radius:10px;padding:13px 16px;color:#e5d19b;margin:0 0 24px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding-bottom:55px}.card{border:1px solid var(--line);background:linear-gradient(155deg,#172734,#111923);border-radius:14px;padding:23px;display:flex;flex-direction:column;min-height:230px}
@@ -41,9 +61,4 @@ footer{border-top:1px solid #263746;padding:22px 0 35px;color:#8299a8;font-size:
 </section>
 </main>
 <footer><div class="wrap">Trading involves risk. Beta testers should validate strategies and execution in paper mode before considering live trading.</div></footer>
-<style>.site-logo{
-    height:100px;
-    width:auto;
-    display:block;
-  
-}</style></body></html>
+</body></html>
