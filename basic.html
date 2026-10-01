@@ -427,8 +427,30 @@ document.getElementById('addRule').onclick=()=>{
   d.className='rule';
   d.innerHTML=`<select name="indicator"><option>RSI</option><option disabled>MACD — Coming Soon</option><option>EMA</option><option disabled>SMA — Coming Soon</option><option disabled>VWAP — Coming Soon</option><option disabled>Price — Coming Soon</option><option>ATR</option><option disabled>Volume — Coming Soon</option><option>RVOL</option><option disabled>Bollinger Bands — Coming Soon</option></select><select name="operator"><option>Below</option><option>Above</option><option>Crosses Above</option><option>Crosses Below</option></select><input name="period" type="number" value="14" title="Period"><input name="value" type="number" value="50" title="Value"><button type="button" class="add" style="margin:0;padding:0" onclick="this.parentElement.remove()">×</button>`;
   document.getElementById('rules').appendChild(d);
+  syncIndicatorRule(d);
   updateFreeIndicatorCount();
 };
+
+// v1.6.25 — indicator-aware Entry Rules.
+const indicatorRuleProfiles={
+  RSI:{operators:['Below','Above','Crosses Above','Crosses Below'],period:{enabled:true,value:14,min:2,max:250,step:1,title:'RSI Period'},value:{enabled:true,value:30,min:0,max:100,step:0.5,title:'RSI Level'}},
+  EMA:{operators:['Price Above EMA','Price Below EMA','Price Crosses Above EMA','Price Crosses Below EMA'],period:{enabled:true,value:20,min:2,max:250,step:1,title:'EMA Period'},value:{enabled:false,value:'',title:'Not used — comparison is price vs EMA'}},
+  ATR:{operators:['Above','Below'],period:{enabled:true,value:14,min:2,max:250,step:1,title:'ATR Period'},value:{enabled:true,value:1,min:0,step:0.1,title:'ATR Value'}},
+  RVOL:{operators:['Above','Below'],period:{enabled:true,value:20,min:2,max:250,step:1,title:'RVOL Lookback'},value:{enabled:true,value:1.5,min:0,step:0.1,title:'RVOL Multiple'}}
+};
+function applyNumberProfile(input,p){
+  if(!input)return; input.disabled=!p.enabled; input.title=p.title||''; input.placeholder=p.enabled?(p.title||''):'N/A';
+  ['min','max','step'].forEach(a=>input.removeAttribute(a));
+  if(p.enabled){['min','max','step'].forEach(a=>{if(p[a]!==undefined)input.setAttribute(a,p[a]);});input.value=p.value;} else input.value='';
+}
+function syncIndicatorRule(rule,preserveOperator=false){
+  const indicator=rule.querySelector('[name="indicator"]'),operator=rule.querySelector('[name="operator"]'),period=rule.querySelector('[name="period"]'),value=rule.querySelector('[name="value"]');
+  if(!indicator||!operator)return; const prof=indicatorRuleProfiles[indicator.value]||indicatorRuleProfiles.RSI,old=operator.value;
+  operator.replaceChildren(...prof.operators.map(label=>{const o=document.createElement('option');o.value=label;o.textContent=label;return o;}));
+  if(preserveOperator&&prof.operators.includes(old))operator.value=old; applyNumberProfile(period,prof.period);applyNumberProfile(value,prof.value);
+}
+document.getElementById('rules').addEventListener('change',e=>{if(e.target.matches('[name="indicator"]'))syncIndicatorRule(e.target.closest('.rule'));});
+document.querySelectorAll('#rules .rule').forEach(r=>syncIndicatorRule(r,true));
 
 function plan(){
   const one=n=>document.querySelector(`[name="${n}"]`);
