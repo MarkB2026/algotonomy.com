@@ -7,44 +7,27 @@
 <style>
 :root{--bg:#0a0f14;--panel:#111923;--line:#304e61;--text:#eef6fb;--muted:#93a8b6;--cyan:#25c7e8;--green:#54e0aa}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0,#143044 0,#0a0f14 38%);color:var(--text);font:15px/1.55 Segoe UI,Arial,sans-serif}
-.wrap{max-width:980px;margin:auto;padding:0 24px}.nav{height:66px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff16}
-.nav{
-    min-height:130px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    border-bottom:1px solid #ffffff16;
-    padding-top:15px;
-    padding-bottom:15px;
-}
-
-.nav a{
-    color:#bfeefa;
-    text-decoration:none;
-}
-
-.site-logo{
-    width:200px;
-    height:150px;
-    object-fit:contain;
-    display:block;
-}
-h1{font-size:44px;line-height:1.05;margin:10px 0 14px}.hero p{color:var(--muted);max-width:700px;font-size:17px}
+.wrap{max-width:980px;margin:auto;padding:0 24px}
+.site-header{width:100%;background:#102635;border-bottom:1px solid #ffffff16}
+.nav{min-height:120px;display:flex;align-items:center;justify-content:space-between;gap:28px;padding-top:10px;padding-bottom:10px}
+.site-logo{width:145px;height:100px;object-fit:contain;display:block}
+.nav-right{display:flex;align-items:center;gap:30px}
+.beta-label{color:var(--text);font-size:13px;font-weight:900;letter-spacing:1.4px;white-space:nowrap}.beta-label i{font-style:italic;color:var(--cyan)}
+.nav a{color:#bfeefa;text-decoration:none;white-space:nowrap}
+.hero{padding:42px 0 28px}h1{font-size:44px;line-height:1.05;margin:0 0 14px}.hero p{color:var(--muted);max-width:700px;font-size:17px}
 .notice{border:1px solid #6d5a2d;background:#241f14;border-radius:10px;padding:13px 16px;color:#e5d19b;margin:0 0 24px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding-bottom:55px}.card{border:1px solid var(--line);background:linear-gradient(155deg,#172734,#111923);border-radius:14px;padding:23px;display:flex;flex-direction:column;min-height:230px}
 .card h2{margin:0 0 5px;font-size:24px}.status{color:var(--green);font-size:11px;font-weight:900;letter-spacing:1px}.card p{color:var(--muted);margin:12px 0 20px}.actions{margin-top:auto;display:flex;gap:9px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--cyan);color:#06161d;text-decoration:none;font-weight:900;border-radius:8px;padding:10px 15px}
-.btn.secondary{background:#1b3543;color:#d9f3ff;border:1px solid #4a7186}.small{font-size:12px;color:#8299a8;margin-top:12px}
-footer{border-top:1px solid #263746;padding:22px 0 35px;color:#8299a8;font-size:12px}@media(max-width:680px){.grid{grid-template-columns:1fr}h1{font-size:36px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--cyan);color:#06161d;text-decoration:none;font-weight:900;border-radius:8px;padding:10px 15px}.btn.secondary{background:#1b3543;color:#d9f3ff;border:1px solid #4a7186}.small{font-size:12px;color:#8299a8;margin-top:12px}
+footer{border-top:1px solid #263746;padding:22px 0 35px;color:#8299a8;font-size:12px}
+@media(max-width:680px){.nav{min-height:auto;align-items:flex-start;flex-direction:column;padding-top:12px;padding-bottom:16px;gap:8px}.site-logo{width:125px;height:85px}.nav-right{width:100%;justify-content:space-between;gap:12px;flex-wrap:wrap}.beta-label{font-size:11px}.grid{grid-template-columns:1fr}h1{font-size:36px}.hero{padding-top:34px}}
 </style>
 </head>
 <body>
-  
-<header class="wrap nav"><strong><img src="assets/logo.png" alt="ScriptZips" class="site-logo"></strong><a href="bots.html">Full Bot Catalogue →</a></header>
+<header class="site-header"><div class="wrap nav"><img src="assets/logo.png" alt="ScriptZips" class="site-logo"><div class="nav-right"><span class="beta-label">SCRIPT <i>ZIPS</i> BETA TESTING</span><a href="bots.html">Full Bot Catalogue →</a></div></div></header>
 <main class="wrap">
-<section class="hero"><div class="kicker"><h1>SCRIPT </h1><i>ZIPS </i>BETA TESTING</div><h1>Current Beta Downloads</h1><p>A simple tester page for the bots and tools currently available. Please use paper trading while validating broker connections, signals and execution.</p></section>
+<section class="hero"><h1>Current Beta Downloads</h1><p>A simple tester page for the bots and tools currently available. Please use paper trading while validating broker connections, signals and execution.</p></section>
 <div class="notice"><strong>Beta software:</strong> features can change while testing is underway. Report anything that does not behave as expected.</div>
-
 <h2 style="margin:10px 0 14px;font-size:18px;letter-spacing:1.5px;color:#bfeefa">BOTS</h2>
 <section class="grid">
 <article class="card"><div class="status">AVAILABLE · PREMIUM BETA</div><h2>Reversal Bot</h2><p>RSI divergence / mean-reversion bot with advanced trade management and intelligence features under active beta testing.</p><div class="actions"><a class="btn" href="basic.html?v=1.6.1#premium">DOWNLOAD →</a></div><div class="small">Uses the Bitcoin Premium checkout and license/download flow.</div></article>
@@ -53,7 +36,6 @@ footer{border-top:1px solid #263746;padding:22px 0 35px;color:#8299a8;font-size:
 <article class="card"><div class="status">AVAILABLE · BETA</div><h2>IF / THEN Bot</h2><p>A straightforward rule-based bot for building IF / THEN trading logic.</p><div class="actions"><a class="btn" href="https://falling-sky-7997.algobotbuilder.workers.dev/if-then/download">DOWNLOAD →</a></div></article>
 <article class="card"><div class="status">AVAILABLE · FREE</div><h2>Mini RSI Bot</h2><p>A simple starter RSI bot and an easy way to test the local install/run workflow.</p><div class="actions"><a class="btn" href="https://falling-sky-7997.algobotbuilder.workers.dev/mini-rsi/download">DOWNLOAD →</a></div></article>
 </section>
-
 <h2 style="margin:4px 0 14px;font-size:18px;letter-spacing:1.5px;color:#bfeefa">TOOLS</h2>
 <section class="grid">
 <article class="card"><div class="status">AVAILABLE · BETA</div><h2>Options Plotter</h2><p>Dynamic Options Plotter v1.13 for Windows.</p><div class="actions"><a class="btn" href="https://github.com/MarkB2026/freetradingbots/releases/download/Dynamic_Options_Plotter_v1.13/Dynamic_Options_Plotter_Setup_v1_13.exe">DOWNLOAD →</a></div></article>
