@@ -460,7 +460,7 @@ body{background:radial-gradient(ellipse at 76% 0%,#102a3c 0%,#0a131b 52%,#090e13
 
 <style id="botzips-home-rebrand">
 .site-nav a.site-brand .logo-bot{color:#19b9ff;font-weight:900;font-style:normal}
-.site-nav a.site-brand .logo-istics{color:#f5f8fb;font-weight:800;font-style:normal;margin-left:2px}
+.site-nav a.site-brand .logo-istics{color:#f5f8fb;font-weight:800;font-style:italic;margin-left:2px}
 .botzips-hero-title{font-size:clamp(30px,3.15vw,45px);line-height:1.1;margin:14px 0 12px;color:#f6faff;letter-spacing:-1px}
 .home-hero-logo img{width:min(100%,500px)!important;max-width:500px!important;max-height:250px!important;object-fit:contain}
 .botzips-css-tagline{margin-top:6px;text-align:center;color:#dcebf4;font-size:clamp(12px,1.2vw,16px);font-weight:750;letter-spacing:.45px;line-height:1.45;text-shadow:0 2px 14px #000}
@@ -468,11 +468,38 @@ body{background:radial-gradient(ellipse at 76% 0%,#102a3c 0%,#0a131b 52%,#090e13
 @media(max-width:900px){.botzips-css-tagline{max-width:520px}.home-hero-logo{display:flex}}
 @media(max-width:680px){.home-hero-logo{display:flex}.botzips-hero-title{font-size:32px}}
 </style>
+
+<style id="botzips-candlestick-wordmark">
+.site-nav .logo-istics .logo-candle-i{
+  position:relative;
+  display:inline-block;
+  width:.18em;
+  height:.72em;
+  margin:0 .055em;
+  background:#19b9ff;
+  border-radius:1px;
+  vertical-align:-.02em;
+  transform:skew(-10deg);
+}
+.site-nav .logo-istics .logo-candle-i::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-.22em;
+  width:2px;
+  height:.24em;
+  background:#19b9ff;
+  transform:translateX(-50%);
+  border-radius:1px;
+}
+/* Intentionally no bottom wick. */
+</style>
+
 </head>
  <body>
   <nav aria-label="Main navigation" class="site-nav">
     <a class="site-brand" href="index.html">
-      <span class="logo-bot">BOT</span><span class="logo-istics">FOLIOS</span>
+      <span class="logo-bot">BOT</span><span class="logo-istics">Z<span class="logo-candle-i" aria-label="I"></span>PS</span>
     </a>
 
 
