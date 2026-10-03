@@ -1,136 +1,59 @@
-<!doctype html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
+<!doctype html><html lang="en"><head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT272GQ5T5"></script>
-<script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','G-FT272GQ5T5');
-</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Download the ScriptZips RSI Reversal trading bot for Windows and IBKR. Start free or unlock Premium trade management for a one-time $1 beta-test purchase.">
-<title>RSI Reversal Trading Bot for IBKR | ScriptZips</title>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FT272GQ5T5');</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Build Your Botfolio | BOTFOLIOS</title>
 <style>
-:root{--bg:#0a0f14;--panel:#111923;--panel2:#16212d;--line:#263746;--text:#eef6fb;--muted:#91a4b1;--cyan:#25c7e8;--cyan2:#1295b4;--good:#55d694;--gold:#e8b95a}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0,#112837 0,#0a0f14 34%);color:var(--text);font:14px/1.55 Segoe UI,Arial,sans-serif}
-button,input{font:inherit}.release{background:linear-gradient(90deg,#123f57,#159bce,#123f57);padding:11px;text-align:center;font-weight:900;letter-spacing:.35px;border-bottom:1px solid #62d8f5}
-.shell{max-width:1120px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.back{color:#8dd4e4;text-decoration:none;font-weight:800}.badge{border:1px solid #245064;background:#102633;color:#87e7fa;border-radius:999px;padding:7px 11px;font-weight:800;font-size:12px}
-.hero{padding:58px 0 35px;max-width:880px}.eyebrow{color:#67c7ee;font-size:11px;letter-spacing:1.9px;font-weight:900}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:-1.5px;margin:10px 0 15px}.hero p{font-size:17px;color:#b8cbd8;max-width:780px;margin:0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
-.btn{border:0;border-radius:8px;padding:13px 18px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d}.btn.secondary{background:#193747;color:#d7f3ff;border:1px solid #3c7896}.btn.gold{background:linear-gradient(180deg,#ffdc89,#d8a638);color:#261a08}.btn:disabled{opacity:.55;cursor:not-allowed}.btn.disabled{opacity:.55;cursor:not-allowed;pointer-events:none;background:#29404f;color:#a9bdc9}
-.section{background:linear-gradient(180deg,var(--panel),#0f171f);border:1px solid var(--line);border-radius:11px;margin:14px 0;overflow:hidden}.head{padding:14px 17px;border-bottom:1px solid var(--line);font-weight:900;letter-spacing:.3px}.body{padding:18px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card{border:1px solid #304757;background:#101a23;border-radius:9px;padding:16px}.card h3{margin:0 0 6px;font-size:15px}.card p{margin:0;color:#9eb1bd;font-size:13px}
-.editions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;align-items:stretch}.edition{display:flex;flex-direction:column;height:100%;border:1px solid #3b5668;border-radius:12px;padding:23px;background:linear-gradient(155deg,#182734,#101922)}.edition.premium{border:2px solid #487a98;background:linear-gradient(155deg,#192c3c,#111b25)}.edition h2{font-size:23px;margin:8px 0}.price{font-size:30px;font-weight:900}.edition p{color:#b8c9d5}.edition ul{padding-left:20px;line-height:1.9;color:#d7e6ef}.edition .btn{margin-top:auto;text-align:center;width:100%}
-.note{padding:12px 14px;border-left:3px solid #0b7e99;background:#0c151d;color:#a8bdc9;border-radius:4px}.status{margin-top:12px;color:#9fd8e9;min-height:21px;white-space:pre-wrap}.error{color:#ffadad}.success{color:#91efbd}
-.checkout{display:none}.checkout.show{display:block}.payment-panel{display:none;margin-top:14px;padding:16px;border:1px solid #45677b;border-radius:9px;background:#101f2b}.payment-panel.show{display:block}.payment-panel code{word-break:break-all;color:#b6e9ff}
-.copyrow{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid #263b48;padding:8px 0}.copyrow button{border:0;background:transparent;color:#86cfe9;text-decoration:underline;cursor:pointer}.field{display:grid;gap:6px;margin:13px 0;color:#b8c9d5}.field input{height:42px;border:1px solid #355061;border-radius:7px;background:#0b1219;color:#fff;padding:8px 10px;width:100%}
-.restore{margin-top:17px;padding:16px;border:1px solid #385263;border-radius:9px;background:#101d28}.restore-row{display:flex;gap:9px}.restore-row input{flex:1}.license{padding:12px;margin:12px 0;border:1px solid #3f8068;background:#122b25;border-radius:8px}.license code{overflow-wrap:anywhere}.fine{font-size:12px;color:#8fa4b1}.configure{display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px}.configure strong{font-size:18px}.footer{text-align:center;color:#738794;font-size:12px;padding:28px 0}
-@media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr}.editions{grid-template-columns:1fr}.configure{grid-template-columns:1fr}.hero{padding-top:38px}}@media(max-width:560px){.shell{padding:14px}.feature-grid{grid-template-columns:1fr}.restore-row,.hero-actions{flex-direction:column}.btn{width:100%;text-align:center}}
-</style>
-</head>
-<body>
-<div class="release">✨ UPDATED SCRIPTZIPS TRADING BOT DOWNLOADS</div>
-<main class="shell">
-<div class="top"><a class="back" href="index.html">← BACK TO SCRIPTZIPS</a><span class="badge">LOCAL WINDOWS BOT · FREE + PREMIUM</span></div>
+:root{--bg:#090f14;--panel:#101922;--line:#29404f;--text:#eef7fb;--muted:#91a6b4;--cyan:#25c7e8;--good:#55d694;--gold:#e8b95a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0,#112a39 0,#090f14 34%);color:var(--text);font:14px/1.55 Segoe UI,Arial,sans-serif}
+.release{background:linear-gradient(90deg,#123f57,#159bce,#123f57);padding:10px;text-align:center;font-weight:900;letter-spacing:.7px;border-bottom:1px solid #62d8f5}
+.shell{max-width:1180px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-size:24px;font-weight:1000;letter-spacing:1px}.brand span{color:var(--cyan)}.badge{border:1px solid #245064;background:#102633;color:#87e7fa;border-radius:999px;padding:7px 11px;font-weight:800;font-size:12px}
+.hero{padding:58px 0 34px;max-width:900px}.eyebrow{color:#67c7ee;font-size:11px;letter-spacing:1.9px;font-weight:900}.hero h1{font-size:clamp(38px,5vw,62px);line-height:1.02;letter-spacing:-1.8px;margin:10px 0 14px}.hero em{font-style:normal;color:var(--cyan)}.hero p{font-size:18px;color:#b8cbd8;max-width:800px}
+.section{background:linear-gradient(180deg,var(--panel),#0e161e);border:1px solid var(--line);border-radius:12px;margin:15px 0;overflow:hidden}.head{padding:15px 18px;border-bottom:1px solid var(--line);font-weight:900;letter-spacing:.45px;display:flex;justify-content:space-between;gap:10px;align-items:center}.body{padding:18px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid #304b5d;background:linear-gradient(155deg,#162530,#101922);border-radius:12px;padding:18px;min-height:245px;display:flex;flex-direction:column}.card:hover{border-color:#3c7691}.ct{display:flex;justify-content:space-between;gap:10px}.card h2{font-size:22px;margin:0}.card b{font-size:10px;letter-spacing:1px;color:#77dff4}.card p{color:#a9bdc9}.pick{width:27px;height:27px;accent-color:var(--cyan)}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}.tags span{border:1px solid #2b4555;background:#0d1820;border-radius:999px;padding:4px 8px;color:#9fb8c6;font-size:11px;font-weight:700}
+.editions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.editions label{border:1px solid #334e60;border-radius:9px;padding:10px;background:#0d171f;display:flex;align-items:center;gap:8px;cursor:pointer}.editions label.premium{border-color:#665a38}.editions input{width:18px;height:18px;accent-color:var(--cyan)}.editions strong,.editions small{display:block}.editions small{color:#8fa6b4}.premium strong{color:#f0c96e}
+.summary{display:grid;grid-template-columns:1.5fr 1fr;gap:15px}.box{border:1px solid #304858;border-radius:10px;background:#0e1820;padding:17px}.box h3{margin-top:0}.box p{color:#9db1bd}.free{font-size:27px;font-weight:950;color:var(--good)}.btn{border-radius:8px;padding:13px 18px;font-weight:900;display:inline-block;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d;opacity:.45}.note{padding:12px 14px;border-left:3px solid #0b7e99;background:#0c151d;color:#a8bdc9;border-radius:4px}
+.checkout{border:1px dashed #4b6574;border-radius:10px;padding:18px;background:#0d161d}.checkout h3{margin:0 0 7px;color:#f0c96e}.checkout p{color:#a9bdc9}.footer{text-align:center;color:#738794;font-size:12px;padding:28px 0}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.summary{grid-template-columns:1fr}}@media(max-width:620px){.grid{grid-template-columns:1fr}.editions{grid-template-columns:1fr}}
+</style></head><body>
+<div class="release">BOTFOLIOS · PORTFOLIOS MANAGED BY BOTS.</div><main class="shell">
+<div class="top"><div class="brand">BOT<span>FOLIOS</span></div><span class="badge">CHOOSE YOUR BOTS · BUILD YOUR OWN</span></div>
+<section class="hero"><div class="eyebrow">BUILD YOUR BOTFOLIO</div><h1>Choose the bots you want <em>working for you.</em></h1><p>Select one bot or build a collection. Basic editions can be free; Premium editions can use the existing one-time Bitcoin checkout and licensing system.</p></section>
 
-<section class="hero">
-<div class="eyebrow">SCRIPTZIPS · RSI REVERSAL BOT</div>
-<h1>RSI reversal trading without babysitting every chart.</h1>
-<p>A focused Windows trading bot built around RSI divergence and reversal logic. Download the bot, connect it to IBKR, and configure the actual strategy inside its native ScriptZips dashboard.</p>
-<div class="hero-actions">
-<!-- FREE REVERSAL HERO DOWNLOAD — TEMPORARILY DISABLED DURING BETA
-<button class="btn" id="heroFree">DOWNLOAD FREE</button>
--->
-<span class="btn disabled" aria-disabled="true">FREE VERSION · TEMPORARILY DISABLED</span>
-<button class="btn secondary" id="heroPremium">PREMIUM BETA TEST VERSION · $1</button>
-</div>
-</section>
+<section class="section"><div class="head"><span>CHOOSE YOUR TRADING BOTS</span><span class="badge">SELECTION MOCKUP</span></div><div class="body grid">
+<article class="card"><div class="ct"><div><h2>TrendBot</h2><b>TREND FOLLOWING</b></div><input class="pick" type="checkbox" aria-label="Select TrendBot"></div>
+<p>Scans for trend opportunities and manages qualifying trades using its own strategy and risk controls.</p><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
+<div class="editions"><label><input type="checkbox"><span><strong>BASIC</strong><small>FREE</small></span></label>
+<label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article><article class="card"><div class="ct"><div><h2>ZigZagBot</h2><b>PRICE STRUCTURE</b></div><input class="pick" type="checkbox" aria-label="Select ZigZagBot"></div>
+<p>Scans for qualifying price-structure opportunities while other bots can work on other symbols.</p><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
+<div class="editions"><label><input type="checkbox"><span><strong>BASIC</strong><small>FREE</small></span></label>
+<label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article><article class="card"><div class="ct"><div><h2>ReversalBot</h2><b>RSI · REVERSAL</b></div><input class="pick" type="checkbox" aria-label="Select ReversalBot"></div>
+<p>Looks for reversal setups using RSI divergence, price confirmation and configurable trade management.</p><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
+<div class="editions"><label><input type="checkbox"><span><strong>BASIC</strong><small>FREE</small></span></label>
+<label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article><article class="card"><div class="ct"><div><h2>Round Lots</h2><b>MINI SCALPER</b></div><input class="pick" type="checkbox" aria-label="Select Round Lots"></div>
+<p>Manual trade-staging and mini-scalping tool with chart-based entries and position management.</p><div class="tags"><span>Standalone</span><span>IBKR</span></div>
+<div class="editions"><label><input type="checkbox"><span><strong>BASIC</strong><small>FREE</small></span></label>
+<label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article><article class="card"><div class="ct"><div><h2>IF/Then Bot</h2><b>RULE-BASED TRADING</b></div><input class="pick" type="checkbox" aria-label="Select IF/Then Bot"></div>
+<p>Build straightforward IF/THEN trade rules and run them as an individual trading tool.</p><div class="tags"><span>Standalone</span><span>IBKR</span></div>
+<div class="editions"><label><input type="checkbox"><span><strong>BASIC</strong><small>FREE</small></span></label>
+<label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article>
+<article class="card"><div class="ct"><div><h2>More Bots</h2><b>COMING LATER</b></div><input class="pick" type="checkbox" disabled></div><p>The catalog can expand without changing the basic selection-and-checkout layout.</p><div class="tags"><span>Coming Soon</span></div></article>
+</div></section>
 
-<section class="section">
-<div class="head">WHAT THE BOT DOES</div>
-<div class="body feature-grid">
-<div class="card"><h3>RSI Divergence</h3><p>Looks for reversal conditions using RSI divergence and confirmed price structure.</p></div>
-<div class="card"><h3>Focused Entry Logic</h3><p>Strategy settings live in the bot itself, where they stay synchronized with the engine that actually trades.</p></div>
-<div class="card"><h3>Risk & Exit Controls</h3><p>Configure position limits, stops and trade-management rules locally in the dashboard.</p></div>
-<div class="card"><h3>IBKR Connection</h3><p>Runs locally on Windows and connects to your running Interactive Brokers TWS or Gateway session.</p></div>
-<div class="card"><h3>Observe & Paper First</h3><p>Use non-live modes to see decisions and validate behavior before considering live execution.</p></div>
-<div class="card"><h3>Decision Visibility</h3><p>Follow the bot's decisions, activity and operational status from the native dashboard.</p></div>
-</div>
-</section>
+<section class="section"><div class="head">YOUR SELECTION</div><div class="body summary">
+<div class="box"><h3>Build your Botfolio</h3><p>The checkboxes above are intentionally visual only. Nothing downloads, purchases or installs yet.</p><div class="note">Next pass: selected bots populate here; then FREE downloads and PREMIUM checkout can be wired separately.</div></div>
+<div class="box"><div class="free">BASIC · FREE</div><p>No payment or license required for Basic editions.</p><span class="btn">DOWNLOAD SELECTED BOTS</span></div>
+</div></section>
 
-<section class="section" id="editions">
-<div class="head">CHOOSE YOUR EDITION</div>
-<div class="body">
-<div class="editions">
-<article class="edition">
-<span class="badge">FREE</span><h2>RSI Reversal Bot</h2><div class="price">FREE</div>
-<p>The standard RSI bot with the core reversal strategy, dashboard and essential risk controls.</p>
-<ul><li>RSI divergence/reversal strategy</li><li>Local Windows dashboard</li><li>IBKR connection</li><li>Observe and Paper modes</li><li>Initial/trailing stop controls</li><li>No payment or license required</li></ul>
-<!-- FREE REVERSAL DOWNLOAD — TEMPORARILY DISABLED DURING PREMIUM BETA
-<button class="btn" id="freeDownload">DOWNLOAD FREE BOT</button>
--->
-<span class="btn disabled" aria-disabled="true">FREE VERSION · TEMPORARILY DISABLED</span>
-<div id="freeStatus" class="status"></div>
-</article>
-<article class="edition premium">
-<span class="badge">PREMIUM BETA</span><h2>Premium RSI Bot · Beta Test Version</h2><div class="price">$1</div>
-<p>Everything in Free plus deeper trade-management controls for protecting and managing developing positions.</p>
-<p class="fine">Beta testers get the complete Premium build. The temporary $1 charge is part of testing the real Bitcoin payment, license and download system before public release.</p>
-<ul><li>Everything in Free</li><li>Progressive Ratcheting</li><li>Protected Profit Stages</li><li>Cooldown & Smart Re-entry</li><li>Scale In / Out</li><li>Structure / ATR Run Room</li><li>One-time purchase · No subscription</li></ul>
-<button class="btn gold" id="premiumOpen">GET PREMIUM BETA TEST VERSION · $1</button>
-</article>
-</div>
-<div class="note" style="margin-top:17px"><strong>No website-built bots.</strong> Both editions download a standard installer. Strategy, scanner, risk and connection settings are configured locally inside the actual ScriptZips bot dashboard.</div>
-</div>
-</section>
-
-<section class="section">
-<div class="head">PREMIUM TRADE MANAGEMENT</div>
-<div class="body feature-grid">
-<div class="card"><h3>Progressive Ratcheting</h3><p>Advance protection from the initial stop through breakeven and stronger profit protection as a trade develops.</p></div>
-<div class="card"><h3>Protected Profit Stages</h3><p>Protect an increasing portion of open profit as the position moves in your favor.</p></div>
-<div class="card"><h3>Cooldown & Smart Re-entry</h3><p>Pause after an exit and require a fresh qualifying setup before another entry.</p></div>
-<div class="card"><h3>Scale In / Out</h3><p>Manage position size through staged entries and exits.</p></div>
-<div class="card"><h3>Structure / ATR Run Room</h3><p>Evaluate remaining movement and market structure against current trade risk.</p></div>
-</div>
-</section>
-
-<section class="section checkout" id="premiumCheckout">
-<div class="head">PREMIUM · BITCOIN CHECKOUT</div>
-<div class="body">
-<p>Premium is temporarily $1 USD during beta testing. The $1 charge is intentional and is part of validating the Bitcoin payment, license issuance and Premium download flow. Already paid? Do not pay again — restore your original license below.</p>
-<button class="btn gold" id="quoteBtn">GENERATE BITCOIN QUOTE</button>
-<div class="payment-panel" id="paymentPanel">
-<div id="quoteDetails">Requesting quote…</div>
-<label class="field">Bitcoin transaction ID (TXID)<input id="txid" maxlength="64" autocomplete="off" placeholder="Paste your 64-character transaction ID"></label>
-<div style="display:flex;gap:9px;flex-wrap:wrap"><button class="btn" id="verifyBtn">VERIFY PAYMENT</button><button class="btn secondary" id="statusBtn">CHECK PAYMENT STATUS</button></div>
-<div id="paymentStatus" class="status"></div>
-<div id="issuedLicense" class="license" hidden><strong>✓ PAYMENT VERIFIED — SAVE THIS LICENSE KEY</strong><div style="margin:8px 0"><code id="licenseText"></code></div><button class="btn secondary" id="copyLicense">COPY LICENSE KEY</button></div>
-<button class="btn" id="premiumDownload" hidden>DOWNLOAD PREMIUM INSTALLER</button>
-</div>
-<div class="restore">
-<h3 style="margin-top:0">Reinstalling Premium?</h3>
-<p>Enter your original Premium license key. No additional payment is required.</p>
-<div class="restore-row"><input id="restoreKey" autocomplete="off" placeholder="Your Premium license key"><button class="btn secondary" id="restoreBtn">RESTORE ACCESS</button></div>
-<div id="restoreStatus" class="status"></div>
-<button class="btn" id="restoredDownload" hidden>DOWNLOAD PREMIUM INSTALLER</button>
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="body configure"><div><strong>Configure the bot where it actually runs.</strong><div class="fine">Scanner, strategy, risk, broker connection and intelligence settings are handled by the native ScriptZips dashboard — not duplicated on the website.</div></div><span class="badge">DOWNLOAD • UNZIP • RUN</span></div>
-</section>
-
-<div class="footer">Trading software can execute orders when configured for live trading. Start in Observe or Paper and review your settings before enabling live execution.</div>
+<section class="section"><div class="head">PREMIUM · BITCOIN CHECKOUT</div><div class="body"><div class="checkout"><h3>Existing Bitcoin system preserved.</h3><p>The Bitcoin transaction/license code from your supplied Basic page is retained in this file but intentionally not executed or connected to these bot checkboxes yet.</p><p>That means this visual redesign does not require us to change the Cloudflare Worker, D1, KV or payment endpoints.</p></div></div></section>
+<div class="footer">Trading software can execute orders when configured for live trading. Start in Observe or Paper and review settings before enabling live execution.</div>
 </main>
-<script>
+<script type="text/plain" id="preserved-bitcoin-code">&lt;script&gt;
 const WORKER='https://falling-sky-7997.algobotbuilder.workers.dev';
 let quote=null, premiumKey='';
 const licensePattern=/^MBB-[A-F0-9]{8}(?:-[A-F0-9]{8}){7}$/i;
-const $=id=>document.getElementById(id);
+const $=id=&gt;document.getElementById(id);
 function setStatus(id,text,error=false){const el=$(id);el.textContent=text;el.className='status '+(error?'error':'');}
 async function installer(product,key=''){
   const premium=product==='premium';
@@ -144,7 +67,7 @@ async function installer(product,key=''){
   const type=r.headers.get('content-type')||'';
   if(type.includes('json')||type.includes('text/html'))throw Error('The server returned a page instead of the installer.');
   const blob=await r.blob();if(!blob.size)throw Error('Installer download was empty.');
-  const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=premium?'Premium_Setup.exe':'Basic_Setup.exe';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),60000);
+  const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=premium?'Premium_Setup.exe':'Basic_Setup.exe';document.body.appendChild(a);a.click();a.remove();setTimeout(()=&gt;URL.revokeObjectURL(u),60000);
 }
 async function freeDownload(){
   const b=$('freeDownload');b.disabled=true;b.textContent='PREPARING DOWNLOAD…';setStatus('freeStatus','');
@@ -154,14 +77,14 @@ async function freeDownload(){
 }
 /* FREE REVERSAL DOWNLOAD BINDINGS — TEMPORARILY DISABLED DURING BETA
 $('freeDownload').onclick=freeDownload;
-$('heroFree').onclick=()=>{$('editions').scrollIntoView({behavior:'smooth'});setTimeout(freeDownload,350)};
+$('heroFree').onclick=()=&gt;{$('editions').scrollIntoView({behavior:'smooth'});setTimeout(freeDownload,350)};
 */
 function openPremium(){$('premiumCheckout').classList.add('show');$('premiumCheckout').scrollIntoView({behavior:'smooth',block:'start'})}
 $('premiumOpen').onclick=openPremium;$('heroPremium').onclick=openPremium;
 function copyRow(label,value){
   const row=document.createElement('div');row.className='copyrow';
   const info=document.createElement('span');const strong=document.createElement('strong');strong.textContent=label+': ';const code=document.createElement('code');code.textContent=String(value);info.append(strong,code);
-  const b=document.createElement('button');b.type='button';b.textContent='Copy';b.onclick=()=>navigator.clipboard.writeText(String(value)).then(()=>{b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy',1500)});
+  const b=document.createElement('button');b.type='button';b.textContent='Copy';b.onclick=()=&gt;navigator.clipboard.writeText(String(value)).then(()=&gt;{b.textContent='Copied ✓';setTimeout(()=&gt;b.textContent='Copy',1500)});
   row.append(info,b);return row;
 }
 function renderQuote(q){
@@ -169,7 +92,7 @@ function renderQuote(q){
   el.append(copyRow('Receiving address',q.bitcoin_address),copyRow('Amount (BTC)',q.required_btc));
   const p=document.createElement('p');p.className='fine';p.textContent='Send the exact amount shown. Quote expires '+new Date(q.expires_at).toLocaleString()+'. Quote ID: '+q.quote_id;el.append(p);
 }
-$('quoteBtn').onclick=async()=>{
+$('quoteBtn').onclick=async()=&gt;{
   $('paymentPanel').classList.add('show');setStatus('paymentStatus','Fetching signed quote…');
   try{const r=await fetch(WORKER+'/premium/quote',{cache:'no-store'}),q=await r.json();if(!r.ok||!q.ok)throw Error(q.error||'Could not create quote');quote=q;renderQuote(q);setStatus('paymentStatus','Send the exact BTC amount, then enter your TXID and verify.')}
   catch(e){setStatus('paymentStatus','Quote error: '+e.message,true)}
@@ -179,28 +102,27 @@ function verified(v){
   if(licensePattern.test(key)){premiumKey=key;$('licenseText').textContent=key;$('issuedLicense').hidden=false;$('premiumDownload').hidden=false}
   setStatus('paymentStatus','✓ Bitcoin payment verified. Save your original license key before downloading.');
 }
-$('verifyBtn').onclick=async()=>{
+$('verifyBtn').onclick=async()=&gt;{
   if(!quote){setStatus('paymentStatus','Generate a quote first.',true);return}
   const txid=$('txid').value.trim();if(!/^[a-fA-F0-9]{64}$/.test(txid)){setStatus('paymentStatus','Enter a valid 64-character TXID.',true);return}
   setStatus('paymentStatus','Checking blockchain confirmation…');
   try{const r=await fetch(WORKER+'/premium/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({txid,quote_id:quote.quote_id,quote_signature:quote.quote_signature,required_sats:quote.required_sats,expires_at:quote.expires_at})});const v=await r.json();if(!r.ok||!v.ok)throw Error(v.error||'Verification failed');if(v.verified)verified(v);else setStatus('paymentStatus','Payment status: '+v.status+'. '+(v.error||'Try again after confirmation.'))}
   catch(e){setStatus('paymentStatus','Verification error: '+e.message,true)}
 };
-$('statusBtn').onclick=async()=>{
+$('statusBtn').onclick=async()=&gt;{
   if(!quote){setStatus('paymentStatus','Generate a quote first.',true);return}
   try{const r=await fetch(WORKER+'/premium/status?quote_id='+encodeURIComponent(quote.quote_id),{cache:'no-store'}),v=await r.json();if(!r.ok||!v.ok)throw Error(v.error||'Status unavailable');if(v.verified||v.status==='verified')verified(v);else setStatus('paymentStatus','Payment status: '+v.status+'. Confirmed: '+v.confirmed+'; received: '+v.received_sats+' sats.')}
   catch(e){setStatus('paymentStatus','Status error: '+e.message,true)}
 };
-$('copyLicense').onclick=()=>{if(premiumKey)navigator.clipboard.writeText(premiumKey).then(()=>setStatus('paymentStatus','License key copied. Store it securely.'))};
-$('premiumDownload').onclick=async()=>{try{await installer('premium',premiumKey);setStatus('paymentStatus','Premium installer download requested.')}catch(e){setStatus('paymentStatus',e.message,true)}};
-$('restoreBtn').onclick=async()=>{
+$('copyLicense').onclick=()=&gt;{if(premiumKey)navigator.clipboard.writeText(premiumKey).then(()=&gt;setStatus('paymentStatus','License key copied. Store it securely.'))};
+$('premiumDownload').onclick=async()=&gt;{try{await installer('premium',premiumKey);setStatus('paymentStatus','Premium installer download requested.')}catch(e){setStatus('paymentStatus',e.message,true)}};
+$('restoreBtn').onclick=async()=&gt;{
   const key=$('restoreKey').value.trim().toUpperCase();if(!licensePattern.test(key)){setStatus('restoreStatus','Enter your complete original Premium license key.',true);return}
   const b=$('restoreBtn');b.disabled=true;setStatus('restoreStatus','Checking your license…');
   try{const r=await fetch(WORKER+'/premium/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key})}),v=await r.json();if(!r.ok||!v.ok||!v.active)throw Error(v.error||'License not active');premiumKey=key;$('restoredDownload').hidden=false;setStatus('restoreStatus','✓ Premium unlocked. No additional payment required.')}
   catch(e){setStatus('restoreStatus','Restore failed: '+e.message,true)}
   finally{b.disabled=false}
 };
-$('restoredDownload').onclick=async()=>{try{await installer('premium',premiumKey);setStatus('restoreStatus','Premium installer download requested.')}catch(e){setStatus('restoreStatus',e.message,true)}};
-</script>
-</body>
-</html>
+$('restoredDownload').onclick=async()=&gt;{try{await installer('premium',premiumKey);setStatus('restoreStatus','Premium installer download requested.')}catch(e){setStatus('restoreStatus',e.message,true)}};
+&lt;/script&gt;</script>
+</body></html>
