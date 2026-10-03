@@ -135,6 +135,22 @@
 }
 </style>
 
+
+<style id="premium-license-gate-fix">
+#premiumDownload[hidden],
+#restoredDownload[hidden],
+#issuedLicense[hidden]{
+  display:none !important;
+}
+#premiumDownload:disabled,
+#restoredDownload:disabled{
+  opacity:.38 !important;
+  filter:saturate(.45) !important;
+  cursor:not-allowed !important;
+  pointer-events:none !important;
+}
+</style>
+
 </head><body>
 <div class="release">BOTZIPS · DOWNLOAD • UNZIP • RUN</div><main class="shell">
 <div class="top"><div class="brand">BOT<span>ZIPS</span></div><span class="badge">AUTOMATED TRADING BOTS</span></div>
@@ -212,14 +228,14 @@
 <div style="display:flex;gap:9px;flex-wrap:wrap"><button class="btn" id="verifyBtn">VERIFY PAYMENT</button><button class="btn secondary" id="statusBtn">CHECK PAYMENT STATUS</button></div>
 <div id="paymentStatus" class="status"></div>
 <div id="issuedLicense" class="license" hidden><strong>✓ PAYMENT VERIFIED — SAVE THIS LICENSE KEY</strong><div style="margin:8px 0"><code id="licenseText"></code></div><button class="btn secondary" id="copyLicense">COPY LICENSE KEY</button></div>
-<button class="btn" id="premiumDownload" hidden>DOWNLOAD PREMIUM INSTALLER</button>
+<button class="btn" id="premiumDownload" hidden disabled>DOWNLOAD PREMIUM INSTALLER</button>
 </div>
 <div class="restore">
 <h3 style="margin-top:0">Reinstalling Premium?</h3>
 <p>Enter your original Premium license key. No additional payment is required.</p>
 <div class="restore-row"><input id="restoreKey" autocomplete="off" placeholder="Your Premium license key"><button class="btn secondary" id="restoreBtn">RESTORE ACCESS</button></div>
 <div id="restoreStatus" class="status"></div>
-<button class="btn" id="restoredDownload" hidden>DOWNLOAD PREMIUM INSTALLER</button>
+<button class="btn" id="restoredDownload" hidden disabled>DOWNLOAD PREMIUM INSTALLER</button>
 </div>
 </div>
 </section>
@@ -306,7 +322,7 @@ $('quoteBtn').onclick=async()=>{
 };
 function verified(v){
   const key=typeof v.license_key==='string'?v.license_key.trim().toUpperCase():'';
-  if(licensePattern.test(key)){premiumKey=key;$('licenseText').textContent=key;$('issuedLicense').hidden=false;$('premiumDownload').hidden=false}
+  if(licensePattern.test(key)){premiumKey=key;$('licenseText').textContent=key;$('issuedLicense').hidden=false;$('premiumDownload').disabled=false;$('premiumDownload').hidden=false}
   setStatus('paymentStatus','✓ Bitcoin payment verified. Save your original license key before downloading.');
 }
 $('verifyBtn').onclick=async()=>{
@@ -325,8 +341,8 @@ $('copyLicense').onclick=()=>{if(premiumKey)navigator.clipboard.writeText(premiu
 $('premiumDownload').onclick=async()=>{try{await installer('premium',premiumKey);setStatus('paymentStatus','Premium installer download requested.')}catch(e){setStatus('paymentStatus',e.message,true)}};
 $('restoreBtn').onclick=async()=>{
   const key=$('restoreKey').value.trim().toUpperCase();if(!licensePattern.test(key)){setStatus('restoreStatus','Enter your complete original Premium license key.',true);return}
-  const b=$('restoreBtn');b.disabled=true;setStatus('restoreStatus','Checking your license…');
-  try{const r=await fetch(WORKER+'/premium/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key})}),v=await r.json();if(!r.ok||!v.ok||!v.active)throw Error(v.error||'License not active');premiumKey=key;$('restoredDownload').hidden=false;setStatus('restoreStatus','✓ Premium unlocked. No additional payment required.')}
+  const b=$('restoreBtn');$('restoredDownload').hidden=true;$('restoredDownload').disabled=true;b.disabled=true;setStatus('restoreStatus','Checking your license…');
+  try{const r=await fetch(WORKER+'/premium/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key})}),v=await r.json();if(!r.ok||!v.ok||!v.active)throw Error(v.error||'License not active');premiumKey=key;$('restoredDownload').disabled=false;$('restoredDownload').hidden=false;setStatus('restoreStatus','✓ Premium unlocked. No additional payment required.')}
   catch(e){setStatus('restoreStatus','Restore failed: '+e.message,true)}
   finally{b.disabled=false}
 };
