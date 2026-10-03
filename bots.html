@@ -42,7 +42,7 @@
 .bot-top{display:flex;gap:14px;align-items:center}.bot-icon{width:52px;height:52px;flex-shrink:0;display:grid;place-items:center;border-radius:12px;background:#22384a;border:1px solid #42647a;font-size:24px;color:#87e7fb}.platinum .bot-icon{background:#372b50;border-color:#9d7bc3;color:#d8c4ff}.platinum.bee .bot-icon{background:#42351c;border-color:#ae8b3c;color:#f4d47b}
 .bot-name{margin:0;font-size:26px;line-height:1.1;letter-spacing:-.7px}.bot-subtitle{color:#bad0de;font-size:13px;margin-top:5px;font-weight:650}.bot-desc{color:#aabfce;font-size:14px;line-height:1.6;margin:18px 0 12px}.bot-feature-title{font-size:11px;letter-spacing:1.1px;text-transform:uppercase;color:#80cddd;font-weight:800;margin:9px 0}.bot-list{list-style:none;margin:0 0 19px;padding:0;display:grid;gap:7px}.bot-list li{font-size:13px;color:#d1dfeb;line-height:1.45;padding-left:18px;position:relative}.bot-list li:before{content:'✓';color:#56d7b0;position:absolute;left:0;font-weight:800}.bot-tags{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 20px}.bot-tags span{border:1px solid #3a586a;border-radius:5px;color:#c3e1ec;font-size:11px;padding:4px 8px}.bot-bottom{margin-top:auto;padding-top:14px;border-top:1px solid #ffffff17;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}.bot-bottom .badge{font-size:10px}.bot-bottom .demo-link{margin:0!important}.bot-meta{font-size:11px;color:#91a9ba;margin:12px 0 0}.platinum .bot-name{font-size:34px}.platinum .bot-desc{font-size:15px}.platinum .bot-list li{font-size:14px}.platinum-label{border:1px solid #a88ad4;background:#382c50;color:#e4d2ff;font-size:11px;letter-spacing:1.1px;padding:5px 9px;border-radius:5px;font-weight:850}.bee .platinum-label{border-color:#b18b3c;background:#493a1f;color:#f5d58a}.standard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;margin-bottom:48px}.standard-grid .bot-card{border:1px solid #304e61;background:linear-gradient(155deg,#172734,#111923);border-radius:16px;padding:24px;display:flex;flex-direction:column;min-height:405px}.standard-grid .bot-name{font-size:23px}.standard-grid .bot-desc{font-size:13px}.standard-grid .bot-list li{font-size:12px}.section-intro{font-size:14px;color:#a4b9c9;margin:0 0 20px;max-width:840px}.featured{margin-bottom:25px}.feature-content{max-width:920px}.features{margin:16px 0}.tiers{margin-top:10px}
 @media(max-width:930px){.standard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:690px){.platinum-grid,.standard-grid{grid-template-columns:1fr}.platinum{min-height:0}.catalogue-heading{display:block}.catalogue-heading p{margin-top:6px}}
-/* Compact boxed introduction, above Available now */
+/* Compact boxed introduction, above  */
 .hero{max-width:none;margin:24px 0 26px;padding:26px 30px;border:1px solid #32627a;border-radius:17px;background:linear-gradient(110deg,#162d3a,#111923 70%);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);align-items:center;gap:20px 32px}
 .hero-heading h1{font-size:clamp(31px,3.4vw,45px);line-height:1.12;margin:9px 0 0;letter-spacing:-1.3px}
 .hero p{max-width:none;margin:0;padding-left:28px;border-left:1px solid #385367;font-size:15px;line-height:1.65;color:#b5c9df}
@@ -121,21 +121,198 @@
 .management-banner strong{color:#eef6fb}
 @media(max-width:760px){.management-banner{grid-template-columns:1fr;padding:23px;gap:14px}}
 
-</style></head><body><header class="wrap nav"><a href="index.html">← Homepage</a><small>Specialized trading bots · Run locally</small></header><main class="wrap"><section class="hero"><div class="hero-heading"><div class="eyebrow">Purpose-built trading software</div><h1>Free Trading Bots.<br/><em>Premium when you want more.</em></h1></div><p>Explore locally run trading bots, from focused strategies to full-featured Platinum platforms. Free editions are planned across the lineup, with optional Premium upgrades as individual releases complete testing.</p></section><div class="catalogue-heading"><h2>Available now</h2></div><section class="mini-rsi-banner" id="mini-rsi">
+</style>
+<style>
+/* BOTFOLIOS layout cleanup — content retained, presentation only */
+:root{
+  --bg:#090f14;--panel:#101922;--line:#294657;--text:#eef7fb;
+  --muted:#9aafbc;--blue:#25c7e8;--green:#54e0aa
+}
+.wrap{max-width:1180px}
+.nav{height:62px}
+.hero{margin:24px 0 30px;padding:28px 32px;border-radius:14px}
+.catalogue-heading{margin:38px 0 14px}
+.section-intro{margin-bottom:18px}
+
+/* Make all bot entries read as broad catalogue banners rather than small tiles. */
+.platinum-grid,.standard-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  margin-bottom:42px
+}
+.platinum,.standard-grid .bot-card{
+  min-height:0;
+  border-radius:14px;
+  padding:24px 27px;
+  display:grid;
+  grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr);
+  column-gap:34px;
+  row-gap:8px;
+  align-items:start
+}
+.platinum .bot-top,.standard-grid .bot-top{
+  grid-column:1;
+  grid-row:1 / span 4;
+  align-self:start
+}
+.platinum .bot-desc,.standard-grid .bot-desc{
+  grid-column:2;
+  margin:0 0 4px
+}
+.platinum .bot-feature-title,.standard-grid .bot-feature-title{
+  grid-column:2;
+  margin:0
+}
+.platinum .bot-list,.standard-grid .bot-list{
+  grid-column:2;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:6px 20px;
+  margin:0 0 5px
+}
+.platinum .bot-tags,.standard-grid .bot-tags{
+  grid-column:2;
+  margin:3px 0 4px
+}
+.platinum .bot-meta{grid-column:2;margin:0}
+.platinum .bot-bottom,.standard-grid .bot-bottom{
+  grid-column:1 / -1;
+  margin-top:9px;
+  padding-top:12px
+}
+.platinum .bot-name{font-size:28px}
+.standard-grid .bot-name{font-size:24px}
+
+/* Existing feature sections retain their information but share one cleaner geometry. */
+.featured,.premium-showcase,.system-banner,.management-banner,.hive-explainer,.demo-section{
+  border-radius:14px!important;
+  box-shadow:none
+}
+.featured{margin-bottom:18px}
+.premium-showcase{margin-bottom:28px}
+.system-banner{margin:8px 0 38px}
+.management-banner{margin-bottom:26px}
+.demo-section video{max-width:100%}
+
+/* Keep System Checklist graphic large and visible. */
+.system-banner{
+  grid-template-columns:minmax(280px,.85fr) minmax(390px,1.15fr);
+  padding:27px 30px
+}
+.system-preview{max-width:520px}
+
+/* Reduce visual noise while retaining every original label/tag/status. */
+.bot-tags span,.features span,.system-chips span{background:#ffffff05}
+.badge,.bot-tags span{white-space:normal}
+.bot-bottom{justify-content:flex-start}
+.bot-bottom .demo-link{margin-left:auto!important}
+
+/* Footer/edition area */
+.tiers{padding:36px 0 52px;margin-top:0}
+
+@media(max-width:800px){
+  .platinum,.standard-grid .bot-card,.system-banner{
+    grid-template-columns:1fr
+  }
+  .platinum .bot-top,.standard-grid .bot-top,
+  .platinum .bot-desc,.standard-grid .bot-desc,
+  .platinum .bot-feature-title,.standard-grid .bot-feature-title,
+  .platinum .bot-list,.standard-grid .bot-list,
+  .platinum .bot-tags,.standard-grid .bot-tags,
+  .platinum .bot-meta,.platinum .bot-bottom,.standard-grid .bot-bottom{
+    grid-column:1;grid-row:auto
+  }
+  .platinum .bot-list,.standard-grid .bot-list{grid-template-columns:1fr}
+  .system-preview{max-width:none;justify-self:stretch}
+}
+</style>
+
+
+<style>
+/* BOTFOLIOS catalogue v3 — compact vertical bot banners */
+.platinum-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-bottom:34px
+}
+.standard-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  margin-bottom:48px
+}
+.platinum,.standard-grid .bot-card{
+  min-height:390px;
+  border-radius:14px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  gap:0
+}
+.platinum .bot-top,.standard-grid .bot-top,
+.platinum .bot-desc,.standard-grid .bot-desc,
+.platinum .bot-feature-title,.standard-grid .bot-feature-title,
+.platinum .bot-list,.standard-grid .bot-list,
+.platinum .bot-tags,.standard-grid .bot-tags,
+.platinum .bot-meta,.platinum .bot-bottom,.standard-grid .bot-bottom{
+  grid-column:auto;
+  grid-row:auto
+}
+.platinum .bot-name{font-size:28px}
+.standard-grid .bot-name{font-size:22px}
+.platinum .bot-desc,.standard-grid .bot-desc{margin:16px 0 10px}
+.platinum .bot-feature-title,.standard-grid .bot-feature-title{margin:5px 0 7px}
+.platinum .bot-list,.standard-grid .bot-list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:5px;
+  margin:0 0 14px
+}
+.platinum .bot-tags,.standard-grid .bot-tags{margin:4px 0 12px}
+.platinum .bot-meta{margin:5px 0 0}
+.platinum .bot-bottom,.standard-grid .bot-bottom{
+  margin-top:auto;
+  padding-top:12px
+}
+@media(max-width:930px){
+  .standard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:690px){
+  .platinum-grid,.standard-grid{grid-template-columns:1fr}
+  .platinum,.standard-grid .bot-card{min-height:0}
+}
+</style>
+
+
+<style>
+/* Single page action: all bot/demo/download links removed; selection lives on basic.html */
+.nav-title{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.3px}
+.top-download{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:38px;padding:8px 15px;border-radius:7px;
+  background:var(--blue);color:#06151d;font-size:12px;
+  font-weight:850;letter-spacing:.35px;text-decoration:none
+}
+.top-download:hover,.top-download:focus-visible{filter:brightness(1.1)}
+@media(max-width:520px){.nav-title{display:none}.top-download{margin-left:auto}}
+</style>
+
+</head><body><header class="wrap nav"><div class="nav-title">Trading Bots · Run locally</div><a class="top-download" href="basic.html">CHOOSE &amp; DOWNLOAD BOTS →</a></header><main class="wrap"><section class="hero"><div class="hero-heading"><div class="eyebrow">Purpose-built trading software</div><h1>Free Trading Bots.<br/><em>Premium when you want more.</em></h1></div><p>Explore locally run trading bots, from focused strategies to full-featured Platinum platforms. Free editions are planned across the lineup, with optional Premium upgrades as individual releases complete testing.</p></section><section class="mini-rsi-banner" id="mini-rsi">
   <div class="mini-rsi-copy">
-    <div class="mini-rsi-top"><span class="mini-rsi-tag">Available now · Free</span><span class="mini-rsi-tag beginner">Starter Bot</span></div>
+    <div class="mini-rsi-top"><span class="mini-rsi-tag beginner">Starter Bot</span></div>
     <h3>Mini <span>RSI Bot</span></h3>
     <p>A simple free introduction to running a local trading bot. Download the Windows installer, configure it and start in paper mode.</p>
   </div>
-  <a class="btn" href="https://falling-sky-7997.algobotbuilder.workers.dev/mini-rsi/download">DOWNLOAD FREE →</a>
+  
 </section>
-<section class="featured" id="reversal"><div class="feature-content"><div class="badges"><span class="badge available">Available · RSI divergence beta</span>
+<section class="featured" id="reversal"><div class="feature-content"><div class="badges">
   <span class="badge">Free &amp; Premium</span></div><h2>Reversal BOT</h2><p>Built for traders looking for potential turning points. Start with RSI divergence, mean reversion, add your own indicator confirmation rules, and manage trades with configurable risk controls.</p><div class="features"><span>RSI divergence</span><span>Price-turn confirmation</span><span>Custom entry filters</span><span>IBKR / MT5</span><span>Local execution</span></div><div class="actions">
 <!-- BASIC REVERSAL DOWNLOAD — TEMPORARILY DISABLED DURING PREMIUM BETA
-<a class="btn" href="basic.html?v=1.6.1">DOWNLOAD BASIC VERSION →</a>
+
 -->
-<span class="btn disabled" aria-disabled="true">BASIC VERSION · TEMPORARILY DISABLED</span>
-<a class="btn" href="basic.html?v=1.6.1#premium">PREMIUM BETA TESTING DOWNLOAD →</a>
+
+
 </div><div class="note">Bollinger Bands mean reversion and independent multi-strategy execution are planned additions; not yet represented as released features.</div></div></section>
 <section class="premium-showcase" id="reversal-premium">
   <div class="premium-showcase-head">
@@ -172,14 +349,14 @@ Reversal Bot can recognize positions already owned by another compatible bot, he
   </div>
   <div class="premium-showcase-foot">
     <p><strong>Everything in Basic.</strong> Nine Premium capabilities shown above · one-time purchase · no subscription.</p>
-    <a class="btn" href="basic.html?v=1.6.1#premium">PREMIUM BETA TESTING DOWNLOAD →</a>
+    
   </div>
 </section>
 
   
-<section aria-labelledby="system-banner-title" class="system-banner"><div><div class="system-kicker">Built-in dashboard feature</div><h2 id="system-banner-title">Know when your bot is ready.</h2><p>The <strong>SYSTEM CHECKLIST</strong> helps you verify configuration, engine startup, broker connection, market data and trading safeguards. Checks update from available runtime evidence, so you can see what passed, what failed and what still needs testing.</p><div class="system-chips"><span>Automatic status checks</span><span>Configuration validation</span><span>Paper-trading verification</span></div></div><div aria-label="Illustrative System Checklist dashboard preview; not live results" class="system-preview"><div class="system-preview-top"><strong>SYSTEM CHECKLIST</strong><span>FEATURE PREVIEW</span></div><div class="system-preview-body"><div class="system-ring"><svg aria-hidden="true" height="112" viewbox="0 0 112 112" width="112"><circle cx="56" cy="56" fill="none" r="47" stroke="#273d4b" stroke-width="10"></circle><circle cx="56" cy="56" fill="none" r="47" stroke="#25c7e8" stroke-dasharray="206.7 295.3" stroke-linecap="round" stroke-width="10"></circle></svg><div class="system-ring-label">70%<small>EXAMPLE</small></div></div><div class="system-checks"><div class="system-check"><span class="tick">✓</span>Configuration saved</div><div class="system-check"><span class="tick">✓</span>Risk controls validated</div><div class="system-check"><span class="tick">✓</span>Engine running</div><div class="system-check wait"><span class="tick">···</span>Broker connection pending</div><div class="system-check wait"><span class="tick">···</span>Paper execution pending</div></div></div><div class="system-preview-foot">Illustration only. Actual checks depend on the installed bot and available evidence; this graphic does not test your broker.</div></div></section><div class="catalogue-heading" id="platinum"><h2>✦ Platinum Bots</h2><p>Advanced dashboards · Extensive controls · Designed for experienced users</p></div><p class="section-intro">Our two most comprehensive trading platforms. OmniBot focuses on autonomous strategy execution and HAL intelligence; BeeBot combines trading with a local learning database and optional Hive community insights.</p><section class="platinum-grid"><article class="platinum" id="omnibot"><div class="bot-top"><div class="bot-icon">✧</div><div><span class="platinum-label">✦ PLATINUM · ADVANCED USERS</span><h3 class="bot-name" style="margin-top:10px">OmniBot</h3><div class="bot-subtitle">Autonomous Multi-Strategy Trading Engine</div></div></div><p class="bot-desc">An advanced autonomous trading system combining dynamic scanning, multiple strategies, HAL Active Intelligence and sophisticated position management. Designed for experienced traders who want extensive control over automated decisions.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Dynamic market scanning and multi-strategy trade selection</li><li>HAL-assisted analysis, prioritization and decision reporting</li><li>Advanced entry, exit and position-management controls</li><li>Global trading safeguards and performance monitoring</li></ul><div class="bot-tags"><span>Multi-strategy</span><span>HAL intelligence</span><span>Advanced dashboard</span><span>Local execution</span></div><p class="bot-meta">Advanced dashboard · Extensive configuration · Local-first design</p><div class="bot-bottom"><span class="badge">Coming soon</span></div></article><article class="platinum bee" id="beebot"><div class="bot-top"><div class="bot-icon">⬡</div><div><span class="platinum-label">✦ PLATINUM · ADVANCED USERS</span><h3 class="bot-name" style="margin-top:10px">BeeBot</h3><div class="bot-subtitle">All-in-One Trading, Learning &amp; The Hive</div></div></div><p class="bot-desc">An advanced trading platform with autonomous strategies, a detailed local SQLite database, historical trade analysis and optional community intelligence through The Hive. Built for experienced traders who want to explore and manage their own trading data.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Multi-strategy trading and advanced trade management</li><li>Local SQLite database and detailed historical analytics</li><li>Learning and performance comparisons from recorded trades</li><li>Optional opt-in sharing and candidate discovery via The Hive</li></ul><div class="bot-tags"><span>Local SQLite</span><span>Learning</span><span>The Hive</span><span>Advanced dashboard</span></div><p class="bot-meta">Advanced dashboard · Extensive configuration · Local-first design</p><div class="bot-bottom"><span class="badge">Entering beta testing</span><p class="demo-link"><a href="#beebot-demo">Watch BeeBot demo ↓</a></p></div></article></section>
+<section aria-labelledby="system-banner-title" class="system-banner"><div><div class="system-kicker">Built-in dashboard feature</div><h2 id="system-banner-title">Know when your bot is ready.</h2><p>The <strong>SYSTEM CHECKLIST</strong> helps you verify configuration, engine startup, broker connection, market data and trading safeguards. Checks update from available runtime evidence, so you can see what passed, what failed and what still needs testing.</p><div class="system-chips"><span>Automatic status checks</span><span>Configuration validation</span><span>Paper-trading verification</span></div></div><div aria-label="Illustrative System Checklist dashboard preview; not live results" class="system-preview"><div class="system-preview-top"><strong>SYSTEM CHECKLIST</strong><span>FEATURE PREVIEW</span></div><div class="system-preview-body"><div class="system-ring"><svg aria-hidden="true" height="112" viewbox="0 0 112 112" width="112"><circle cx="56" cy="56" fill="none" r="47" stroke="#273d4b" stroke-width="10"></circle><circle cx="56" cy="56" fill="none" r="47" stroke="#25c7e8" stroke-dasharray="206.7 295.3" stroke-linecap="round" stroke-width="10"></circle></svg><div class="system-ring-label">70%<small>EXAMPLE</small></div></div><div class="system-checks"><div class="system-check"><span class="tick">✓</span>Configuration saved</div><div class="system-check"><span class="tick">✓</span>Risk controls validated</div><div class="system-check"><span class="tick">✓</span>Engine running</div><div class="system-check wait"><span class="tick">···</span>Broker connection pending</div><div class="system-check wait"><span class="tick">···</span>Paper execution pending</div></div></div><div class="system-preview-foot">Illustration only. Actual checks depend on the installed bot and available evidence; this graphic does not test your broker.</div></div></section><div class="catalogue-heading" id="platinum"><h2>✦ Platinum Bots</h2><p>Advanced dashboards · Extensive controls · Designed for experienced users</p></div><p class="section-intro">Our two most comprehensive trading platforms. OmniBot focuses on autonomous strategy execution and HAL intelligence; BeeBot combines trading with a local learning database and optional Hive community insights.</p><section class="platinum-grid"><article class="platinum" id="omnibot"><div class="bot-top"><div class="bot-icon">✧</div><div><span class="platinum-label">✦ PLATINUM · ADVANCED USERS</span><h3 class="bot-name" style="margin-top:10px">OmniBot</h3><div class="bot-subtitle">Autonomous Multi-Strategy Trading Engine</div></div></div><p class="bot-desc">An advanced autonomous trading system combining dynamic scanning, multiple strategies, HAL Active Intelligence and sophisticated position management. Designed for experienced traders who want extensive control over automated decisions.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Dynamic market scanning and multi-strategy trade selection</li><li>HAL-assisted analysis, prioritization and decision reporting</li><li>Advanced entry, exit and position-management controls</li><li>Global trading safeguards and performance monitoring</li></ul><div class="bot-tags"><span>Multi-strategy</span><span>HAL intelligence</span><span>Advanced dashboard</span><span>Local execution</span></div><p class="bot-meta">Advanced dashboard · Extensive configuration · Local-first design</p></article><article class="platinum bee" id="beebot"><div class="bot-top"><div class="bot-icon">⬡</div><div><span class="platinum-label">✦ PLATINUM · ADVANCED USERS</span><h3 class="bot-name" style="margin-top:10px">BeeBot</h3><div class="bot-subtitle">All-in-One Trading, Learning &amp; The Hive</div></div></div><p class="bot-desc">An advanced trading platform with autonomous strategies, a detailed local SQLite database, historical trade analysis and optional community intelligence through The Hive. Built for experienced traders who want to explore and manage their own trading data.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Multi-strategy trading and advanced trade management</li><li>Local SQLite database and detailed historical analytics</li><li>Learning and performance comparisons from recorded trades</li><li>Optional opt-in sharing and candidate discovery via The Hive</li></ul><div class="bot-tags"><span>Local SQLite</span><span>Learning</span><span>The Hive</span><span>Advanced dashboard</span></div><p class="bot-meta">Advanced dashboard · Extensive configuration · Local-first design</p></article></section>
 <div class="catalogue-heading" id="catalogue"><h2>Specialized Bots</h2><p>Focused strategies and dedicated trading tools</p></div><p class="section-intro">Each bot has its own purpose, feature set and release status. Capabilities marked as planned are not presented as available until integration testing is complete.</p><section class="management-banner" id="trade-management-philosophy">
   <div>
     <div class="management-kicker">Built around the whole trade</div>
     <h2>Finding the trade is only the beginning. <em>Managing it matters.</em></h2>
-  </div><p>Each bot is tailored to a specific trading style, while giving you extensive settings to customize how it behaves. Entry signals can be fickle. Once a position is open, the focus shifts to <strong>staying with trades that are working, protecting profits as they develop, and getting out when they are not</strong> — with the goal of preserving as much profit and limiting as much loss as the configured strategy allows.</p></section><section class="standard-grid"><article class="bot-card" id="diybot"><div class="bot-top"><div class="bot-icon">◇</div><div><h3 class="bot-name">DIY Bot</h3><div class="bot-subtitle">Build Your Own IF / THEN Trading Bot</div></div></div><p class="bot-desc">Create your own rule-based trading strategy without writing code. Choose indicators, combine entry and exit conditions, and configure risk controls in a planned downloadable local builder.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Visual IF / THEN strategy builder</li><li>RSI, MACD, EMA / SMA, VWAP, Bollinger Bands, ATR and RVOL</li><li>Custom entry, exit and risk rules</li><li>Planned downloadable local application</li></ul><div class="bot-tags"><span>No-code</span><span>Custom indicators</span><span>IF / THEN rules</span></div><div class="bot-bottom"><span class="badge">Free builder · Planned</span></div></article><article class="bot-card" id="zerooptions"><div class="bot-top"><div class="bot-icon">0D</div><div><h3 class="bot-name">ZeRO Bot (Options)</h3><div class="bot-subtitle">Short-Dated Options Trading</div></div></div><p class="bot-desc">A focused 0–3 DTE options bot built around configurable entries, contract selection and defined risk. Advanced stop handoffs and profit protection are planned as the engine is validated.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>0–3 DTE contract selection and entry controls</li><li>Configurable position sizing and defined exits</li><li>Planned technical-to-option stop handoff</li><li>Planned trailing stops and profit protection</li></ul><div class="bot-tags"><span>Options</span><span>0–3 DTE</span><span>Defined risk</span></div><div class="bot-bottom"><span class="badge">Free edition coming soon</span></div></article><article class="bot-card" id="trendbot"><div class="bot-top"><div class="bot-icon">↗</div><div><h3 class="bot-name">Trend Bot</h3><div class="bot-subtitle">Trend Following &amp; Pullbacks</div></div></div><p class="bot-desc">Follow established trends and pullbacks using configurable technical confirmation, entry selectivity and trade-management controls.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>EMA crossover and pullback setups</li><li>Supertrend and ADX confirmation</li><li>Global Throttle and HAL integration under development</li><li>Configurable trade and account-risk management</li></ul><div class="bot-tags"><span>Trend following</span><span>EMA / ADX</span><span>Global Throttle</span></div><div class="bot-bottom"><span class="badge">Integration beta in development</span></div></article><article class="bot-card" id="breakoutbot"><div class="bot-top"><div class="bot-icon">↥</div><div><h3 class="bot-name">Breakout Bot</h3><div class="bot-subtitle">Range &amp; Opening-Range Breakouts</div></div></div><p class="bot-desc">Monitor support, resistance and opening ranges for confirmed breakout opportunities with configurable filters.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Price and range breakout setups</li><li>Opening-range monitoring</li><li>Volume and volatility confirmation</li><li>User-defined entry and exit controls</li></ul><div class="bot-tags"><span>Breakouts</span><span>Opening range</span><span>Volume filters</span></div><div class="bot-bottom"><span class="badge">Coming soon</span></div></article><article class="bot-card" id="momentumbot"><div class="bot-top"><div class="bot-icon">ϟ</div><div><h3 class="bot-name">Momentum Bot</h3><div class="bot-subtitle">Momentum &amp; Continuation</div></div></div><p class="bot-desc">Scan for accelerating price moves and continuation setups, with filters to help distinguish momentum from noise.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Momentum continuation setups</li><li>Relative-strength screening</li><li>Volume-confirmed signals</li><li>Configurable strength and exit rules</li></ul><div class="bot-tags"><span>Momentum</span><span>Relative strength</span><span>Volume</span></div><div class="bot-bottom"><span class="badge">Coming soon</span></div></article><article class="bot-card" id="scalpbot"><div class="bot-top"><div class="bot-icon">⚡</div><div><h3 class="bot-name">Scalp Bot</h3><div class="bot-subtitle">Intraday Scalping</div></div></div><p class="bot-desc">Short-duration intraday trading focused on fast signals, liquidity and controlled execution.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Short-timeframe entry setups</li><li>Spread, liquidity and volatility filters</li><li>Fast exits and configurable trade limits</li><li>Local control panel and trade reporting</li></ul><div class="bot-tags"><span>Intraday</span><span>Liquidity</span><span>Fast exits</span></div><div class="bot-bottom"><span class="badge">Entering beta testing</span></div></article><article class="bot-card" id="earningsbot"><div class="bot-top"><div class="bot-icon">◈</div><div><h3 class="bot-name">Earnings Bot</h3><div class="bot-subtitle">Event-Driven Trading</div></div></div><p class="bot-desc">Explore configurable strategies around company earnings announcements with event-aware entries and risk controls.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Earnings calendar and event filters</li><li>Pre-earnings and post-report setups</li><li>Gap and volatility analysis</li><li>Event-aware position and risk management</li></ul><div class="bot-tags"><span>Earnings</span><span>Event filters</span><span>Volatility</span></div><div class="bot-bottom"><span class="badge">Entering beta testing</span></div></article><article class="bot-card" id="dividendbot"><div class="bot-top"><div class="bot-icon">◫</div><div><h3 class="bot-name">Dividend Bot</h3><div class="bot-subtitle">Dividend &amp; NAV Analytics</div></div></div><p class="bot-desc">Track distributions and NAV changes using local historical data, broker imports and visual reporting.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Dividend and NAV performance tracking</li><li>IBKR Flex history support</li><li>Local dashboard and reporting</li><li>Distribution and performance analysis</li></ul><div class="bot-tags"><span>Income tracking</span><span>IBKR Flex</span><span>Local dashboard</span></div><div class="bot-bottom"><span class="badge">Entering beta testing</span><p class="demo-link"><a href="assets/videos/dividend-demo.mp4">Watch demo ↗</a></p></div></article><article class="bot-card" id="wheelbot"><div class="bot-top"><div class="bot-icon">↻</div><div><h3 class="bot-name">Wheel Bot</h3><div class="bot-subtitle">Options Wheel Management</div></div></div><p class="bot-desc">Manage cash-secured puts, covered calls and recurring wheel cycles with dedicated position-tracking tools.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Cash-secured puts and covered calls</li><li>Wheel-cycle and position tracking</li><li>Local broker-connected workflows</li><li>Configurable risk and execution controls</li></ul><div class="bot-tags"><span>Options wheel</span><span>Cycle tracking</span><span>Broker workflows</span></div><div class="bot-bottom"><span class="badge">Entering beta testing</span><p class="demo-link"><a href="assets/videos/wheel-demo.mp4">Watch demo ↗</a></p></div></article><article class="bot-card" id="swingbot"><div class="bot-top"><div class="bot-icon">⌁</div><div><h3 class="bot-name">Swing Bot</h3><div class="bot-subtitle">Multi-Day Trading</div></div></div><p class="bot-desc">Build longer-duration technical and momentum setups with user-defined entries, exits and risk controls.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Multi-day technical setups</li><li>Momentum and trend filters</li><li>Configurable entries and exits</li><li>Custom position-risk settings</li></ul><div class="bot-tags"><span>Swing trading</span><span>Technical filters</span><span>Risk controls</span></div><div class="bot-bottom"><span class="badge">Entering beta testing</span></div></article><article class="bot-card" id="legbot"><div class="bot-top"><div class="bot-icon">⇄</div><div><h3 class="bot-name">Scale Bot</h3><div class="bot-subtitle">Multi-Leg Options Execution</div></div></div><p class="bot-desc">Coordinate staged entries and exits for multi-leg options positions using leg-by-leg controls.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Staged options execution</li><li>Leg-by-leg position management</li><li>User-defined execution controls</li><li>Local position tracking</li></ul><div class="bot-tags"><span>Multi-leg options</span><span>Staged execution</span><span>Position tracking</span></div><div class="bot-bottom"><span class="badge">Entering beta testing</span></div></article></section><section class="hive-explainer" id="hive" style="border:1px solid #a47d2d;border-radius:18px;background:linear-gradient(110deg,#3a301b,#101827);padding:30px;margin:-25px 0 62px"><div class="eyebrow" style="color:#81e8b7">BeeBot ecosystem</div><h2 style="font-size:30px;margin:8px 0">Connect to The Hive. Only if you choose.</h2><p style="color:#b5c9df;max-width:780px">BeeBot keeps its own local database of trades and market observations. Connecting to The Hive is optional: users can choose whether to share data and explore community-generated candidates. The Hive is a planned opt-in feature, not a requirement for local trading.</p><div class="features"><span>Local-first</span><span>Optional sharing</span><span>Community candidate discovery</span></div></section><section class="demo-section" id="beebot-demo"><div><p class="eyebrow">BEEBOT DEMO</p><h2>BeeBot + The Hive</h2><p>See the current BeeBot concept and local-first Hive workflow.</p></div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/BeeBot_Web_Demo.mp4" type="video/mp4"/>Your browser does not support embedded video.</video><p class="note">Video: BeeBot_Web_Demo.mp4</p></section><section class="tiers" id="editions"><div><h2>Free first. Premium when you want more.</h2><p><strong>Reversal Bot Premium · $1 beta test price:</strong> HAL Active Intelligence · Manual / Hybrid / Sentience Intelligence Modes · Global Throttle · Progressive Ratcheting · Protected Profit · Smart Re-entry · Scale In / Out · Structure / ATR Run Room · Advanced Trade Management.</p></div><div class="tier-pills"><span>Free</span><span>Premium Beta ✦ $1</span></div></section></main><footer><div class="wrap">FREE TRADING BOTS · Trading involves risk. Test strategies in paper mode before considering live execution. Product availability and capabilities are subject to release testing.</div></footer></body></html>
+  </div><p>Each bot is tailored to a specific trading style, while giving you extensive settings to customize how it behaves. Entry signals can be fickle. Once a position is open, the focus shifts to <strong>staying with trades that are working, protecting profits as they develop, and getting out when they are not</strong> — with the goal of preserving as much profit and limiting as much loss as the configured strategy allows.</p></section><section class="standard-grid"><article class="bot-card" id="diybot"><div class="bot-top"><div class="bot-icon">◇</div><div><h3 class="bot-name">DIY Bot</h3><div class="bot-subtitle">Build Your Own IF / THEN Trading Bot</div></div></div><p class="bot-desc">Create your own rule-based trading strategy without writing code. Choose indicators, combine entry and exit conditions, and configure risk controls in a planned downloadable local builder.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Visual IF / THEN strategy builder</li><li>RSI, MACD, EMA / SMA, VWAP, Bollinger Bands, ATR and RVOL</li><li>Custom entry, exit and risk rules</li><li>Planned downloadable local application</li></ul><div class="bot-tags"><span>No-code</span><span>Custom indicators</span><span>IF / THEN rules</span></div></article><article class="bot-card" id="zerooptions"><div class="bot-top"><div class="bot-icon">0D</div><div><h3 class="bot-name">ZeRO Bot (Options)</h3><div class="bot-subtitle">Short-Dated Options Trading</div></div></div><p class="bot-desc">A focused 0–3 DTE options bot built around configurable entries, contract selection and defined risk. Advanced stop handoffs and profit protection are planned as the engine is validated.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>0–3 DTE contract selection and entry controls</li><li>Configurable position sizing and defined exits</li><li>Planned technical-to-option stop handoff</li><li>Planned trailing stops and profit protection</li></ul><div class="bot-tags"><span>Options</span><span>0–3 DTE</span><span>Defined risk</span></div></article><article class="bot-card" id="trendbot"><div class="bot-top"><div class="bot-icon">↗</div><div><h3 class="bot-name">Trend Bot</h3><div class="bot-subtitle">Trend Following &amp; Pullbacks</div></div></div><p class="bot-desc">Follow established trends and pullbacks using configurable technical confirmation, entry selectivity and trade-management controls.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>EMA crossover and pullback setups</li><li>Supertrend and ADX confirmation</li><li>Global Throttle and HAL integration under development</li><li>Configurable trade and account-risk management</li></ul><div class="bot-tags"><span>Trend following</span><span>EMA / ADX</span><span>Global Throttle</span></div></article><article class="bot-card" id="breakoutbot"><div class="bot-top"><div class="bot-icon">↥</div><div><h3 class="bot-name">Breakout Bot</h3><div class="bot-subtitle">Range &amp; Opening-Range Breakouts</div></div></div><p class="bot-desc">Monitor support, resistance and opening ranges for confirmed breakout opportunities with configurable filters.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Price and range breakout setups</li><li>Opening-range monitoring</li><li>Volume and volatility confirmation</li><li>User-defined entry and exit controls</li></ul><div class="bot-tags"><span>Breakouts</span><span>Opening range</span><span>Volume filters</span></div></article><article class="bot-card" id="momentumbot"><div class="bot-top"><div class="bot-icon">ϟ</div><div><h3 class="bot-name">Momentum Bot</h3><div class="bot-subtitle">Momentum &amp; Continuation</div></div></div><p class="bot-desc">Scan for accelerating price moves and continuation setups, with filters to help distinguish momentum from noise.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Momentum continuation setups</li><li>Relative-strength screening</li><li>Volume-confirmed signals</li><li>Configurable strength and exit rules</li></ul><div class="bot-tags"><span>Momentum</span><span>Relative strength</span><span>Volume</span></div></article><article class="bot-card" id="scalpbot"><div class="bot-top"><div class="bot-icon">⚡</div><div><h3 class="bot-name">Scalp Bot</h3><div class="bot-subtitle">Intraday Scalping</div></div></div><p class="bot-desc">Short-duration intraday trading focused on fast signals, liquidity and controlled execution.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Short-timeframe entry setups</li><li>Spread, liquidity and volatility filters</li><li>Fast exits and configurable trade limits</li><li>Local control panel and trade reporting</li></ul><div class="bot-tags"><span>Intraday</span><span>Liquidity</span><span>Fast exits</span></div></article><article class="bot-card" id="earningsbot"><div class="bot-top"><div class="bot-icon">◈</div><div><h3 class="bot-name">Earnings Bot</h3><div class="bot-subtitle">Event-Driven Trading</div></div></div><p class="bot-desc">Explore configurable strategies around company earnings announcements with event-aware entries and risk controls.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Earnings calendar and event filters</li><li>Pre-earnings and post-report setups</li><li>Gap and volatility analysis</li><li>Event-aware position and risk management</li></ul><div class="bot-tags"><span>Earnings</span><span>Event filters</span><span>Volatility</span></div></article><article class="bot-card" id="dividendbot"><div class="bot-top"><div class="bot-icon">◫</div><div><h3 class="bot-name">Dividend Bot</h3><div class="bot-subtitle">Dividend &amp; NAV Analytics</div></div></div><p class="bot-desc">Track distributions and NAV changes using local historical data, broker imports and visual reporting.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Dividend and NAV performance tracking</li><li>IBKR Flex history support</li><li>Local dashboard and reporting</li><li>Distribution and performance analysis</li></ul><div class="bot-tags"><span>Income tracking</span><span>IBKR Flex</span><span>Local dashboard</span></div></article><article class="bot-card" id="wheelbot"><div class="bot-top"><div class="bot-icon">↻</div><div><h3 class="bot-name">Wheel Bot</h3><div class="bot-subtitle">Options Wheel Management</div></div></div><p class="bot-desc">Manage cash-secured puts, covered calls and recurring wheel cycles with dedicated position-tracking tools.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Cash-secured puts and covered calls</li><li>Wheel-cycle and position tracking</li><li>Local broker-connected workflows</li><li>Configurable risk and execution controls</li></ul><div class="bot-tags"><span>Options wheel</span><span>Cycle tracking</span><span>Broker workflows</span></div></article><article class="bot-card" id="swingbot"><div class="bot-top"><div class="bot-icon">⌁</div><div><h3 class="bot-name">Swing Bot</h3><div class="bot-subtitle">Multi-Day Trading</div></div></div><p class="bot-desc">Build longer-duration technical and momentum setups with user-defined entries, exits and risk controls.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Multi-day technical setups</li><li>Momentum and trend filters</li><li>Configurable entries and exits</li><li>Custom position-risk settings</li></ul><div class="bot-tags"><span>Swing trading</span><span>Technical filters</span><span>Risk controls</span></div></article><article class="bot-card" id="legbot"><div class="bot-top"><div class="bot-icon">⇄</div><div><h3 class="bot-name">Scale Bot</h3><div class="bot-subtitle">Multi-Leg Options Execution</div></div></div><p class="bot-desc">Coordinate staged entries and exits for multi-leg options positions using leg-by-leg controls.</p><div class="bot-feature-title">Key features</div><ul class="bot-list"><li>Staged options execution</li><li>Leg-by-leg position management</li><li>User-defined execution controls</li><li>Local position tracking</li></ul><div class="bot-tags"><span>Multi-leg options</span><span>Staged execution</span><span>Position tracking</span></div></article></section><section class="hive-explainer" id="hive" style="border:1px solid #a47d2d;border-radius:18px;background:linear-gradient(110deg,#3a301b,#101827);padding:30px;margin:-25px 0 62px"><div class="eyebrow" style="color:#81e8b7">BeeBot ecosystem</div><h2 style="font-size:30px;margin:8px 0">Connect to The Hive. Only if you choose.</h2><p style="color:#b5c9df;max-width:780px">BeeBot keeps its own local database of trades and market observations. Connecting to The Hive is optional: users can choose whether to share data and explore community-generated candidates. The Hive is a planned opt-in feature, not a requirement for local trading.</p><div class="features"><span>Local-first</span><span>Optional sharing</span><span>Community candidate discovery</span></div></section><section class="demo-section" id="beebot-demo"><div><p class="eyebrow">BEEBOT DEMO</p><h2>BeeBot + The Hive</h2><p>See the current BeeBot concept and local-first Hive workflow.</p></div><video controls="" playsinline="" preload="metadata"><source src="assets/videos/BeeBot_Web_Demo.mp4" type="video/mp4"/>Your browser does not support embedded video.</video><p class="note">Video: BeeBot_Web_Demo.mp4</p></section><section class="tiers" id="editions"><div><h2>Free first. Premium when you want more.</h2><p><strong>Reversal Bot Premium · $1 beta test price:</strong> HAL Active Intelligence · Manual / Hybrid / Sentience Intelligence Modes · Global Throttle · Progressive Ratcheting · Protected Profit · Smart Re-entry · Scale In / Out · Structure / ATR Run Room · Advanced Trade Management.</p></div><div class="tier-pills"><span>Free</span><span>Premium Beta ✦ $1</span></div></section></main><footer><div class="wrap">FREE TRADING BOTS · Trading involves risk. Test strategies in paper mode before considering live execution. Product availability and capabilities are subject to release testing.</div></footer></body></html>
