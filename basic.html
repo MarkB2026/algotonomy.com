@@ -78,6 +78,14 @@
 @media(max-width:820px){.bundle-showcase{grid-template-columns:1fr}.bundle-features{grid-template-columns:1fr}}
 </style>
 
+
+<style>
+.bundle-image-wrap a{display:block;position:relative;text-decoration:none}
+.bundle-image-wrap .image-hint{position:absolute;right:10px;bottom:10px;padding:5px 8px;border:1px solid #42677b;border-radius:5px;background:rgba(6,17,24,.9);color:#91e8fa;font-size:9px;font-weight:900;letter-spacing:.55px;opacity:.88}
+.bundle-image-wrap a:hover .bundle-preview{border-color:#65dff6}
+.bundle-image-wrap a:hover .image-hint{opacity:1}
+</style>
+
 </head><body>
 <div class="release">BOTFOLIOS · PORTFOLIOS MANAGED BY BOTS.</div><main class="shell">
 <div class="top"><div class="brand">BOT<span>FOLIOS</span></div><span class="badge">CREATE YOUR BOTFOLIO</span></div>
@@ -86,7 +94,7 @@
 <section class="section botfolio-section"><div class="head"><span>CHOOSE BOTS FOR YOUR BOTFOLIO</span><span class="badge">ADD MORE ANY TIME</span></div>
 <div class="trio-intro"><strong>Trend. Reversal. Everything in between.</strong><span>Three complementary strategies designed to look for different types of market movement.</span></div>
 <div class="body grid">
-<article class="card"><div class="bot-banner"><div class="ct"><div class="bot-title"><span class="bot-icon">↗</span><div class="meta"><h2>Trend Bot</h2><b>TREND FOLLOWING</b></div></div><input class="pick" type="checkbox" aria-label="Select TrendBot"></div>
+<article class="card"><div class="bot-banner"><div class="ct"><div class="bot-title"><span class="bot-icon">↗</span><div class="meta"><h2>TrendBot</h2><b>TREND FOLLOWING</b></div></div><input class="pick" type="checkbox" aria-label="Select TrendBot"></div>
 <p><strong>Find the trend.</strong> Scans for sustained directional movement and qualifying trend opportunities.</p></div><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
 <div class="auto-premium">PREMIUM · MODE 3 AUTONOMOUS</div></article><article class="card"><div class="bot-banner"><div class="ct"><div class="bot-title"><span class="bot-icon">⌁</span><div class="meta"><h2>ZigZagBot</h2><b>PRICE STRUCTURE</b></div></div><input class="pick" type="checkbox" aria-label="Select ZigZagBot"></div>
 <p><strong>Trade the swings in between.</strong> Looks for price-structure opportunities between major trends and reversals.</p></div><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
@@ -97,7 +105,12 @@
 <section class="section" id="botfolioBundle">
 <div class="head"><span>THE BOTFOLIO BUNDLE</span><span class="badge">CENTRAL MANAGEMENT</span></div>
 <div class="body bundle-showcase">
-<div><img class="bundle-preview" src="/assets/Controlpanel.png" alt="Botfolios Control Center showing portfolio overview, bot controls, scanner status, symbol ownership and activity"></div>
+<div class="bundle-image-wrap">
+<a href="/assets/Controlpanel.png" target="_blank" rel="noopener" title="View Control Panel full size">
+<img class="bundle-preview" src="/assets/Controlpanel.png" alt="Botfolios Control Center showing portfolio overview, bot controls, scanner status, symbol ownership and activity">
+<span class="image-hint">CLICK TO VIEW FULL SIZE ↗</span>
+</a>
+</div>
 <div class="bundle-copy">
 <div class="eyebrow">MORE THAN INDIVIDUAL BOT DOWNLOADS</div>
 <h2>One control center for your Botfolio.</h2>
@@ -108,23 +121,23 @@
 </div></div></section>
 
 <section class="section" id="otherBots"><div class="head"><span>TRY SINGLE BOTS</span><span class="badge">STANDALONE</span></div><div class="body grid">
-<article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">↗</span><div class="meta"><h2>Trend Bot</h2><b>TREND FOLLOWING</b></div></div><input class="pick" type="checkbox" aria-label="Select Trend Bot Basic"></div>
+<article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">↗</span><div class="meta"><h2>TrendBot</h2><b>TREND FOLLOWING</b></div></div><input class="pick" type="checkbox" aria-label="Select TrendBot Basic"></div>
 <p>Run it as a standalone bot. Choose the free Basic edition or the Premium standalone edition.</p><div class="tags"><span>Standalone</span><span>IBKR</span></div><div class="editions standalone-editions">
 <label><input type="checkbox"><span><strong>BASIC</strong><small>FREE · MODES 1 &amp; 2</small></span></label>
 <label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>FULL VERSION</small></span></label>
 </div></article>
-<article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">⌁</span><div class="meta"><h2>ZigZag Bot</h2><b>PRICE STRUCTURE</b></div></div><input class="pick" type="checkbox" aria-label="Select ZigZag Bot Basic"></div>
+<article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">⌁</span><div class="meta"><h2>ZigZagBot</h2><b>PRICE STRUCTURE</b></div></div><input class="pick" type="checkbox" aria-label="Select ZigZagBot Basic"></div>
 <p>Run it as a standalone bot. Choose the free Basic edition or the Premium standalone edition.</p><div class="tags"><span>Standalone</span><span>IBKR</span></div><div class="editions standalone-editions">
 <label><input type="checkbox"><span><strong>BASIC</strong><small>FREE · MODES 1 &amp; 2</small></span></label>
 <label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>FULL VERSION</small></span></label>
 </div></article>
-<article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">↶</span><div class="meta"><h2>Reversal Bot</h2><b>RSI · REVERSAL</b></div></div><input class="pick" type="checkbox" aria-label="Select Reversal Bot Basic"></div>
+<article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">↶</span><div class="meta"><h2>ReversalBot</h2><b>RSI · REVERSAL</b></div></div><input class="pick" type="checkbox" aria-label="Select ReversalBot Basic"></div>
 <p>Run it as a standalone bot. Choose the free Basic edition or the Premium standalone edition.</p><div class="tags"><span>Standalone</span><span>IBKR</span></div><div class="editions standalone-editions">
 <label><input type="checkbox"><span><strong>BASIC</strong><small>FREE · MODES 1 &amp; 2</small></span></label>
 <label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>FULL VERSION</small></span></label>
 </div></article>
 
-<article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">◎</span><div class="meta"><h2>SCALP BOT</h2><b>MINI SCALPER</b></div></div><input class="pick" type="checkbox" aria-label="Select Round Lots"></div>
+<article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">◎</span><div class="meta"><h2>Round Lots</h2><b>MINI SCALPER</b></div></div><input class="pick" type="checkbox" aria-label="Select Round Lots"></div>
 <p>Manual trade-staging and mini-scalping tool with chart-based entries and position management.</p><div class="tags"><span>Standalone</span><span>IBKR</span></div>
 <div class="editions"><label><input type="checkbox"><span><strong>BASIC</strong><small>FREE</small></span></label>
 <label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article><article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">⇄</span><div class="meta"><h2>IF/Then Bot</h2><b>RULE-BASED TRADING</b></div></div><input class="pick" type="checkbox" aria-label="Select IF/Then Bot"></div>
