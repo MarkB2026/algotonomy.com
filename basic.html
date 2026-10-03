@@ -56,21 +56,34 @@
 /* Align the Premium info bars across all Botfolio cards. */
 .botfolio-section .card{display:flex;flex-direction:column}
 .botfolio-section .auto-premium{margin-top:auto}
+
+/* Keep the divider under each autonomous bot description perfectly aligned. */
+.botfolio-section .bot-banner{
+  min-height:190px;
+  display:flex;
+  flex-direction:column;
+}
+
+.trio-intro{padding:14px 18px 0;text-align:center}
+.trio-intro strong{display:block;font-size:18px;letter-spacing:.2px;color:#eef7fb}
+.trio-intro span{display:block;margin-top:3px;color:#9fb0bd;font-size:12px}
 </style></head><body>
 <div class="release">BOTFOLIOS · PORTFOLIOS MANAGED BY BOTS.</div><main class="shell">
 <div class="top"><div class="brand">BOT<span>FOLIOS</span></div><span class="badge">CREATE YOUR BOTFOLIO</span></div>
 <section class="hero"><div class="eyebrow">CREATE YOUR BOTFOLIO</div><h1>Create your Botfolio.</h1><p>Choose the compatible trading bots you want in your Botfolio. Start with one or several — <strong>you can always add more bots later.</strong></p></section>
 
-<section class="section botfolio-section"><div class="head"><span>CHOOSE BOTS FOR YOUR BOTFOLIO</span><span class="badge">ADD MORE ANY TIME</span></div><div class="body grid">
+<section class="section botfolio-section"><div class="head"><span>CHOOSE BOTS FOR YOUR BOTFOLIO</span><span class="badge">ADD MORE ANY TIME</span></div>
+<div class="trio-intro"><strong>Trend. Reversal. Everything in between.</strong><span>Three complementary strategies designed to look for different types of market movement.</span></div>
+<div class="body grid">
 <article class="card"><div class="bot-banner"><div class="ct"><div class="bot-title"><span class="bot-icon">↗</span><div class="meta"><h2>TrendBot</h2><b>TREND FOLLOWING</b></div></div><input class="pick" type="checkbox" aria-label="Select TrendBot"></div>
-<p>Scans for trend opportunities and manages qualifying trades using its own strategy and risk controls.</p></div><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
+<p><strong>Find the trend.</strong> Scans for sustained directional movement and qualifying trend opportunities.</p></div><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
 <div class="auto-premium">PREMIUM · MODE 3 AUTONOMOUS</div></article><article class="card"><div class="bot-banner"><div class="ct"><div class="bot-title"><span class="bot-icon">⌁</span><div class="meta"><h2>ZigZagBot</h2><b>PRICE STRUCTURE</b></div></div><input class="pick" type="checkbox" aria-label="Select ZigZagBot"></div>
-<p>Scans for qualifying price-structure opportunities while other bots can work on other symbols.</p></div><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
+<p><strong>Trade the swings in between.</strong> Looks for price-structure opportunities between major trends and reversals.</p></div><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
 <div class="auto-premium">PREMIUM · MODE 3 AUTONOMOUS</div></article><article class="card"><div class="bot-banner"><div class="ct"><div class="bot-title"><span class="bot-icon">↶</span><div class="meta"><h2>ReversalBot</h2><b>RSI · REVERSAL</b></div></div><input class="pick" type="checkbox" aria-label="Select ReversalBot"></div>
-<p>Looks for reversal setups using RSI divergence, price confirmation and configurable trade management.</p></div><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
+<p><strong>Find the turn.</strong> Looks for reversal setups using RSI divergence and price confirmation.</p></div><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
 <div class="auto-premium">PREMIUM · MODE 3 AUTONOMOUS</div></article></div></section>
 
-<section class="section" id="otherBots"><div class="head"><span>TRY AS SINGLE BOTS</span><span class="badge">STANDALONE</span></div><div class="body grid">
+<section class="section" id="otherBots"><div class="head"><span>TRY OUR OTHER BOTS</span><span class="badge">STANDALONE</span></div><div class="body grid">
 <article class="card"><div class="ct"><div class="bot-title"><span class="bot-icon">↗</span><div class="meta"><h2>TrendBot</h2><b>TREND FOLLOWING</b></div></div><input class="pick" type="checkbox" aria-label="Select TrendBot Basic"></div>
 <p>Run it as a standalone bot. Choose the free Basic edition or the Premium standalone edition.</p><div class="tags"><span>Standalone</span><span>IBKR</span></div><div class="editions standalone-editions">
 <label><input type="checkbox"><span><strong>BASIC</strong><small>FREE · MODES 1 &amp; 2</small></span></label>
