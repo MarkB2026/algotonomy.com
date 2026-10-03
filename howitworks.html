@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Botfolio Works | Botfolios.com</title>
+<meta name="description" content="See how Botfolio coordinates multiple trading bots, protects existing positions, assigns symbol ownership, and keeps dividend holdings separated.">
+<style>
+:root{
+  --bg:#09131b;--panel:#102536;--panel2:#132d3f;--line:#32708d;
+  --text:#f2f8fc;--muted:#b7cbd8;--cyan:#25c7e8;--cyan2:#66dafa;
+  --green:#62dda1;--red:#ff7c83;--gold:#f1c96e;--blue:#6dbdf5;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;color:var(--text);
+  font:14px/1.55 "Segoe UI",Arial,sans-serif;
+  background:radial-gradient(ellipse at 76% 0,#102a3c 0,#0a131b 52%,#090e13 100%);
+}
+.site-nav{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  max-width:1160px;margin:auto;padding:13px 24px;border-bottom:1px solid #294251;
+}
+.site-brand{display:inline-flex;align-items:baseline;text-decoration:none;font-size:26px;font-weight:900;letter-spacing:-.8px}
+.logo-bot{color:#19b9ff}.logo-folios{color:#f5f8fb;margin-left:2px}
+.site-links{display:flex;gap:6px;flex-wrap:wrap}
+.site-links a{padding:9px 13px;border-radius:8px;color:#b7cbd7;text-decoration:none;font-weight:600}
+.site-links a:hover,.site-links a[aria-current=page]{background:#193748;color:#7ce7ff}
+.shell{max-width:1160px;margin:auto;padding:34px 24px 55px}
+.hero{text-align:center;padding:35px 18px 42px}
+.eyebrow,.section-tag{font-size:11px;letter-spacing:2px;font-weight:900;color:#67d8fc}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.08;margin:12px 0 13px;letter-spacing:-1.5px}
+.hero p{max-width:760px;margin:auto;color:var(--muted);font-size:17px}
+.rule{
+  margin:0 auto 30px;max-width:900px;padding:20px 24px;text-align:center;
+  border:1px solid #3a88a8;border-radius:12px;background:linear-gradient(145deg,#143247,#102432);
+}
+.rule strong{font-size:22px;color:#fff}.rule span{color:#79e2f7}
+.example{border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,#122536,#101c29);margin:0 0 20px;overflow:hidden}
+.example-head{padding:21px 24px;border-bottom:1px solid #284e62}
+.example-head h2{margin:5px 0 5px;font-size:27px}.example-head p{margin:0;color:var(--muted)}
+.example-body{padding:24px}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:5px 0 18px}
+.bot,.position,.owner-card{border:1px solid #315a70;background:#142c3d;border-radius:10px;padding:15px}
+.bot strong,.position strong{display:block;font-size:16px}.status{font-size:12px;font-weight:800;color:var(--green);margin-top:5px}
+.signal{margin-top:11px;padding:9px 10px;background:#0c1d29;border-radius:7px;color:#d9f5ff}
+.arrow{text-align:center;color:var(--cyan);font-size:28px;font-weight:900;margin:4px}
+.ownership{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.owner-card .symbol{font-size:21px;font-weight:900;color:#fff}.owner-card .owner{color:var(--cyan2);font-weight:800}.owner-card .free{color:var(--green)}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:650px;background:#0d1d29;border:1px solid #294f63;border-radius:9px;overflow:hidden}
+th,td{padding:12px 14px;border-bottom:1px solid #294354;text-align:left}
+th{background:#163246;color:#8ee7fa;font-size:11px;letter-spacing:.8px}
+td{color:#dce9f1}.protected{color:var(--gold);font-weight:800}.owned{color:var(--green);font-weight:800}.blocked{color:var(--red);font-weight:800}
+.callout{margin-top:17px;padding:13px 15px;border-left:3px solid var(--cyan);background:#0d202d;border-radius:5px;color:#c9dce7}
+.priority{display:grid;grid-template-columns:70px 1fr 150px;max-width:650px;margin:16px auto 0;border:1px solid #315a70;border-radius:9px;overflow:hidden}
+.priority div{padding:11px 13px;border-bottom:1px solid #29495a;background:#122a3a}.priority .head{color:#75dff5;font-size:11px;font-weight:900}
+.arch{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:15px 0}
+.arch-box{min-width:145px;text-align:center;padding:13px;border:1px solid #36728d;background:#142f41;border-radius:9px;font-weight:800}
+.arch-arrow{color:var(--cyan);font-size:23px}
+.bottom-rule{text-align:center;padding:28px;border:1px solid #3a88a8;border-radius:12px;background:#102838;margin-top:26px}
+.bottom-rule h2{margin:0 0 7px;font-size:29px}.bottom-rule p{margin:0;color:#c2d6e2;font-size:16px}
+footer{margin-top:28px;border-top:1px solid #304a5b;padding:22px 0;color:#8da0ae;font-size:12px}
+@media(max-width:760px){.flow,.ownership{grid-template-columns:1fr}.priority{grid-template-columns:55px 1fr 105px}.site-nav{align-items:flex-start;flex-direction:column}.shell{padding:24px 15px}.example-body{padding:17px}}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="site-brand" href="index.html"><span class="logo-bot">BOT</span><span class="logo-folios">FOLIOS</span></a>
+  <div class="site-links">
+    <a href="index.html">Home</a>
+    <a href="bots.html">Trading Bots</a>
+    <a href="tools.html">Trading Tools</a>
+    <a href="howitworks.html" aria-current="page">How It Works</a>
+    <a href="about.html">Why Botfolio?</a>
+  </div>
+</nav>
+
+<main class="shell">
+<section class="hero">
+  <div class="eyebrow">MULTIPLE BOTS. ONE ACCOUNT. CLEAR OWNERSHIP.</div>
+  <h1>How Botfolio Works</h1>
+  <p>Compatible autonomous bots can scan at the same time. Botfolio coordinates which bot owns each symbol, protects positions that do not belong to a bot, and keeps every strategy in its own lane.</p>
+</section>
+
+<div class="rule"><strong>Every position has an owner. <span>No owner = protected.</span></strong></div>
+
+<section class="example">
+ <div class="example-head"><div class="section-tag">EXAMPLE 1</div><h2>Multiple bots scanning different symbols</h2><p>TrendBot, ZigZagBot and ReversalBot can all scan simultaneously.</p></div>
+ <div class="example-body">
+  <div class="flow">
+   <div class="bot"><strong>TrendBot</strong><div class="status">● SCANNING</div><div class="signal">MARA → LONG signal</div></div>
+   <div class="bot"><strong>ZigZagBot</strong><div class="status">● SCANNING</div><div class="signal">NVDA → LONG signal</div></div>
+   <div class="bot"><strong>ReversalBot</strong><div class="status">● SCANNING</div><div class="signal">TSLA → SHORT signal</div></div>
+  </div>
+  <div class="arrow">↓</div>
+  <div class="ownership">
+   <div class="owner-card"><div class="symbol">MARA</div><div class="owner">OWNER: TrendBot</div></div>
+   <div class="owner-card"><div class="symbol">NVDA</div><div class="owner">OWNER: ZigZagBot</div></div>
+   <div class="owner-card"><div class="symbol">TSLA</div><div class="owner">OWNER: ReversalBot</div></div>
+  </div>
+  <div class="callout">Different symbols do not conflict. Each bot can continue scanning its full universe while managing the positions it owns.</div>
+ </div>
+</section>
+
+<section class="example">
+ <div class="example-head"><div class="section-tag">EXAMPLE 2</div><h2>Two bots want the same symbol</h2><p>The first authorized claim owns the symbol until its trade is completely closed.</p></div>
+ <div class="example-body">
+  <div class="flow">
+   <div class="bot"><strong>TrendBot</strong><div class="status">10:31:42.125</div><div class="signal">MARA → LONG</div></div>
+   <div class="owner-card"><div class="symbol">MARA</div><div class="owner">CLAIMED BY TRENDBOT</div><div class="status">✓ ENTRY AUTHORIZED</div></div>
+   <div class="bot"><strong>ZigZagBot</strong><div class="status">10:31:43.410</div><div class="signal">MARA → SHORT<br><span class="blocked">✕ BLOCKED — already owned</span></div></div>
+  </div>
+  <div class="callout">ZigZagBot is not stopped. It simply cannot enter MARA while TrendBot owns MARA, and it continues scanning every other available symbol.</div>
+  <div class="priority">
+   <div class="head">TIER</div><div class="head">BOT</div><div class="head">TIE PRIORITY</div>
+   <div>1</div><div>TrendBot</div><div>Highest</div>
+   <div>2</div><div>ZigZagBot</div><div>Second</div>
+   <div>3</div><div>ReversalBot</div><div>Third</div>
+  </div>
+  <div class="callout">The tier can resolve effectively simultaneous requests. Normal non-simultaneous signals remain first valid claim wins.</div>
+ </div>
+</section>
+
+<section class="example">
+ <div class="example-head"><div class="section-tag">EXAMPLE 3</div><h2>Your existing shares stay protected</h2><p>Botfolio does not assume a position already in your brokerage account belongs to a trading bot.</p></div>
+ <div class="example-body">
+  <div class="table-wrap"><table>
+   <thead><tr><th>SYMBOL</th><th>POSITION</th><th>CLASSIFICATION</th><th>AUTONOMOUS BOT ACCESS</th></tr></thead>
+   <tbody>
+    <tr><td>NVDA</td><td>100 shares</td><td class="protected">🔒 EXISTING / PROTECTED</td><td class="blocked">BLOCKED</td></tr>
+    <tr><td>AAPL</td><td>200 shares</td><td class="protected">🔒 EXISTING / PROTECTED</td><td class="blocked">BLOCKED</td></tr>
+    <tr><td>MARA</td><td>0 shares</td><td class="owned">○ FREE</td><td class="owned">AVAILABLE</td></tr>
+   </tbody>
+  </table></div>
+  <div class="callout">A bot cannot automatically adopt, sell, stop, trail or modify an existing protected position. Reassignment requires an explicit user action.</div>
+ </div>
+</section>
+
+<section class="example">
+ <div class="example-head"><div class="section-tag">EXAMPLE 4</div><h2>Dividend holdings have their own manager</h2><p>Dividend positions can be assigned exclusively to Dividend Manager and kept away from autonomous trading strategies.</p></div>
+ <div class="example-body">
+  <div class="table-wrap"><table>
+   <thead><tr><th>SYMBOL</th><th>POSITION</th><th>OWNER</th><th>OTHER BOTS</th></tr></thead>
+   <tbody>
+    <tr><td>YMAG</td><td>10,000</td><td class="owned">Dividend Manager</td><td class="blocked">NO ACCESS</td></tr>
+    <tr><td>YMAX</td><td>10,000</td><td class="owned">Dividend Manager</td><td class="blocked">NO ACCESS</td></tr>
+    <tr><td>MSTY</td><td>2,500</td><td class="owned">Dividend Manager</td><td class="blocked">NO ACCESS</td></tr>
+    <tr><td>MARA</td><td>500</td><td class="owned">TrendBot</td><td class="blocked">NO ACCESS</td></tr>
+    <tr><td>NVDA</td><td>100</td><td class="protected">Protected / Existing</td><td class="blocked">NO ACCESS</td></tr>
+   </tbody>
+  </table></div>
+  <div class="callout"><strong>Dividend Manager manages dividend holdings.</strong> Trading bots manage their own trades. Existing positions remain protected.</div>
+ </div>
+</section>
+
+<section class="example">
+ <div class="example-head"><div class="section-tag">THE CONTROL LAYER</div><h2>Botfolio sits between strategy and execution</h2><p>Before an autonomous bot is allowed to create or manage a trade, ownership is checked.</p></div>
+ <div class="example-body">
+  <div class="arch">
+   <div class="arch-box">TrendBot<br>ZigZagBot<br>ReversalBot</div><div class="arch-arrow">→</div>
+   <div class="arch-box">BOTFOLIO<br><span style="color:#67d8fc">Ownership Gate</span></div><div class="arch-arrow">→</div>
+   <div class="arch-box">Broker Hub</div><div class="arch-arrow">→</div>
+   <div class="arch-box">IBKR</div>
+  </div>
+  <div class="table-wrap"><table>
+   <thead><tr><th>POSITION TYPE</th><th>DEFAULT OWNER</th><th>RULE</th></tr></thead>
+   <tbody>
+    <tr><td>Existing / manual holding</td><td class="protected">PROTECTED</td><td>No autonomous bot access</td></tr>
+    <tr><td>Dividend holding</td><td class="owned">DIVIDEND MANAGER</td><td>Dividend Manager only</td></tr>
+    <tr><td>Bot-created trade</td><td class="owned">CREATING BOT</td><td>Creating bot manages it</td></tr>
+    <tr><td>No position / no claim</td><td class="owned">FREE</td><td>Compatible bots may compete for ownership</td></tr>
+   </tbody>
+  </table></div>
+ </div>
+</section>
+
+<div class="bottom-rule">
+ <h2>Bots only manage what they own.</h2>
+ <p>If ownership is missing or Botfolio and the broker disagree, the safe response is to lock the symbol — not guess.</p>
+</div>
+
+<footer>Choose your bots. Build your Botfolio. · Botfolios.com<br>Automated trading involves market, software and execution risk.</footer>
+</main>
+</body>
+</html>
