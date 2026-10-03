@@ -104,6 +104,37 @@
 @media(max-width:560px){.restore-row{flex-direction:column}.checkout .btn{width:100%}}
 </style>
 
+
+<style id="bitcoin-button-visibility-fix">
+#bitcoinCheckout .btn{
+  background:linear-gradient(180deg,#42dcf4,#18afd0);
+  color:#04151b;
+  border:1px solid #69e7fb;
+  box-shadow:0 0 0 1px rgba(37,199,232,.18),0 4px 12px rgba(0,0,0,.22);
+  opacity:1;
+}
+#bitcoinCheckout .btn:hover{
+  filter:brightness(1.08);
+  transform:translateY(-1px);
+}
+#bitcoinCheckout .btn.gold{
+  background:linear-gradient(180deg,#ffe29a,#e8b44d);
+  color:#241805;
+  border-color:#ffe09a;
+}
+#bitcoinCheckout .btn.secondary{
+  background:#193747;
+  color:#bfefff;
+  border:1px solid #4c8ca9;
+}
+#bitcoinCheckout .btn:disabled{
+  opacity:.42;
+  filter:saturate(.55);
+  box-shadow:none;
+  cursor:not-allowed;
+}
+</style>
+
 </head><body>
 <div class="release">BOTZIPS · DOWNLOAD • UNZIP • RUN</div><main class="shell">
 <div class="top"><div class="brand">BOT<span>ZIPS</span></div><span class="badge">AUTOMATED TRADING BOTS</span></div>
