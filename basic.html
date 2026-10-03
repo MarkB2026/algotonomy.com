@@ -13,15 +13,15 @@
 .section{background:linear-gradient(180deg,var(--panel),#0e161e);border:1px solid var(--line);border-radius:12px;margin:15px 0;overflow:hidden}.head{padding:15px 18px;border-bottom:1px solid var(--line);font-weight:900;letter-spacing:.45px;display:flex;justify-content:space-between;gap:10px;align-items:center}.body{padding:18px}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid #304b5d;background:linear-gradient(155deg,#162530,#101922);border-radius:12px;padding:18px;min-height:245px;display:flex;flex-direction:column}.card:hover{border-color:#3c7691}.ct{display:flex;justify-content:space-between;gap:10px}.card h2{font-size:22px;margin:0}.card b{font-size:10px;letter-spacing:1px;color:#77dff4}.card p{color:#a9bdc9}.pick{width:27px;height:27px;accent-color:var(--cyan)}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}.tags span{border:1px solid #2b4555;background:#0d1820;border-radius:999px;padding:4px 8px;color:#9fb8c6;font-size:11px;font-weight:700}
 .editions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.editions label{border:1px solid #334e60;border-radius:9px;padding:10px;background:#0d171f;display:flex;align-items:center;gap:8px;cursor:pointer}.editions label.premium{border-color:#665a38}.editions input{width:18px;height:18px;accent-color:var(--cyan)}.editions strong,.editions small{display:block}.editions small{color:#8fa6b4}.premium strong{color:#f0c96e}
-.summary{display:grid;grid-template-columns:1.5fr 1fr;gap:15px}.box{border:1px solid #304858;border-radius:10px;background:#0e1820;padding:17px}.box h3{margin-top:0}.box p{color:#9db1bd}.free{font-size:27px;font-weight:950;color:var(--good)}.btn{border-radius:8px;padding:13px 18px;font-weight:900;display:inline-block;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d;opacity:.45}.note{padding:12px 14px;border-left:3px solid #0b7e99;background:#0c151d;color:#a8bdc9;border-radius:4px}
+.summary{display:grid;grid-template-columns:1.5fr 1fr;gap:15px}.box{border:1px solid #304858;border-radius:10px;background:#0e1820;padding:17px}.box h3{margin-top:0}.box p{color:#9db1bd}.free{font-size:27px;font-weight:950;color:var(--good)}.createBtn{border:0;border-radius:8px;padding:14px 18px;font-weight:900;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d;cursor:pointer;width:100%}.createBtn:disabled{opacity:.4;cursor:not-allowed}.btn{border-radius:8px;padding:13px 18px;font-weight:900;display:inline-block;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d;opacity:.45}.note{padding:12px 14px;border-left:3px solid #0b7e99;background:#0c151d;color:#a8bdc9;border-radius:4px}
 .checkout{border:1px dashed #4b6574;border-radius:10px;padding:18px;background:#0d161d}.checkout h3{margin:0 0 7px;color:#f0c96e}.checkout p{color:#a9bdc9}.footer{text-align:center;color:#738794;font-size:12px;padding:28px 0}
 @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.summary{grid-template-columns:1fr}}@media(max-width:620px){.grid{grid-template-columns:1fr}.editions{grid-template-columns:1fr}}
 </style></head><body>
 <div class="release">BOTFOLIOS · PORTFOLIOS MANAGED BY BOTS.</div><main class="shell">
-<div class="top"><div class="brand">BOT<span>FOLIOS</span></div><span class="badge">CHOOSE YOUR BOTS · BUILD YOUR OWN</span></div>
-<section class="hero"><div class="eyebrow">BUILD YOUR BOTFOLIO</div><h1>Choose the bots you want <em>working for you.</em></h1><p>Select one bot or build a collection. Basic editions can be free; Premium editions can use the existing one-time Bitcoin checkout and licensing system.</p></section>
+<div class="top"><div class="brand">BOT<span>FOLIOS</span></div><span class="badge">CREATE YOUR BOTFOLIO</span></div>
+<section class="hero"><div class="eyebrow">CREATE YOUR BOTFOLIO</div><h1>Create your Botfolio.</h1><p>Choose the compatible trading bots you want in your Botfolio. Start with one or several — <strong>you can always add more bots later.</strong></p></section>
 
-<section class="section"><div class="head"><span>CHOOSE YOUR TRADING BOTS</span><span class="badge">SELECTION MOCKUP</span></div><div class="body grid">
+<section class="section"><div class="head"><span>CHOOSE BOTS FOR YOUR BOTFOLIO</span><span class="badge">ADD MORE ANY TIME</span></div><div class="body grid">
 <article class="card"><div class="ct"><div><h2>TrendBot</h2><b>TREND FOLLOWING</b></div><input class="pick" type="checkbox" aria-label="Select TrendBot"></div>
 <p>Scans for trend opportunities and manages qualifying trades using its own strategy and risk controls.</p><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
 <div class="editions"><label><input type="checkbox"><span><strong>BASIC</strong><small>FREE</small></span></label>
@@ -31,7 +31,10 @@
 <label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article><article class="card"><div class="ct"><div><h2>ReversalBot</h2><b>RSI · REVERSAL</b></div><input class="pick" type="checkbox" aria-label="Select ReversalBot"></div>
 <p>Looks for reversal setups using RSI divergence, price confirmation and configurable trade management.</p><div class="tags"><span>Autonomous</span><span>IBKR</span></div>
 <div class="editions"><label><input type="checkbox"><span><strong>BASIC</strong><small>FREE</small></span></label>
-<label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article><article class="card"><div class="ct"><div><h2>Round Lots</h2><b>MINI SCALPER</b></div><input class="pick" type="checkbox" aria-label="Select Round Lots"></div>
+<label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article></div></section>
+
+<section class="section"><div class="head"><span>TRY OUR OTHER BOTS</span><span class="badge">STANDALONE · NOT BOTFOLIO COMPATIBLE</span></div><div class="body grid">
+<article class="card"><div class="ct"><div><h2>Round Lots</h2><b>MINI SCALPER</b></div><input class="pick" type="checkbox" aria-label="Select Round Lots"></div>
 <p>Manual trade-staging and mini-scalping tool with chart-based entries and position management.</p><div class="tags"><span>Standalone</span><span>IBKR</span></div>
 <div class="editions"><label><input type="checkbox"><span><strong>BASIC</strong><small>FREE</small></span></label>
 <label class="premium"><input type="checkbox"><span><strong>PREMIUM</strong><small>PAID</small></span></label></div></article><article class="card"><div class="ct"><div><h2>IF/Then Bot</h2><b>RULE-BASED TRADING</b></div><input class="pick" type="checkbox" aria-label="Select IF/Then Bot"></div>
@@ -41,14 +44,64 @@
 <article class="card"><div class="ct"><div><h2>More Bots</h2><b>COMING LATER</b></div><input class="pick" type="checkbox" disabled></div><p>The catalog can expand without changing the basic selection-and-checkout layout.</p><div class="tags"><span>Coming Soon</span></div></article>
 </div></section>
 
-<section class="section"><div class="head">YOUR SELECTION</div><div class="body summary">
-<div class="box"><h3>Build your Botfolio</h3><p>The checkboxes above are intentionally visual only. Nothing downloads, purchases or installs yet.</p><div class="note">Next pass: selected bots populate here; then FREE downloads and PREMIUM checkout can be wired separately.</div></div>
-<div class="box"><div class="free">BASIC · FREE</div><p>No payment or license required for Basic editions.</p><span class="btn">DOWNLOAD SELECTED BOTS</span></div>
+<section class="section"><div class="head">YOUR BOTFOLIO</div><div class="body summary">
+<div class="box"><h3>Selected bots</h3><div id="selectedList"><p>No Botfolio bots selected yet.</p></div><div class="note">You can always return and add more compatible bots to your Botfolio later.</div></div>
+<div class="box"><div class="free">READY TO CREATE</div><p id="selectionSummary">Choose your bots and editions above.</p><button class="createBtn" id="createBotfolio" disabled>CREATE MY BOTFOLIO</button></div>
 </div></section>
 
-<section class="section"><div class="head">PREMIUM · BITCOIN CHECKOUT</div><div class="body"><div class="checkout"><h3>Existing Bitcoin system preserved.</h3><p>The Bitcoin transaction/license code from your supplied Basic page is retained in this file but intentionally not executed or connected to these bot checkboxes yet.</p><p>That means this visual redesign does not require us to change the Cloudflare Worker, D1, KV or payment endpoints.</p></div></div></section>
+<section class="section" id="bitcoinCheckout" style="display:none"><div class="head">PREMIUM · BITCOIN CHECKOUT</div><div class="body"><div class="checkout"><h3>Bitcoin payment</h3><p>Your Premium selection requires the existing Bitcoin checkout. The live address/quote will be connected to the preserved payment system next.</p><div class="note">For this layout pass, clicking CREATE MY BOTFOLIO reveals this checkout area when at least one Premium edition is selected.</div></div></div></section>
 <div class="footer">Trading software can execute orders when configured for live trading. Start in Observe or Paper and review settings before enabling live execution.</div>
 </main>
+
+<script>
+(function(){
+ const compatible=[...document.querySelectorAll('.section')][0].querySelectorAll('.card');
+ const list=document.getElementById('selectedList'), summary=document.getElementById('selectionSummary');
+ const create=document.getElementById('createBotfolio'), checkout=document.getElementById('bitcoinCheckout');
+
+ function update(){
+   const chosen=[];
+   compatible.forEach(card=>{
+     const main=card.querySelector('.pick');
+     const editions=[...card.querySelectorAll('.editions input')];
+     if(main.checked || editions.some(x=>x.checked)){
+       main.checked=true;
+       const name=card.querySelector('h2').textContent;
+       const labels=[];
+       if(editions[0]?.checked) labels.push('Basic · Free');
+       if(editions[1]?.checked) labels.push('Premium');
+       chosen.push({name,labels});
+     }
+   });
+   if(!chosen.length){
+     list.innerHTML='<p>No Botfolio bots selected yet.</p>';
+     summary.textContent='Choose your bots and editions above.';
+     create.disabled=true; checkout.style.display='none'; return;
+   }
+   list.innerHTML='<ul>'+chosen.map(x=>'<li><strong>'+x.name+'</strong> — '+(x.labels.length?x.labels.join(' + '):'choose Basic or Premium')+'</li>').join('')+'</ul>';
+   const valid=chosen.every(x=>x.labels.length);
+   const premium=chosen.some(x=>x.labels.includes('Premium'));
+   summary.textContent=valid?(premium?'Premium selected — Bitcoin checkout will open when you continue.':'Basic selections are free — no Bitcoin payment required.'):'Choose Basic or Premium for each selected bot.';
+   create.disabled=!valid;
+ }
+ compatible.forEach(card=>{
+   const main=card.querySelector('.pick'), ed=[...card.querySelectorAll('.editions input')];
+   main.addEventListener('change',()=>{if(!main.checked) ed.forEach(x=>x.checked=false);update()});
+   ed.forEach((x,i)=>x.addEventListener('change',()=>{
+     if(x.checked){ main.checked=true; ed.forEach((other,j)=>{if(i!==j) other.checked=false}); }
+     update();
+   }));
+ });
+ create.addEventListener('click',()=>{
+   const premium=[...compatible].some(card=>card.querySelectorAll('.editions input')[1]?.checked);
+   checkout.style.display=premium?'block':'none';
+   if(premium) checkout.scrollIntoView({behavior:'smooth',block:'start'});
+   else alert('Your Basic Botfolio selection is ready. Free download wiring comes next.');
+ });
+ update();
+})();
+</script>
+
 <script type="text/plain" id="preserved-bitcoin-code">&lt;script&gt;
 const WORKER='https://falling-sky-7997.algobotbuilder.workers.dev';
 let quote=null, premiumKey='';
