@@ -86,6 +86,71 @@
 .bundle-image-wrap a:hover .image-hint{opacity:1}
 </style>
 
+
+<style id="bitcoin-checkout-restored-css">
+.payment-panel{display:none;margin-top:14px;padding:16px;border:1px solid #45677b;border-radius:9px;background:#101f2b}
+.payment-panel.show{display:block}.payment-panel code{word-break:break-all;color:#b6e9ff}
+.copyrow{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid #263b48;padding:8px 0}
+.copyrow button{border:0;background:transparent;color:#86cfe9;text-decoration:underline;cursor:pointer}
+.field{display:grid;gap:6px;margin:13px 0;color:#b8c9d5}.field input{height:42px;border:1px solid #355061;border-radius:7px;background:#0b1219;color:#fff;padding:8px 10px;width:100%}
+.restore{margin-top:17px;padding:16px;border:1px solid #385263;border-radius:9px;background:#101d28}
+.restore-row{display:flex;gap:9px}.restore-row input{flex:1;height:42px;border:1px solid #355061;border-radius:7px;background:#0b1219;color:#fff;padding:8px 10px}
+.status{margin-top:12px;color:#9fd8e9;min-height:21px;white-space:pre-wrap}.error{color:#ffadad}
+.license{padding:12px;margin:12px 0;border:1px solid #3f8068;background:#122b25;border-radius:8px}.license code{overflow-wrap:anywhere}
+.fine{font-size:12px;color:#8fa4b1}
+.checkout .btn{border:0;border-radius:8px;padding:13px 18px;font-weight:900;cursor:pointer;background:linear-gradient(180deg,#39d4f0,#1299b9);color:#06171d}
+.checkout .btn.secondary{background:#193747;color:#d7f3ff;border:1px solid #3c7896}
+.checkout .btn.gold{background:linear-gradient(180deg,#ffdc89,#d8a638);color:#261a08}
+@media(max-width:560px){.restore-row{flex-direction:column}.checkout .btn{width:100%}}
+</style>
+
+
+<style id="bitcoin-button-visibility-fix">
+#bitcoinCheckout .btn{
+  background:linear-gradient(180deg,#42dcf4,#18afd0);
+  color:#04151b;
+  border:1px solid #69e7fb;
+  box-shadow:0 0 0 1px rgba(37,199,232,.18),0 4px 12px rgba(0,0,0,.22);
+  opacity:1;
+}
+#bitcoinCheckout .btn:hover{
+  filter:brightness(1.08);
+  transform:translateY(-1px);
+}
+#bitcoinCheckout .btn.gold{
+  background:linear-gradient(180deg,#ffe29a,#e8b44d);
+  color:#241805;
+  border-color:#ffe09a;
+}
+#bitcoinCheckout .btn.secondary{
+  background:#193747;
+  color:#bfefff;
+  border:1px solid #4c8ca9;
+}
+#bitcoinCheckout .btn:disabled{
+  opacity:.42;
+  filter:saturate(.55);
+  box-shadow:none;
+  cursor:not-allowed;
+}
+</style>
+
+
+<style id="premium-license-gate-fix">
+#premiumDownload[hidden],
+#restoredDownload[hidden],
+#issuedLicense[hidden]{
+  display:none !important;
+}
+#premiumDownload:disabled,
+#restoredDownload:disabled{
+  opacity:.38 !important;
+  filter:saturate(.45) !important;
+  cursor:not-allowed !important;
+  pointer-events:none !important;
+}
+</style>
+
 </head><body>
 <div class="release">BOTZIPS · DOWNLOAD • UNZIP • RUN</div><main class="shell">
 <div class="top"><div class="brand">BOT<span>ZIPS</span></div><span class="badge">AUTOMATED TRADING BOTS</span></div>
@@ -152,7 +217,28 @@
 <div class="box"><div class="free">READY TO CREATE</div><p id="selectionSummary">Choose the compatible Premium bots you want to run together.</p><button class="createBtn" id="createBotfolio" disabled>CONTINUE WITH SELECTED BOTS</button></div>
 </div></section>
 
-<section class="section" id="bitcoinCheckout" style="display:none"><div class="head">PREMIUM · BITCOIN CHECKOUT</div><div class="body"><div class="checkout"><h3>Bitcoin payment</h3><p>Your Premium selection requires the existing Bitcoin checkout. The live address/quote will be connected to the preserved payment system next.</p><div class="note">For this layout pass, clicking CONTINUE WITH SELECTED BOTS reveals this checkout area when at least one Premium edition is selected.</div></div></div></section>
+<section class="section checkout" id="bitcoinCheckout" style="display:none">
+<div class="head">PREMIUM · BITCOIN CHECKOUT</div>
+<div class="body">
+<p>Premium is temporarily $1 USD during beta testing. The $1 charge is intentional and is part of validating the Bitcoin payment, license issuance and Premium download flow. Already paid? Do not pay again — restore your original license below.</p>
+<button class="btn gold" id="quoteBtn">GENERATE BITCOIN QUOTE</button>
+<div class="payment-panel" id="paymentPanel">
+<div id="quoteDetails">Requesting quote…</div>
+<label class="field">Bitcoin transaction ID (TXID)<input id="txid" maxlength="64" autocomplete="off" placeholder="Paste your 64-character transaction ID"></label>
+<div style="display:flex;gap:9px;flex-wrap:wrap"><button class="btn" id="verifyBtn">VERIFY PAYMENT</button><button class="btn secondary" id="statusBtn">CHECK PAYMENT STATUS</button></div>
+<div id="paymentStatus" class="status"></div>
+<div id="issuedLicense" class="license" hidden><strong>✓ PAYMENT VERIFIED — SAVE THIS LICENSE KEY</strong><div style="margin:8px 0"><code id="licenseText"></code></div><button class="btn secondary" id="copyLicense">COPY LICENSE KEY</button></div>
+<button class="btn" id="premiumDownload" hidden disabled>DOWNLOAD PREMIUM INSTALLER</button>
+</div>
+<div class="restore">
+<h3 style="margin-top:0">Reinstalling Premium?</h3>
+<p>Enter your original Premium license key. No additional payment is required.</p>
+<div class="restore-row"><input id="restoreKey" autocomplete="off" placeholder="Your Premium license key"><button class="btn secondary" id="restoreBtn">RESTORE ACCESS</button></div>
+<div id="restoreStatus" class="status"></div>
+<button class="btn" id="restoredDownload" hidden disabled>DOWNLOAD PREMIUM INSTALLER</button>
+</div>
+</div>
+</section>
 <div class="footer">Trading software can execute orders when configured for live trading. Start in Observe or Paper and review settings before enabling live execution.</div>
 </main>
 
@@ -196,11 +282,11 @@
 })();
 </script>
 
-<script type="text/plain" id="preserved-bitcoin-code">&lt;script&gt;
+<script>
 const WORKER='https://falling-sky-7997.algobotbuilder.workers.dev';
 let quote=null, premiumKey='';
 const licensePattern=/^MBB-[A-F0-9]{8}(?:-[A-F0-9]{8}){7}$/i;
-const $=id=&gt;document.getElementById(id);
+const $=id=>document.getElementById(id);
 function setStatus(id,text,error=false){const el=$(id);el.textContent=text;el.className='status '+(error?'error':'');}
 async function installer(product,key=''){
   const premium=product==='premium';
@@ -214,24 +300,14 @@ async function installer(product,key=''){
   const type=r.headers.get('content-type')||'';
   if(type.includes('json')||type.includes('text/html'))throw Error('The server returned a page instead of the installer.');
   const blob=await r.blob();if(!blob.size)throw Error('Installer download was empty.');
-  const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=premium?'Premium_Setup.exe':'Basic_Setup.exe';document.body.appendChild(a);a.click();a.remove();setTimeout(()=&gt;URL.revokeObjectURL(u),60000);
+  const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=premium?'Premium_Setup.exe':'Basic_Setup.exe';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),60000);
 }
-async function freeDownload(){
-  const b=$('freeDownload');b.disabled=true;b.textContent='PREPARING DOWNLOAD…';setStatus('freeStatus','');
-  try{await installer('basic-reversal');setStatus('freeStatus','Download requested. Configure the bot locally after installation.')}
-  catch(e){setStatus('freeStatus',e.message,true)}
-  finally{b.disabled=false;b.textContent='DOWNLOAD FREE BOT'}
-}
-/* FREE REVERSAL DOWNLOAD BINDINGS — TEMPORARILY DISABLED DURING BETA
-$('freeDownload').onclick=freeDownload;
-$('heroFree').onclick=()=&gt;{$('editions').scrollIntoView({behavior:'smooth'});setTimeout(freeDownload,350)};
-*/
-function openPremium(){$('premiumCheckout').classList.add('show');$('premiumCheckout').scrollIntoView({behavior:'smooth',block:'start'})}
-$('premiumOpen').onclick=openPremium;$('heroPremium').onclick=openPremium;
+
+
 function copyRow(label,value){
   const row=document.createElement('div');row.className='copyrow';
   const info=document.createElement('span');const strong=document.createElement('strong');strong.textContent=label+': ';const code=document.createElement('code');code.textContent=String(value);info.append(strong,code);
-  const b=document.createElement('button');b.type='button';b.textContent='Copy';b.onclick=()=&gt;navigator.clipboard.writeText(String(value)).then(()=&gt;{b.textContent='Copied ✓';setTimeout(()=&gt;b.textContent='Copy',1500)});
+  const b=document.createElement('button');b.type='button';b.textContent='Copy';b.onclick=()=>navigator.clipboard.writeText(String(value)).then(()=>{b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy',1500)});
   row.append(info,b);return row;
 }
 function renderQuote(q){
@@ -239,37 +315,37 @@ function renderQuote(q){
   el.append(copyRow('Receiving address',q.bitcoin_address),copyRow('Amount (BTC)',q.required_btc));
   const p=document.createElement('p');p.className='fine';p.textContent='Send the exact amount shown. Quote expires '+new Date(q.expires_at).toLocaleString()+'. Quote ID: '+q.quote_id;el.append(p);
 }
-$('quoteBtn').onclick=async()=&gt;{
+$('quoteBtn').onclick=async()=>{
   $('paymentPanel').classList.add('show');setStatus('paymentStatus','Fetching signed quote…');
   try{const r=await fetch(WORKER+'/premium/quote',{cache:'no-store'}),q=await r.json();if(!r.ok||!q.ok)throw Error(q.error||'Could not create quote');quote=q;renderQuote(q);setStatus('paymentStatus','Send the exact BTC amount, then enter your TXID and verify.')}
   catch(e){setStatus('paymentStatus','Quote error: '+e.message,true)}
 };
 function verified(v){
   const key=typeof v.license_key==='string'?v.license_key.trim().toUpperCase():'';
-  if(licensePattern.test(key)){premiumKey=key;$('licenseText').textContent=key;$('issuedLicense').hidden=false;$('premiumDownload').hidden=false}
+  if(licensePattern.test(key)){premiumKey=key;$('licenseText').textContent=key;$('issuedLicense').hidden=false;$('premiumDownload').disabled=false;$('premiumDownload').hidden=false}
   setStatus('paymentStatus','✓ Bitcoin payment verified. Save your original license key before downloading.');
 }
-$('verifyBtn').onclick=async()=&gt;{
+$('verifyBtn').onclick=async()=>{
   if(!quote){setStatus('paymentStatus','Generate a quote first.',true);return}
   const txid=$('txid').value.trim();if(!/^[a-fA-F0-9]{64}$/.test(txid)){setStatus('paymentStatus','Enter a valid 64-character TXID.',true);return}
   setStatus('paymentStatus','Checking blockchain confirmation…');
   try{const r=await fetch(WORKER+'/premium/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({txid,quote_id:quote.quote_id,quote_signature:quote.quote_signature,required_sats:quote.required_sats,expires_at:quote.expires_at})});const v=await r.json();if(!r.ok||!v.ok)throw Error(v.error||'Verification failed');if(v.verified)verified(v);else setStatus('paymentStatus','Payment status: '+v.status+'. '+(v.error||'Try again after confirmation.'))}
   catch(e){setStatus('paymentStatus','Verification error: '+e.message,true)}
 };
-$('statusBtn').onclick=async()=&gt;{
+$('statusBtn').onclick=async()=>{
   if(!quote){setStatus('paymentStatus','Generate a quote first.',true);return}
   try{const r=await fetch(WORKER+'/premium/status?quote_id='+encodeURIComponent(quote.quote_id),{cache:'no-store'}),v=await r.json();if(!r.ok||!v.ok)throw Error(v.error||'Status unavailable');if(v.verified||v.status==='verified')verified(v);else setStatus('paymentStatus','Payment status: '+v.status+'. Confirmed: '+v.confirmed+'; received: '+v.received_sats+' sats.')}
   catch(e){setStatus('paymentStatus','Status error: '+e.message,true)}
 };
-$('copyLicense').onclick=()=&gt;{if(premiumKey)navigator.clipboard.writeText(premiumKey).then(()=&gt;setStatus('paymentStatus','License key copied. Store it securely.'))};
-$('premiumDownload').onclick=async()=&gt;{try{await installer('premium',premiumKey);setStatus('paymentStatus','Premium installer download requested.')}catch(e){setStatus('paymentStatus',e.message,true)}};
-$('restoreBtn').onclick=async()=&gt;{
+$('copyLicense').onclick=()=>{if(premiumKey)navigator.clipboard.writeText(premiumKey).then(()=>setStatus('paymentStatus','License key copied. Store it securely.'))};
+$('premiumDownload').onclick=async()=>{try{await installer('premium',premiumKey);setStatus('paymentStatus','Premium installer download requested.')}catch(e){setStatus('paymentStatus',e.message,true)}};
+$('restoreBtn').onclick=async()=>{
   const key=$('restoreKey').value.trim().toUpperCase();if(!licensePattern.test(key)){setStatus('restoreStatus','Enter your complete original Premium license key.',true);return}
-  const b=$('restoreBtn');b.disabled=true;setStatus('restoreStatus','Checking your license…');
-  try{const r=await fetch(WORKER+'/premium/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key})}),v=await r.json();if(!r.ok||!v.ok||!v.active)throw Error(v.error||'License not active');premiumKey=key;$('restoredDownload').hidden=false;setStatus('restoreStatus','✓ Premium unlocked. No additional payment required.')}
+  const b=$('restoreBtn');$('restoredDownload').hidden=true;$('restoredDownload').disabled=true;b.disabled=true;setStatus('restoreStatus','Checking your license…');
+  try{const r=await fetch(WORKER+'/premium/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({license_key:key})}),v=await r.json();if(!r.ok||!v.ok||!v.active)throw Error(v.error||'License not active');premiumKey=key;$('restoredDownload').disabled=false;$('restoredDownload').hidden=false;setStatus('restoreStatus','✓ Premium unlocked. No additional payment required.')}
   catch(e){setStatus('restoreStatus','Restore failed: '+e.message,true)}
   finally{b.disabled=false}
 };
-$('restoredDownload').onclick=async()=&gt;{try{await installer('premium',premiumKey);setStatus('restoreStatus','Premium installer download requested.')}catch(e){setStatus('restoreStatus',e.message,true)}};
-&lt;/script&gt;</script>
+$('restoredDownload').onclick=async()=>{try{await installer('premium',premiumKey);setStatus('restoreStatus','Premium installer download requested.')}catch(e){setStatus('restoreStatus',e.message,true)}};
+</script>
 </body></html>
